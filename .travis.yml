@@ -1,0 +1,23 @@
+language: python
+
+python:
+  - "3.6"
+
+install:
+  - pip install mkdocs
+  - pip install mkdocs-material
+  - pip install pymdown-extensions
+  - echo -e "machine github.com\n  login ${GITHUB_TOKEN}" > ~/.netrc
+
+script: 
+  - mkdocs gh-deploy --force --clean
+
+branches:
+  only:
+    - master
+# deploy:
+#   provider: pages
+#   skip_cleanup: true
+#   github_token: $GITHUB_TOKEN
+#   on:
+#     branch: master
