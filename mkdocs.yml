@@ -2,15 +2,15 @@ site_name: CUC ACM-Wiki
 
 # Contents
 nav:
-  - 首页: 
+  - 首页:
       - 关于本项目: index.md
       - 关于mkdocs: mkdocs.md
-  - C语言基础: 
-      - 基本语法: grammar.md
-      - 逻辑结构: structure.md
-      - 数组: array.md
-      - 函数: function.md
-  - 2020春集训安排: 
+  - C语言基础:
+      - 基本语法: c-basic/grammar.md
+      - 逻辑结构: c-basic/structure.md
+      - 数组: c-basic/array.md
+      - 函数: c-basic/function.md
+  - 2020春集训安排:
       - 讲师名单: TeacherName.md
 
 ## Theme
