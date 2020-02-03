@@ -4,7 +4,7 @@ site_name: CUC ACM-Wiki
 nav:
   - 首页:
       - 关于本项目: index.md
-      - 关于mkdocs: mkdocs.md
+      - F.A.Q: FAQ.md
   - C语言基础:
       - 基本语法: c-basic/grammar.md
       - 逻辑结构: c-basic/structure.md
