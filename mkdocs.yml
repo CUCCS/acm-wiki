@@ -12,7 +12,7 @@ nav:
       - 函数: c-basic/function.md
   - 2020春集训安排:
       - 课程安排: 2020Spring.md  
-
+  
 ## Theme
 theme:
   name: 'material'
