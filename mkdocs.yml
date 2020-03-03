@@ -5,13 +5,22 @@ nav:
   - 首页:
       - 关于本项目: index.md
       - F.A.Q: FAQ.md
+  - 2020春集训安排:
+      - 课程安排: 2020Spring.md  
   - C语言基础:
       - 基本语法: c-basic/grammar.md
       - 逻辑结构: c-basic/structure.md
       - 数组: c-basic/array.md
       - 函数: c-basic/function.md
-  - 2020春集训安排:
-      - 课程安排: 2020Spring.md  
+  - STL:
+      - STL简介: STL/introduction.md
+      - Vector: STL/vector.md
+      - Map: STL/map.md
+      - Set: STL/set.md
+      - Queue: STL/queue.md
+      - List: STL/list.md
+      - Bitset: STL/bitset.md
+
   
 ## Theme
 theme:
