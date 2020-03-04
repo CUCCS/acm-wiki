@@ -12,6 +12,11 @@ nav:
       - 逻辑结构: c-basic/structure.md
       - 数组: c-basic/array.md
       - 函数: c-basic/function.md
+  - 基础算法:
+      - 简介: basic-algorithm/introduction.md
+      - 二分: basic-algorithm/binary-research.md
+      - 尺取: basic-algorithm/two-pointers.md
+      - 倍增: basic-algorithm/adding-doubling.md
   - STL:
       - STL简介: STL/introduction.md
       - Vector: STL/vector.md
