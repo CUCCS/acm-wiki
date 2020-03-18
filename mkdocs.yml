@@ -31,7 +31,6 @@ nav:
       - 差分约束: graph/difference-constraint.md
       - 二分图: graph/bipartite-graph.md
 
-  
 ## Theme
 theme:
   name: 'material'
