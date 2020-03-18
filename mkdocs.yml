@@ -3,7 +3,8 @@ site_name: CUC ACM-Wiki
 # Contents
 nav:
   - 首页:
-      - 关于本项目: index.md
+      - 主页: index.md
+      - 关于本项目: intro.md
       - F.A.Q: FAQ.md
   - 2020春季集训:
       - 课程安排: 2020Spring.md  
@@ -25,6 +26,10 @@ nav:
       - Queue: STL/queue.md
       - List: STL/list.md
       - Bitset: STL/bitset.md
+  - 图论:
+      - 图论简介: graph/intro.md
+      - 差分约束: graph/difference-constraint.md
+      - 二分图: graph/bipartite-graph.md
 
   
 ## Theme
