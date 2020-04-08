@@ -9,7 +9,7 @@
 |第1周|2月26日  14:00-18:00|2020春季训练开营仪式|黄玮 老师|
 |周三|2月26日   14:00-18:00| [时间复杂度、空间复杂度、结构体、高精度运算、INT128、sort的应用](https://www.bilibili.com/video/av91660459?t=1018) |王明月/吕九洋|
 |周六|2月29日   14:00-18:00|[STL简单结构和用法（map,set,multiset,优先队列，哈希表）、bitset](https://blog.csdn.net/Cross_Entropy/article/details/104560014)|刘宗鑫|
-|第2周|3月4日   14:00-18:00|[尺取、二分、STL里的二分、倍增](https://cuccs.github.io/acm-wiki/basic-algorithm/introduction/)|李晨曦|
+|第2周|3月4日   14:00-18:00|尺取、二分、STL里的二分、倍增|李晨曦|
 ||3月7日    14:00-18:00|[树和图的结构、存储、遍历、简单介绍并查集](https://www.bilibili.com/video/av93965143)|王冬霞/宗子钰|
 |第3周|3月11日（周三）13:30-17:00|[树和图的DFS、BFS、队列、栈（STL）](https://www.bilibili.com/video/av95255042)|荆薇|
 ||3月14日（周六）13:30-17:00|[最小生成树、最短路径](https://www.bilibili.com/video/av95813313)|荆薇|
