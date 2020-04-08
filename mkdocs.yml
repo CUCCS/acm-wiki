@@ -30,6 +30,10 @@ nav:
       - 图论简介: graph/intro.md
       - 差分约束: graph/difference-constraint.md
       - 二分图: graph/bipartite-graph.md
+  - 动态规划:
+      - DP简介: dp/intro.md
+      - 数位DP: dp/DigitalDP.md
+      - 计数DP: dp/CountingDP.md
 
 ## Theme
 theme:
