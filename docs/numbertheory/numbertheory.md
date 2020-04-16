@@ -18,17 +18,17 @@
 - 不超过x的质数的总数π(x)近似于x/ln(x)
 - π(2)=1，π(3.5)=2，π(10)=4
   
-  <img src="https://cdn.britannica.com/14/77714-004-D28E8805/Prime-number-theorem.jpg">
+    <img src="https://cdn.britannica.com/14/77714-004-D28E8805/Prime-number-theorem.jpg">
 
 ### 素数筛法
 
 - 求$1$到$n$之间内的所有素数
   
-  | 方法 | 时间复杂度 |
-  | ---- | --------- |
-  | $sqrt(n)$的判别 | $O(n*sqrt(n))$ |
-  | 普通筛 / 埃氏筛法 | $O(nloglogn)$ |
-  | 线性筛 / 欧拉筛法 | $O(n)$ |
+    | 方法 | 时间复杂度 |
+    | ---- | --------- |
+    | $sqrt(n)$的判别 | $O(n*sqrt(n))$ |
+    | 普通筛 / 埃氏筛法 | $O(nloglogn)$ |
+    | 线性筛 / 欧拉筛法 | $O(n)$ |
 
 ### 素数测试-Miller Rabin
 
@@ -69,7 +69,7 @@
     return “composite”
     return “probably prime”
     ```
-- [video tutorial](https://www.youtube.com/watch?v=qdylJqXCDGs)
+8. [video tutorial](https://www.youtube.com/watch?v=qdylJqXCDGs)
 
 #### Miller Rabin模板
 
@@ -167,9 +167,9 @@ bool Miller_Rabin(ll n){
 - 构造一个**伪随机数序列**，然后取相邻的两项来求gcd。Pollard设计了一个函数: $f(x)=(x^2+c)\mod N$ 其中c是一个随机的常数。选取$x_1$，令$x_2=f(x_1),x_3=f(x_2),...,x_i=f(x_{i-1})$
 - Floyd判圈。在一定范围内，这个数列是随机的；但也有死循环的情况。龟兔赛跑：兔子比乌龟快一倍，同起点同时开始，当兔子“追上”乌龟时，兔子一定跑了刚好一圈。
   
-  <img src="https://img-blog.csdn.net/20150503163841553" width=50%>
+    <img src="https://img-blog.csdn.net/20150503163841553" width=50%>
 
-6. [brent判环(更高效)](https://www.cnblogs.com/book-book/p/6349362.html)
+- [brent判环(更高效)](https://www.cnblogs.com/book-book/p/6349362.html)
 
 #### kuangbin的模板
 
@@ -262,7 +262,7 @@ void findfac(ll n,int k){
 - 欧拉定理：$a^{\varphi(p)}≡1 \ mod \ p，a和p互质$
 - 拓展欧拉降幂
   
-  $a^b\equiv \begin{cases} a^{b\bmod\varphi(p)},&\gcd(a,p)=1\\ a^b,&\gcd(a,p)\ne1,b<\varphi(p)\\ a^{b\bmod\varphi(p)+\varphi(p)},&\gcd(a,p)\ne1,b\ge\varphi(p) \end{cases} \pmod p$
+    $a^b\equiv \begin{cases} a^{b\bmod\varphi(p)},&\gcd(a,p)=1\\ a^b,&\gcd(a,p)\ne1,b<\varphi(p)\\ a^{b\bmod\varphi(p)+\varphi(p)},&\gcd(a,p)\ne1,b\ge\varphi(p) \end{cases} \pmod p$
 
 - 假设$k=\frac{b}{\varphi(p)},h=bmod\varphi(p)$，则$a^b=a^{k*\varphi(p)+h}=(a^{\varphi(p)})^k*a^h=a^h(modp)$
 - [欧拉降幂公式的证明](https://blog.csdn.net/weixin_38686780/article/details/81272848)
@@ -299,7 +299,8 @@ void findfac(ll n,int k){
     // 快速幂计算 a是底数，ans是指数，p是模数
     qPow(a,ans,p);
     ```
-### 欧拉函数常用性质和公式
+
+## 欧拉函数常用性质和公式
 
 - $对于质数p，\varphi(p)=p-1$
 - $\sum_{d|n}\varphi(d)=n\quad，包括1和n本身$
@@ -359,7 +360,7 @@ void findfac(ll n,int k){
 
 ### 模数两两不互质
 
-- 思路
+#### 思路
 
   1. $通过先解出前两个方程的解，如将前两个方程$
   2. $x≡a_1 (mod n_1)，x≡a_2 (mod n_2)化为x≡A(mod N)$
@@ -367,38 +368,45 @@ void findfac(ll n,int k){
   4. $继续联立求解，直到最后一个方程解完为止$
 
 - [洛谷 P4777 模板题](https://www.luogu.com.cn/problem/P4777)
-- 求解
-  
-    > $x≡a_1 (mod n_1)$
-    > 
-    > $x≡a_2 (mod n_2)$
 
-    - $可化为 x=a_1+k_1*n_1 ①; x=a_2+k_2*n_2;$
-    - $消x，可得a_1+k_1*n_1=a_2+k_2*n_2$ 
-        
-      $移项得到k_1*n_1+(-k_2)*n_2=a_2-a_1$
-    - $令d=a_2-a_1, x=k_1, y=-k_2;$
-    
-      $上式化为 x*n_1+y*n_2=d ③$
-    - $令g=gcd(n_1,n_2),用拓展欧几里得解线性方程$
-    
-      $(此处求解x_1，y_1)，x_1*n_1+y_1*n_2=g$
-    - $③式可化为  x_1*(d/g)*n_1+y_1*(d/g)*n_2 = g*(d/g)$
-    - $即x=x_1*(d/g)=k_1 ; y=y_1*(d/g)=-k_2;$
-    
-      $即k_1=x_1*(d/g); k_2=-y_1*(d/g)$
-    - $一组通解为 k_1=k_1+(n_2/g)*T; k_2=k_2-(n_1/g)*T$
-    - $要求使所求得的解最小且为正整数，$
-    
-      $则可以根据 k_1的通解形式求得(消掉T的影响)$
-    - $k_1=(k_1 mod (n_2/g)+(n_2/g)) mod (n_2/g) ②，$
-    
-      $即k_1=((x_1*(d/g)) mod (n_2/g)+(n_2/g)) mod (n_2/g)$
-    - $将求出的k_1带入①，可得x的解，$
-    
-      $作为下一次的A，N为lcm(n1,n2)，$
-    
-      $即A为合并后的a，N为合并后的n$
+#### 求解过程
+  
+> $x≡a_1 (mod n_1)$
+> 
+> $x≡a_2 (mod n_2)$
+
+- $可化为 x=a_1+k_1*n_1 ①; x=a_2+k_2*n_2;$
+- $消x，可得a_1+k_1*n_1=a_2+k_2*n_2$ 
+  
+    $移项得到k_1*n_1+(-k_2)*n_2=a_2-a_1$
+
+- $令d=a_2-a_1, x=k_1, y=-k_2;$
+  
+    $上式化为 x*n_1+y*n_2=d ③$
+
+- $令g=gcd(n_1,n_2),用拓展欧几里得解线性方程$
+  
+    $(此处求解x_1，y_1)，x_1*n_1+y_1*n_2=g$
+
+- $③式可化为  x_1*(d/g)*n_1+y_1*(d/g)*n_2 = g*(d/g)$
+- $即x=x_1*(d/g)=k_1 ; y=y_1*(d/g)=-k_2;$
+  
+    $即k_1=x_1*(d/g); k_2=-y_1*(d/g)$
+
+- $一组通解为 k_1=k_1+(n_2/g)*T; k_2=k_2-(n_1/g)*T$
+- $要求使所求得的解最小且为正整数，$
+  
+    $则可以根据 k_1的通解形式求得(消掉T的影响)$
+
+- $k_1=(k_1 mod (n_2/g)+(n_2/g)) mod (n_2/g) ②，$
+  
+    $即k_1=((x_1*(d/g)) mod (n_2/g)+(n_2/g)) mod (n_2/g)$
+
+- $将求出的k_1带入①，可得x的解，$
+  
+    $作为下一次的A，N为lcm(n1,n2)，$
+  
+    $即A为合并后的a，N为合并后的n$
 
 ### 模板[不唯一]
 
@@ -433,12 +441,14 @@ ll excrt(){
 
 - 费马大定理：
   
-  $当整数n >2时，$
+    $当整数n >2时，$
 
-  $关于x, y, z的方程 x^n + y^n = z^n 没有正整数解$
+    $关于x, y, z的方程 x^n + y^n = z^n 没有正整数解$
+
 - 实数域不可拆分多项式：
   
-  $一次多项式和二次多项式(b^2<4ac)$
+    $一次多项式和二次多项式(b^2<4ac)$
+  
   - 艾森斯坦因判别法：有理数域不可约，即一定要整数解
 - 勾股数
   - 任意大于2的整数都可以找出另外两个数构成勾股数

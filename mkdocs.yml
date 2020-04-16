@@ -35,6 +35,7 @@ nav:
       - 数位DP: dp/DigitalDP.md
       - 计数DP: dp/CountingDP.md
   - 数论:
+      - 数论简介: numbertheory/intro.md
       - 数论: numbertheory/numbertheory.md
 
 ## Theme
