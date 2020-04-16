@@ -261,7 +261,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../intro/" class="md-tabs__link md-tabs__link--active">
           数论
         </a>
       
@@ -785,6 +785,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../intro/" title="数论简介" class="md-nav__link">
+      数论简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -944,15 +956,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_12" class="md-nav__link">
     欧拉函数常用性质和公式
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1003,10 +1015,30 @@
     模数两两不互质
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_18" class="md-nav__link">
+    思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    求解过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
     模板[不唯一]
   </a>
   
@@ -1018,7 +1050,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     定理&amp;猜想&amp;公式
   </a>
   
@@ -1191,15 +1223,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_12" class="md-nav__link">
     欧拉函数常用性质和公式
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1250,10 +1282,30 @@
     模数两两不互质
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_18" class="md-nav__link">
+    思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    求解过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
     模板[不唯一]
   </a>
   
@@ -1265,7 +1317,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     定理&amp;猜想&amp;公式
   </a>
   
@@ -1302,13 +1354,15 @@
 <ul>
 <li>质数分布密度</li>
 <li>不超过x的质数的总数π(x)近似于x/ln(x)</li>
-<li>π(2)=1，π(3.5)=2，π(10)=4</li>
-</ul>
+<li>
+<p>π(2)=1，π(3.5)=2，π(10)=4</p>
 <p><img src="https://cdn.britannica.com/14/77714-004-D28E8805/Prime-number-theorem.jpg"></p>
+</li>
+</ul>
 <h3 id="_4">素数筛法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>求<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>到<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>之间内的所有素数</li>
-</ul>
+<li>
+<p>求<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>到<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>之间内的所有素数</p>
 <table>
 <thead>
 <tr>
@@ -1331,6 +1385,8 @@
 </tr>
 </tbody>
 </table>
+</li>
+</ul>
 <h3 id="-miller-rabin">素数测试-Miller Rabin<a class="headerlink" href="#-miller-rabin" title="Permanent link">&para;</a></h3>
 <ul>
 <li>哥德巴赫猜想：任何大于2的偶数都能够写成两个质数相加的形式</li>
@@ -1555,12 +1611,14 @@ return “probably prime”
 <li>假如一个班上有<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>个人，如果找到一个人的生日是x月x日，这个概率会相当低；如果想找两个生日相同，当<span><span class="MathJax_Preview">k=23</span><script type="math/tex">k=23</script></span>，两个人在同一天生日的概率至少有<span><span class="MathJax_Preview">50\%</span><script type="math/tex">50\%</script></span>，<span><span class="MathJax_Preview">k=60</span><script type="math/tex">k=60</script></span>时，生日有重复的现象的概率<span><span class="MathJax_Preview">\text{P}(k) ≈0.9999</span><script type="math/tex">\text{P}(k) ≈0.9999</script></span></li>
 <li>最大公约数一定是某个数的约数。通过选择适当的<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>使得<span><span class="MathJax_Preview">\gcd(k,n)&gt;1</span><script type="math/tex">\gcd(k,n)>1</script></span>，则求得的<span><span class="MathJax_Preview">\gcd(k,n)</span><script type="math/tex">\gcd(k,n)</script></span>是<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的约数。则选取一组数<span><span class="MathJax_Preview">x_1,x_2,x_3,...x_n</span><script type="math/tex">x_1,x_2,x_3,...x_n</script></span>，若有<span><span class="MathJax_Preview">gcd(|x_i-x_j|,n)&gt;1</span><script type="math/tex">gcd(|x_i-x_j|,n)>1</script></span>，则称<span><span class="MathJax_Preview">gcd(|x_i-x_j|,n)</span><script type="math/tex">gcd(|x_i-x_j|,n)</script></span>是<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的一个因子。</li>
 <li>构造一个<strong>伪随机数序列</strong>，然后取相邻的两项来求gcd。Pollard设计了一个函数: <span><span class="MathJax_Preview">f(x)=(x^2+c)\mod N</span><script type="math/tex">f(x)=(x^2+c)\mod N</script></span> 其中c是一个随机的常数。选取<span><span class="MathJax_Preview">x_1</span><script type="math/tex">x_1</script></span>，令<span><span class="MathJax_Preview">x_2=f(x_1),x_3=f(x_2),...,x_i=f(x_{i-1})</span><script type="math/tex">x_2=f(x_1),x_3=f(x_2),...,x_i=f(x_{i-1})</script></span></li>
-<li>Floyd判圈。在一定范围内，这个数列是随机的；但也有死循环的情况。龟兔赛跑：兔子比乌龟快一倍，同起点同时开始，当兔子“追上”乌龟时，兔子一定跑了刚好一圈。</li>
-</ul>
+<li>
+<p>Floyd判圈。在一定范围内，这个数列是随机的；但也有死循环的情况。龟兔赛跑：兔子比乌龟快一倍，同起点同时开始，当兔子“追上”乌龟时，兔子一定跑了刚好一圈。</p>
 <p><img src="https://img-blog.csdn.net/20150503163841553" width=50%></p>
-<ol>
-<li><a href="https://www.cnblogs.com/book-book/p/6349362.html">brent判环(更高效)</a></li>
-</ol>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/book-book/p/6349362.html">brent判环(更高效)</a></p>
+</li>
+</ul>
 <h4 id="kuangbin">kuangbin的模板<a class="headerlink" href="#kuangbin" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1718,11 +1776,13 @@ return “probably prime”
 <h3 id="_10">理论依据<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <ul>
 <li>欧拉定理：<span><span class="MathJax_Preview">a^{\varphi(p)}≡1 \ mod \ p，a和p互质</span><script type="math/tex">a^{\varphi(p)}≡1 \ mod \ p，a和p互质</script></span></li>
-<li>拓展欧拉降幂</li>
-</ul>
+<li>
+<p>拓展欧拉降幂</p>
 <p><span><span class="MathJax_Preview">a^b\equiv \begin{cases} a^{b\bmod\varphi(p)},&amp;\gcd(a,p)=1\\ a^b,&amp;\gcd(a,p)\ne1,b&lt;\varphi(p)\\ a^{b\bmod\varphi(p)+\varphi(p)},&amp;\gcd(a,p)\ne1,b\ge\varphi(p) \end{cases} \pmod p</span><script type="math/tex">a^b\equiv \begin{cases} a^{b\bmod\varphi(p)},&\gcd(a,p)=1\\ a^b,&\gcd(a,p)\ne1,b<\varphi(p)\\ a^{b\bmod\varphi(p)+\varphi(p)},&\gcd(a,p)\ne1,b\ge\varphi(p) \end{cases} \pmod p</script></span></p>
-<ul>
-<li>假设<span><span class="MathJax_Preview">k=\frac{b}{\varphi(p)},h=bmod\varphi(p)</span><script type="math/tex">k=\frac{b}{\varphi(p)},h=bmod\varphi(p)</script></span>，则<span><span class="MathJax_Preview">a^b=a^{k*\varphi(p)+h}=(a^{\varphi(p)})^k*a^h=a^h(modp)</span><script type="math/tex">a^b=a^{k*\varphi(p)+h}=(a^{\varphi(p)})^k*a^h=a^h(modp)</script></span></li>
+</li>
+<li>
+<p>假设<span><span class="MathJax_Preview">k=\frac{b}{\varphi(p)},h=bmod\varphi(p)</span><script type="math/tex">k=\frac{b}{\varphi(p)},h=bmod\varphi(p)</script></span>，则<span><span class="MathJax_Preview">a^b=a^{k*\varphi(p)+h}=(a^{\varphi(p)})^k*a^h=a^h(modp)</span><script type="math/tex">a^b=a^{k*\varphi(p)+h}=(a^{\varphi(p)})^k*a^h=a^h(modp)</script></span></p>
+</li>
 <li><a href="https://blog.csdn.net/weixin_38686780/article/details/81272848">欧拉降幂公式的证明</a></li>
 </ul>
 <h3 id="_11">代码模板<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
@@ -1776,11 +1836,11 @@ return “probably prime”
 </code></pre></div>
 </td></tr></table>
 
-<h3 id="_12">欧拉函数常用性质和公式<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 </li>
-<li>
-<p><span><span class="MathJax_Preview">对于质数p，\varphi(p)=p-1</span><script type="math/tex">对于质数p，\varphi(p)=p-1</script></span></p>
-</li>
+</ul>
+<h2 id="_12">欧拉函数常用性质和公式<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span><span class="MathJax_Preview">对于质数p，\varphi(p)=p-1</span><script type="math/tex">对于质数p，\varphi(p)=p-1</script></span></li>
 <li><span><span class="MathJax_Preview">\sum_{d|n}\varphi(d)=n\quad，包括1和n本身</span><script type="math/tex">\sum_{d|n}\varphi(d)=n\quad，包括1和n本身</script></span></li>
 <li><span><span class="MathJax_Preview">\sum_{gcd(d,n)==1}d=\varphi(n)*n/2</span><script type="math/tex">\sum_{gcd(d,n)==1}d=\varphi(n)*n/2</script></span></li>
 <li><span><span class="MathJax_Preview">\sum_{i=1}^{n-1}gcd(i,n)=\sum_{d|n}d\varphi(n|d)</span><script type="math/tex">\sum_{i=1}^{n-1}gcd(i,n)=\sum_{d|n}d\varphi(n|d)</script></span></li>
@@ -1857,13 +1917,9 @@ return “probably prime”
 <li><span><span class="MathJax_Preview">x=\sum_{i=1}^ka_iy_iz_i，最后计算x=x(modN)得到结果</span><script type="math/tex">x=\sum_{i=1}^ka_iy_iz_i，最后计算x=x(modN)得到结果</script></span></li>
 </ol>
 <h3 id="_17">模数两两不互质<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>思路</p>
-</li>
-<li>
-<p><span><span class="MathJax_Preview">通过先解出前两个方程的解，如将前两个方程</span><script type="math/tex">通过先解出前两个方程的解，如将前两个方程</script></span></p>
-</li>
+<h4 id="_18">思路<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<ol>
+<li><span><span class="MathJax_Preview">通过先解出前两个方程的解，如将前两个方程</span><script type="math/tex">通过先解出前两个方程的解，如将前两个方程</script></span></li>
 <li><span><span class="MathJax_Preview">x≡a_1 (mod n_1)，x≡a_2 (mod n_2)化为x≡A(mod N)</span><script type="math/tex">x≡a_1 (mod n_1)，x≡a_2 (mod n_2)化为x≡A(mod N)</script></span></li>
 <li><span><span class="MathJax_Preview">将此方程和x≡a_3 (mod n_3)</span><script type="math/tex">将此方程和x≡a_3 (mod n_3)</script></span></li>
 <li>
@@ -1872,35 +1928,51 @@ return “probably prime”
 <li>
 <p><a href="https://www.luogu.com.cn/problem/P4777">洛谷 P4777 模板题</a></p>
 </li>
-<li>
-<p>求解</p>
+</ol>
+<h4 id="_19">求解过程<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p><span><span class="MathJax_Preview">x≡a_1 (mod n_1)</span><script type="math/tex">x≡a_1 (mod n_1)</script></span></p>
 <p><span><span class="MathJax_Preview">x≡a_2 (mod n_2)</span><script type="math/tex">x≡a_2 (mod n_2)</script></span></p>
 </blockquote>
 <ul>
 <li><span><span class="MathJax_Preview">可化为 x=a_1+k_1*n_1 ①; x=a_2+k_2*n_2;</span><script type="math/tex">可化为 x=a_1+k_1*n_1 ①; x=a_2+k_2*n_2;</script></span></li>
-<li><span><span class="MathJax_Preview">消x，可得a_1+k_1*n_1=a_2+k_2*n_2</span><script type="math/tex">消x，可得a_1+k_1*n_1=a_2+k_2*n_2</script></span> </li>
-</ul>
-<p><span><span class="MathJax_Preview">移项得到k_1*n_1+(-k_2)*n_2=a_2-a_1</span><script type="math/tex">移项得到k_1*n_1+(-k_2)*n_2=a_2-a_1</script></span>
-- <span><span class="MathJax_Preview">令d=a_2-a_1, x=k_1, y=-k_2;</span><script type="math/tex">令d=a_2-a_1, x=k_1, y=-k_2;</script></span></p>
-<p><span><span class="MathJax_Preview">上式化为 x*n_1+y*n_2=d ③</span><script type="math/tex">上式化为 x*n_1+y*n_2=d ③</script></span>
-- <span><span class="MathJax_Preview">令g=gcd(n_1,n_2),用拓展欧几里得解线性方程</span><script type="math/tex">令g=gcd(n_1,n_2),用拓展欧几里得解线性方程</script></span></p>
-<p><span><span class="MathJax_Preview">(此处求解x_1，y_1)，x_1*n_1+y_1*n_2=g</span><script type="math/tex">(此处求解x_1，y_1)，x_1*n_1+y_1*n_2=g</script></span>
-- <span><span class="MathJax_Preview">③式可化为  x_1*(d/g)*n_1+y_1*(d/g)*n_2 = g*(d/g)</span><script type="math/tex">③式可化为  x_1*(d/g)*n_1+y_1*(d/g)*n_2 = g*(d/g)</script></span>
-- <span><span class="MathJax_Preview">即x=x_1*(d/g)=k_1 ; y=y_1*(d/g)=-k_2;</span><script type="math/tex">即x=x_1*(d/g)=k_1 ; y=y_1*(d/g)=-k_2;</script></span></p>
-<p><span><span class="MathJax_Preview">即k_1=x_1*(d/g); k_2=-y_1*(d/g)</span><script type="math/tex">即k_1=x_1*(d/g); k_2=-y_1*(d/g)</script></span>
-- <span><span class="MathJax_Preview">一组通解为 k_1=k_1+(n_2/g)*T; k_2=k_2-(n_1/g)*T</span><script type="math/tex">一组通解为 k_1=k_1+(n_2/g)*T; k_2=k_2-(n_1/g)*T</script></span>
-- <span><span class="MathJax_Preview">要求使所求得的解最小且为正整数，</span><script type="math/tex">要求使所求得的解最小且为正整数，</script></span></p>
-<p><span><span class="MathJax_Preview">则可以根据 k_1的通解形式求得(消掉T的影响)</span><script type="math/tex">则可以根据 k_1的通解形式求得(消掉T的影响)</script></span>
-- <span><span class="MathJax_Preview">k_1=(k_1 mod (n_2/g)+(n_2/g)) mod (n_2/g) ②，</span><script type="math/tex">k_1=(k_1 mod (n_2/g)+(n_2/g)) mod (n_2/g) ②，</script></span></p>
-<p><span><span class="MathJax_Preview">即k_1=((x_1*(d/g)) mod (n_2/g)+(n_2/g)) mod (n_2/g)</span><script type="math/tex">即k_1=((x_1*(d/g)) mod (n_2/g)+(n_2/g)) mod (n_2/g)</script></span>
-- <span><span class="MathJax_Preview">将求出的k_1带入①，可得x的解，</span><script type="math/tex">将求出的k_1带入①，可得x的解，</script></span></p>
+<li>
+<p><span><span class="MathJax_Preview">消x，可得a_1+k_1*n_1=a_2+k_2*n_2</span><script type="math/tex">消x，可得a_1+k_1*n_1=a_2+k_2*n_2</script></span> </p>
+<p><span><span class="MathJax_Preview">移项得到k_1*n_1+(-k_2)*n_2=a_2-a_1</span><script type="math/tex">移项得到k_1*n_1+(-k_2)*n_2=a_2-a_1</script></span></p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">令d=a_2-a_1, x=k_1, y=-k_2;</span><script type="math/tex">令d=a_2-a_1, x=k_1, y=-k_2;</script></span></p>
+<p><span><span class="MathJax_Preview">上式化为 x*n_1+y*n_2=d ③</span><script type="math/tex">上式化为 x*n_1+y*n_2=d ③</script></span></p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">令g=gcd(n_1,n_2),用拓展欧几里得解线性方程</span><script type="math/tex">令g=gcd(n_1,n_2),用拓展欧几里得解线性方程</script></span></p>
+<p><span><span class="MathJax_Preview">(此处求解x_1，y_1)，x_1*n_1+y_1*n_2=g</span><script type="math/tex">(此处求解x_1，y_1)，x_1*n_1+y_1*n_2=g</script></span></p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">③式可化为  x_1*(d/g)*n_1+y_1*(d/g)*n_2 = g*(d/g)</span><script type="math/tex">③式可化为  x_1*(d/g)*n_1+y_1*(d/g)*n_2 = g*(d/g)</script></span></p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">即x=x_1*(d/g)=k_1 ; y=y_1*(d/g)=-k_2;</span><script type="math/tex">即x=x_1*(d/g)=k_1 ; y=y_1*(d/g)=-k_2;</script></span></p>
+<p><span><span class="MathJax_Preview">即k_1=x_1*(d/g); k_2=-y_1*(d/g)</span><script type="math/tex">即k_1=x_1*(d/g); k_2=-y_1*(d/g)</script></span></p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">一组通解为 k_1=k_1+(n_2/g)*T; k_2=k_2-(n_1/g)*T</span><script type="math/tex">一组通解为 k_1=k_1+(n_2/g)*T; k_2=k_2-(n_1/g)*T</script></span></p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">要求使所求得的解最小且为正整数，</span><script type="math/tex">要求使所求得的解最小且为正整数，</script></span></p>
+<p><span><span class="MathJax_Preview">则可以根据 k_1的通解形式求得(消掉T的影响)</span><script type="math/tex">则可以根据 k_1的通解形式求得(消掉T的影响)</script></span></p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">k_1=(k_1 mod (n_2/g)+(n_2/g)) mod (n_2/g) ②，</span><script type="math/tex">k_1=(k_1 mod (n_2/g)+(n_2/g)) mod (n_2/g) ②，</script></span></p>
+<p><span><span class="MathJax_Preview">即k_1=((x_1*(d/g)) mod (n_2/g)+(n_2/g)) mod (n_2/g)</span><script type="math/tex">即k_1=((x_1*(d/g)) mod (n_2/g)+(n_2/g)) mod (n_2/g)</script></span></p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">将求出的k_1带入①，可得x的解，</span><script type="math/tex">将求出的k_1带入①，可得x的解，</script></span></p>
 <p><span><span class="MathJax_Preview">作为下一次的A，N为lcm(n1,n2)，</span><script type="math/tex">作为下一次的A，N为lcm(n1,n2)，</script></span></p>
 <p><span><span class="MathJax_Preview">即A为合并后的a，N为合并后的n</span><script type="math/tex">即A为合并后的a，N为合并后的n</script></span></p>
 </li>
 </ul>
-<h3 id="_18">模板[不唯一]<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<h3 id="_20">模板[不唯一]<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1951,24 +2023,30 @@ return “probably prime”
 </code></pre></div>
 </td></tr></table>
 
-<h2 id="_19">定理&amp;猜想&amp;公式<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<h2 id="_21">定理&amp;猜想&amp;公式<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
 <ul>
-<li>费马大定理：</li>
-</ul>
+<li>
+<p>费马大定理：</p>
 <p><span><span class="MathJax_Preview">当整数n &gt;2时，</span><script type="math/tex">当整数n >2时，</script></span></p>
-<p><span><span class="MathJax_Preview">关于x, y, z的方程 x^n + y^n = z^n 没有正整数解</span><script type="math/tex">关于x, y, z的方程 x^n + y^n = z^n 没有正整数解</script></span>
-- 实数域不可拆分多项式：</p>
-<p><span><span class="MathJax_Preview">一次多项式和二次多项式(b^2&lt;4ac)</span><script type="math/tex">一次多项式和二次多项式(b^2<4ac)</script></span>
-  - 艾森斯坦因判别法：有理数域不可约，即一定要整数解
-- 勾股数
-  - 任意大于2的整数都可以找出另外两个数构成勾股数
-  - 本原勾股数
-- 四色猜想
-- 康威常数
-- 日期转化成星期
-  - 蔡勒公式
-  - 基姆拉尔森计算公式
-- 斯特林公式 - 阶乘</p>
+<p><span><span class="MathJax_Preview">关于x, y, z的方程 x^n + y^n = z^n 没有正整数解</span><script type="math/tex">关于x, y, z的方程 x^n + y^n = z^n 没有正整数解</script></span></p>
+</li>
+<li>
+<p>实数域不可拆分多项式：</p>
+<p><span><span class="MathJax_Preview">一次多项式和二次多项式(b^2&lt;4ac)</span><script type="math/tex">一次多项式和二次多项式(b^2<4ac)</script></span></p>
+</li>
+<li>
+<p>艾森斯坦因判别法：有理数域不可约，即一定要整数解</p>
+</li>
+<li>勾股数</li>
+<li>任意大于2的整数都可以找出另外两个数构成勾股数</li>
+<li>本原勾股数</li>
+<li>四色猜想</li>
+<li>康威常数</li>
+<li>日期转化成星期</li>
+<li>蔡勒公式</li>
+<li>基姆拉尔森计算公式</li>
+<li>斯特林公式 - 阶乘</li>
+</ul>
                 
                   
                 
@@ -1990,7 +2068,7 @@ return “probably prime”
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../dp/CountingDP/" title="计数DP" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../intro/" title="数论简介" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1999,7 +2077,7 @@ return “probably prime”
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                计数DP
+                数论简介
               </span>
             </div>
           </a>
