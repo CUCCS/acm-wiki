@@ -3,15 +3,40 @@ site_name: CUC ACM-Wiki
 # Contents
 nav:
   - 首页:
-      - 关于本项目: index.md
-      - 关于mkdocs: mkdocs.md
+      - 主页: index.md
+      - 关于本项目: intro.md
+      - F.A.Q: FAQ.md
+  - 2020春季集训:
+      - 课程安排: 2020Spring.md
   - C语言基础:
       - 基本语法: c-basic/grammar.md
       - 逻辑结构: c-basic/structure.md
       - 数组: c-basic/array.md
       - 函数: c-basic/function.md
-  - 2020春集训安排:
-      - 讲师名单: TeacherName.md
+  - 基础算法:
+      - 简介: basic-algorithm/introduction.md
+      - 二分: basic-algorithm/binary-research.md
+      - 尺取: basic-algorithm/two-pointers.md
+      - 倍增: basic-algorithm/adding-doubling.md
+  - STL:
+      - STL简介: STL/introduction.md
+      - Vector: STL/vector.md
+      - Map: STL/map.md
+      - Set: STL/set.md
+      - Queue: STL/queue.md
+      - List: STL/list.md
+      - Bitset: STL/bitset.md
+  - 图论:
+      - 图论简介: graph/intro.md
+      - 差分约束: graph/difference-constraint.md
+      - 二分图: graph/bipartite-graph.md
+  - 动态规划:
+      - DP简介: dp/intro.md
+      - 数位DP: dp/DigitalDP.md
+      - 计数DP: dp/CountingDP.md
+  - 数论:
+      - 数论简介: numbertheory/intro.md
+      - 数论: numbertheory/numbertheory.md
 
 ## Theme
 theme:

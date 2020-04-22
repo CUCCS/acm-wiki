@@ -1,7 +1,8 @@
-# 程序设计基本思路
+# 逻辑结构
+## 程序设计基本思路
 输入 --> 计算处理 --> 输出  
 
-# 基本结构
+## 基本结构
 ```cpp
 #include <stdio.h> // 头文件
 
@@ -11,9 +12,9 @@ int main() // 主函数
     return 0; // 返回0，主函数不能返回其他值
 }
 ```
-# 顺序结构
-# 选择结构
-## if
+## 顺序结构
+## 选择结构
+### if
 ```cpp
     if(条件表达式) {
         语句1;
@@ -26,7 +27,7 @@ int main() // 主函数
         语句4;
     }
 ```
-## switch
+### switch
 ```cpp
 switch(表达式)
 {
@@ -44,25 +45,25 @@ switch(表达式)
 ```
 * 不要忘记```break```和每种情况后的```:```
 * ```switch```语句的对象只能是```int``` ```char``` ```bool```类型的数据
-# 循环结构
-## for
+## 循环结构
+### for
 ```c
 for ( init; condition; increment ) {
    statement(s);
 }
 ```
-## while
+### while
 ```c
 while ( condition ) {
    statement(s);
 }
 ```
-## do-while
+### do-while
 ```c
 do {
    statement(s); // 语句至少会被执行一次
 }while( condition );
 ```
 
-## 嵌套循环
-## 死循环
+### 嵌套循环
+### 死循环
