@@ -37,6 +37,8 @@ nav:
   - 数论:
       - 数论简介: numbertheory/intro.md
       - 数论: numbertheory/numbertheory.md
+  - 数据结构:
+      - 树状数组: data-struct/fenwick-tree.md
 
 ## Theme
 theme:
