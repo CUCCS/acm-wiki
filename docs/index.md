@@ -8,5 +8,6 @@
   - [STL](https://cuccs.github.io/acm-wiki/STL/introduction/)
   - [图论](https://cuccs.github.io/acm-wiki/graph/intro/)
   - [DP](https://cuccs.github.io/acm-wiki/dp/intro/)
-  - [数论](https://cuccs.github.io/acm-wiki/numbertheory/intro)
+  - [数论](https://cuccs.github.io/acm-wiki/math/intro)
+  - [数据结构](https://cuccs.github.io/acm-wiki/data-struct/intro/)
   - [如何参与本项目](https://cuccs.github.io/acm-wiki/intro/)
