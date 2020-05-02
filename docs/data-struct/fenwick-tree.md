@@ -1,5 +1,5 @@
 ---
-title: 数据结构-树状数组
+title: 数据结构 - 树状数组
 ---
 
 ## 主要用途
@@ -8,6 +8,7 @@ title: 数据结构-树状数组
 - 区间修改，单点查询
 - 区间修改，区间查询
 - ~~单点修改，单点查询~~ (ΦдΦ╬)
+- 求逆序对
 
 ## 原理
 
@@ -130,6 +131,13 @@ procedure getsum(x)
     return ans;
   }
   ```
+
+## 例题
+
+- [树状数组 1：单点修改，区间查询](https://loj.ac/problem/130)
+- [树状数组 2：区间修改，单点查询](https://loj.ac/problem/131)
+- [树状数组 3：区间修改，区间查询](https://loj.ac/problem/132)
+- [求逆序对：Ultra-QuickSort](http://poj.org/problem?id=2299)
 
 ## 参考资料
 
