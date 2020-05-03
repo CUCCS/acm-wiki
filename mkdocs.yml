@@ -3,11 +3,11 @@ site_name: CUC ACM-Wiki
 # Contents
 nav:
   - 首页:
-      - 主页: index.md
-      - 关于本项目: intro.md
-      - F.A.Q: FAQ.md
+      - 主页: index/index.md
+      - 关于本项目: index/intro.md
+      - F.A.Q: index/FAQ.md
   - 2020春季集训:
-      - 课程安排: 2020Spring.md
+      - 课程安排: index/2020Spring.md
   - C语言基础:
       - 基本语法: c-basic/grammar.md
       - 逻辑结构: c-basic/structure.md
