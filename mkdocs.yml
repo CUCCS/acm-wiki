@@ -44,6 +44,8 @@ nav:
       - 数据结构简介: data-struct/intro.md
       - 树状数组: data-struct/fenwick-tree.md
       - 线段树: data-struct/segment-tree.md
+  - 2020暑期集训:
+      - 暑期多校训练: 2020summer/official.md
 
 ## Theme
 theme:
