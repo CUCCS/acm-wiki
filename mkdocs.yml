@@ -44,6 +44,7 @@ nav:
       - 数据结构简介: data-struct/intro.md
       - 树状数组: data-struct/fenwick-tree.md
       - 线段树: data-struct/segment-tree.md
+      - 树链剖分: data-struct/hld.md
 
 ## Theme
 theme:
