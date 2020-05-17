@@ -2,6 +2,7 @@
 
 ## Contents
 
+  - [2020暑期多校训练](https://cuccs.github.io/acm-wiki/2020summer/official/)
   - [2020春季集训安排](https://cuccs.github.io/acm-wiki/2020Spring/)
   - [C语言基础](https://cuccs.github.io/acm-wiki/c-basic/grammar/)
   - [基础算法](https://cuccs.github.io/acm-wiki/basic-algorithm/introduction/)
