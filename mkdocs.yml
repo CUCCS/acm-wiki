@@ -45,6 +45,9 @@ nav:
       - 树状数组: data-struct/fenwick-tree.md
       - 线段树: data-struct/segment-tree.md
       - 树链剖分: data-struct/hld.md
+      - 可持久化数据结构:
+        - 简介: data-struct/pds-intro.md
+        - 可持久化线段树: data-struct/persistent-segment.md
   - 2020暑期集训:
       - 暑期多校训练: 2020summer/official.md
 
