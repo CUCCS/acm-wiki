@@ -6,8 +6,6 @@ nav:
       - 主页: index.md
       - 关于本项目: intro.md
       - F.A.Q: FAQ.md
-  - 2020春季集训:
-      - 课程安排: 2020Spring.md
   - C语言基础:
       - 基本语法: c-basic/grammar.md
       - 逻辑结构: c-basic/structure.md
@@ -48,8 +46,11 @@ nav:
       - 可持久化数据结构:
         - 简介: data-struct/pds-intro.md
         - 可持久化线段树: data-struct/persistent-segment.md
+  - 2020春季集训:
+      - 课程安排: 2020Spring.md
   - 2020暑期集训:
       - 暑期多校训练: 2020summer/official.md
+      - 2020牛客多校题解/总结: 2020summer/nowcoder.md
   
 ## Theme
 theme:
