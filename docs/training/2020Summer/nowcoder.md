@@ -16,9 +16,12 @@
 - [Codeforces Global Round 10](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E9%9D%92%E9%9D%92%E8%8D%89%E5%8E%9F%E4%B8%89%E9%94%AE%E5%AE%A2/global_round10.md)
 - [Codeforces Round #663 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E9%9D%92%E9%9D%92%E8%8D%89%E5%8E%9F%E4%B8%89%E9%94%AE%E5%AE%A2/cf663-div2.md)
 ### 夏日长吃小肉串喝杏仁茶
+- [Codeforces Round #660 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E5%A4%8F%E6%97%A5%E9%95%BF%E5%90%83%E5%B0%8F%E8%82%89%E4%B8%B2%E5%96%9D%E6%9D%8F%E4%BB%81%E8%8C%B6/cf660-div2.md)
+- [Codeforces Round #661 (Div. 3)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E5%A4%8F%E6%97%A5%E9%95%BF%E5%90%83%E5%B0%8F%E8%82%89%E4%B8%B2%E5%96%9D%E6%9D%8F%E4%BB%81%E8%8C%B6/cf661-div3.md)
 - [Codeforces Round #662 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E5%A4%8F%E6%97%A5%E9%95%BF%E5%90%83%E5%B0%8F%E8%82%89%E4%B8%B2%E5%96%9D%E6%9D%8F%E4%BB%81%E8%8C%B6/cf662-div2.md)
 - [Codeforces Round #663 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E5%A4%8F%E6%97%A5%E9%95%BF%E5%90%83%E5%B0%8F%E8%82%89%E4%B8%B2%E5%96%9D%E6%9D%8F%E4%BB%81%E8%8C%B6/cf663-div2.md)
 - [Codeforces Round #664 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E5%A4%8F%E6%97%A5%E9%95%BF%E5%90%83%E5%B0%8F%E8%82%89%E4%B8%B2%E5%96%9D%E6%9D%8F%E4%BB%81%E8%8C%B6/cf664-div2.md)
+
 
 ### 三缺一
 - [Codeforces Global Round 10](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E4%B8%89%E7%BC%BA%E4%B8%80/CfGlobalRound10.md)
