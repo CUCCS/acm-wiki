@@ -39,11 +39,13 @@ int sum(int a, int b)
 }
 ```
 ## 返回值
-return语句语法如下：   
-&emsp;`return 返回值；`  
-* return语句的功能是**结束函数的执行，并将“返回值”作为结果返回**。“返回值”是常量、变量或复杂的表达式均可。  
-* 如果函数返回值类型为`void`，return语句就直接写 `return ;`  
-* 
+return语句语法为：`return 返回值；`  
+
+- return语句的功能是**结束函数的执行，并将“返回值”作为结果返回**。返回值是常量、变量或复杂的表达式均可。  
+
+- 如果函数返回值类型为`void`，return语句就直接写 `return ;`  
+
+
 ```cpp
 int a[] = {1, 1, 2, 3, 5, 8, 13};
 void show(int n)
@@ -131,10 +133,10 @@ int main()
     PrintArray(b); //调用时只用写数组名
 }
 ```
-* 数组作为函数参数时是传址引用的，即形参数组改变了，实参数组也会改变。
+数组作为函数参数时是传址引用的，即形参数组改变了，实参数组也会改变。
 
 ### 二维数组作为函数的参数
-* 二维数组作为形参时，必须写明数组有多少列，不用写明有多少行。
+二维数组作为形参时，必须写明数组有多少列，不用写明有多少行。
 ```cpp
 void PrintArray(int a[][5]) 
 {
@@ -144,5 +146,3 @@ void PrintArray(int a[][5])
 
 <br></br>
 <br></br>
-
-Contributed by [LyuLumos](https://github.com/LyuLumos)

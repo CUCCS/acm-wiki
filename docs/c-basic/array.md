@@ -20,4 +20,5 @@ char d[105] = {'\0'};
 char parr[] = "zifushuzu";
 char charr[] = { 'z','i','f','u','s','h','u','z','u' };
 ```
+
 * 读入时注意回车与空格

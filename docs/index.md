@@ -1,7 +1,7 @@
 # Welcome to CUC ACM-Wiki！
 
 ## Contents
-
+  - [2020秋季训练](https://cuccs.github.io/acm-wiki/training/2020Autumn/)
   - [C语言基础](https://cuccs.github.io/acm-wiki/c-basic/grammar/)
   - [基础算法](https://cuccs.github.io/acm-wiki/basic-algorithm/introduction/)
   - [STL](https://cuccs.github.io/acm-wiki/STL/introduction/)
