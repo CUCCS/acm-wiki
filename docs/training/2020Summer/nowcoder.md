@@ -37,6 +37,7 @@
 - [Codeforces Round #664 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E4%B8%89%E7%BC%BA%E4%B8%80/cf664.md)
 - [Codeforces Round #660 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E4%B8%89%E7%BC%BA%E4%B8%80/div2%20%23660.md)
 - [Codeforces Round #665 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E4%B8%89%E7%BC%BA%E4%B8%80/div2%20%23665.md)
+- [Codeforces Round #654 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E4%B8%89%E7%BC%BA%E4%B8%80/Codeforces%20Round%20%23654%20(Div.%202)%20%E9%A2%98%E8%A7%A3.md)
 
 ### 拿铁就再也不喝拿铁！
 - [Codeforces Round #657 (Div. 2)](https://github.com/LyuLumos/CUC_ACM_2020-Summary-during-Summer-Training/blob/%E6%8B%BF%E9%93%81%E5%B0%B1%E5%86%8D%E4%B9%9F%E4%B8%8D%E5%96%9D%E6%8B%BF%E9%93%81%EF%BC%81/cf657.div2.md)
