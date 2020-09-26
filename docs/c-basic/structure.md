@@ -68,4 +68,85 @@ do {
 ```
 
 ### 嵌套循环
+&ensp;&ensp;就是在循环里面循环...
+```c
+for(;;){
+    while(条件){
+        ...
+    }
+}
+```
 ### 死循环
+
+```c
+while(true){}
+for(;;)
+```
+### break&continue;
+* break表示跳出循环
+* continue表示结束本次循环，直接进行下一次循环，只能用于循环结构
+
+例：判断n是否为素数
+
+```cpp
+#include<stdio.h>
+int main(){
+	int n,flg=0;
+	scanf("%d",&n);
+	for(int i=2;i<n;i++){
+		if(n%i!=0)continue;//不是因子继续循环
+		flg=1;break;//跳出循环
+	}
+	if(flg==1)printf("NO\n");
+	else printf("YES\n");
+	return 0;
+} 
+```
+## 算法竞赛中的输入输出
+#### 处理到文件结束
+例如，给出整数a和b的值，输出a+b，输入包含多组数据，处理到文件结束。
+
+* C语言
+EOF在C标准函数库中表示`文件结束符(end of file)`，在while循环中以EOF为文件结束标志。在命令行中输入Ctrl+z可以结束输入。
+```cpp
+#include<stdio.h>
+int main(){
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF){ //或使用
+	while(~scanf("%d%d",&a,&b)){
+		printf("%d\n",a+b);
+	}
+	return 0;
+} 
+```
+
+* C++
+```c
+#include<iostream>
+using namepsace std;
+int main(){
+	int a,b;
+	while(cin>>a>>b){
+		cout<<a+b<<endl;
+	}
+	return 0;
+} 
+```
+当题目是多组数据且处理到文件结束的情况下，一定要写EOF或者~(`推荐使用`)，不然可能会报错
+#### T组样例输入输出
+给出整数a和b的值，输出a+b，输入包含T组数据。输入的第一行为T，之后的T行分别是a和b的值。
+
+代码：
+```cpp
+#include<stdio.h>
+int main()
+{
+	int a,b,t;
+	scanf("%d",&t);
+	while(t--){
+		scanf("%d%d",&a,&b);
+		printf("%d\n",a+b);
+	}
+	return 0;
+}
+```
