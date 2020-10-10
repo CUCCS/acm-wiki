@@ -1,11 +1,11 @@
 ## 2020 暑期训练人员名单（排名不分先后）
 |队名|人员|
 |----|----|
-|青青草原三键客|**吕九洋** 冷林富 甘雨卉|
-|拿铁就再也不喝拿铁！|**李笙润** 肖子萌 许可|
-|夏日长吃小肉串喝杏仁茶|**高畅** 杨奕欣 王成瑞|
-|三缺一|**亓泽鲁** 张华睿 赵润泽|
-|Wow404|**王明月** 于梦丽 李美莹 曾祥浩 |
+|青青草原三键客|**Lyu Jiuyang**, Leng Linfu, Gan Yuhui|
+|拿铁就再也不喝拿铁！|**Li Shengrun**, Xiao Zimeng, Xu Ke|
+|夏日长吃小肉串喝杏仁茶|**Gao Chang**, Yang Yixin, Wang Chengrui|
+|三缺一|**Qi Zelu**, Zhang Huarui, Zhao Runze|
+|Wow404|**Wang Mingyue**, Yu Mengli, Li Meiying, Zeng Xianghao |
 
 ## 训练时间
 2020年7月18日 至 2020年8月22日，周日休息。

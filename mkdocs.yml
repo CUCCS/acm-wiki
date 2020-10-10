@@ -53,7 +53,8 @@ nav:
         - 暑期多校训练: training/2020Summer/official.md
         - 2020牛客多校题解/总结: training/2020Summer/nowcoder.md
       - 2020春季集训: training/2020Spring.md
-      
+  - 视频资源:
+      - 视频资源: videos/videos.md
   
 ## Theme
 theme:
