@@ -1,7 +1,3 @@
-## 差分约束
-
-
-What？
 
 ### 假设我们现在有这样一个问题
 
@@ -28,9 +24,8 @@ $...$
 - 一般使用 Bellman-Ford 或队列优化的 Bellman-Ford（俗称 SPFA，在某些随机图跑得很快）判断图中是否存在负环，最坏时间复杂度为 $O(nm)$ 。
 
 
-## 例题
 
-### [luogu P1993 小 K 的农场](https://www.luogu.org/problemnew/show/P1993)
+### 例题 [luogu P1993 小 K 的农场](https://www.luogu.org/problemnew/show/P1993)
 
 
 题目大意：求解差分约束系统，有 $m$ 条约束条件，每条都为形如 $x_a-x_b\geq c_k$ ， $x_a-x_b\leq c_k$ 或 $x_a=x_b$ 的形式，判断该差分约束系统有没有解。

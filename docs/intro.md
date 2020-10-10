@@ -15,5 +15,4 @@
 - 请务必确保您的文档中引用的**外链**图片已经全部转存到了**本库内**对应的`img`文件夹中，建议处理成`MD 文档名称 + 编号`的形式；（即格式为`![描述信息](img/example-1.jpg)`）。
 
 ## 联系方式
-[Issue](https://github.com/CUCCS/acm-wiki/issues) /
-QQ: 3208413453   
+[Issue](https://github.com/CUCCS/acm-wiki/issues)  
