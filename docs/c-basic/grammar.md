@@ -130,16 +130,19 @@ printf("%d%d", a, c); //c被转换成int类型
 printf("ans = %f %.12lf\n", f, d);
 ```
 
-### 反例：初学者常犯的错误
-```cpp
-int mian()
-{
-    int a, b; c, d = 1;
-    bool flag1 = ture, flag2 = flase;
-    scanf("%d", a);
-    printf("%d, b");
-    c = b + 1
-    e = 2ab;
-    return 1;
-}
-```
+
+
+??? Bug
+    ```cpp
+    // 除了大括号，每行至少有一个bug
+    int mian()
+    {
+        int a, b; c, d = 1;
+        bool flag1 = ture, flag2 = flase;
+        scanf("%d", a);
+        printf("%d, b");
+        c = b + 1
+        e = 2ab;
+        return 1;
+    }
+    ```

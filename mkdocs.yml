@@ -61,7 +61,7 @@ theme:
   name: 'material'
   language: 'zh'
   palette:
-    primary: 'white'
+    primary: 'Indigo'
     accent: 'red'
   include_search_page: false
   search_index_only: true
@@ -82,6 +82,9 @@ extra:
   pagetime: 'on'
   manifest: 'manifest.webmanifest'
   githash: ''
+  social:
+    - type: github
+      link: https://cuccs.github.io/ctf-wiki/
 
 extra_javascript:
   - '_static/js/extra.js?v=16'
