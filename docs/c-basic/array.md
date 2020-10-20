@@ -1,3 +1,8 @@
+!!! note "Copyright"
+    本页面贡献者：[LyuLumos](https://github.com/LyuLumos)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
+
 ## 基本格式
 ```c
 type arrayName[arraySize];

@@ -9,8 +9,8 @@
 | 4  | 数组             | Gao Chang      |
 | 5  | 字符数组和字符串       | Xiao Zimeng    |
 | 6  | 函数             | Lyu Jiuyang    |
-| 7  | 熟悉vjudge在线评测系统 | Yang Yixin     |
-| 8  | vjudge综合练习     | Li Shengrun    |
+| 7  | 熟悉vjudge在线评测系统 | Li Shengrun    |
+| 8  | vjudge综合练习     | Yang Yixin  |
 | 9  | 算法基础           | Wang Mingyue   |
 | 10 | 位运算            | Zhao Runze     |
 | 11 | 递归和递推          | Zhang Huarui   |

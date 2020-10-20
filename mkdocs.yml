@@ -11,7 +11,6 @@ nav:
       - 逻辑结构: c-basic/structure.md
       - 数组: c-basic/array.md
       - 函数: c-basic/function.md
-      - 简介: c-basic/introduction.md
   - 基础算法:
       - 简介: basic-algorithm/introduction.md
       - 二分: basic-algorithm/binary-research.md

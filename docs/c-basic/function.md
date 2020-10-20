@@ -1,4 +1,9 @@
 # 函数
+
+!!! note "Copyright"
+    本页面贡献者：[LyuLumos](https://github.com/LyuLumos)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 ## 定义
 ```
 返回值类型 函数名(参数1类型 参数1名称, 参数2类型 参数2名称……)   
@@ -143,6 +148,3 @@ void PrintArray(int a[][5])
     printf("%d", a[4][3]);
 }
 ```
-
-<br></br>
-<br></br>
