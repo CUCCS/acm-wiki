@@ -17,7 +17,7 @@
 | 12 | 排序             | Wang Chengrui  |
 | 13 | 分治与二分          | Qi Zelu        |
 | 14 | 贪心             | Xu Ke          |
-| 15 | 动态规划入门         | Xia Yewei      |
+| 15 | 动态规划入门         | Huang Biao      |
 | 16 | 简单数学和枚举约简      | Lyu Jiuyang    |
 | 17 | 枚举排列和枚举子集      | Leng Linfu     |
 | 18 | 栈和深度优先搜索算法DFS  | Leng Linfu     |

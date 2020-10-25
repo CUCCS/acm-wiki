@@ -1,6 +1,6 @@
-## 目标
-
-**复习 + 拓展**
+!!! note "Copyright"
+    本页面贡献者：[Purplepurple](https://github.com/purplezi)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
 
 ## 质数
 

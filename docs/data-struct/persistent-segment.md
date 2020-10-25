@@ -2,6 +2,10 @@
 title: 数据结构 - 可持久化线段树
 ---
 
+!!! note "Copyright"
+    本页面贡献者：[YanhuiJessica](https://github.com/YanhuiJessica)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 - 以下主要是主席树（全称可持久化权值线段树）的内容
   - 权值线段树维护区间内数组元素出现的次数
 - 关于主席树和可持久化线段树的关系，参见 [知乎](https://www.zhihu.com/question/59195374) 「个人感觉主席树是可持久化线段树的子集（小声(Φ艸Φ)）」

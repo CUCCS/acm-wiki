@@ -1,3 +1,7 @@
+!!! note "Copyright"
+    本页面贡献者：[LyuLumos](https://github.com/LyuLumos)，[xyw5vplus1](http://codeforces.com/profile/xyw5vplus1)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 # 组合数学
 
 ## 组合数的定义

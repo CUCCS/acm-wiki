@@ -2,6 +2,10 @@
 title: 数据结构 - 树链剖分
 ---
 
+!!! note "Copyright"
+    本页面贡献者：[YanhuiJessica](https://github.com/YanhuiJessica)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 ## 简介
 
 - 树链剖分将树分割成若干条链，以维护树上路径的信息

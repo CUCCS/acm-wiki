@@ -1,3 +1,7 @@
+!!! note "Copyright"
+    本页面贡献者：[cuccenter](https://blog.csdn.net/Cross_Entropy)，[YanhuiJessica](https://github.com/YanhuiJessica)，[LyuLumos](https://github.com/LyuLumos)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 # queue
 ## 用途
 是一个先进先出的数据结构，与stack正好相反。

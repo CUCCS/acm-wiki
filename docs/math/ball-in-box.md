@@ -1,7 +1,5 @@
-## 推荐资料
-
-[当小球遇上盒子](https://www.luogu.com.cn/blog/chengni5673/dang-xiao-qiu-yu-shang-he-zi)
-
+!!! note "Copyright"
+    本页面转载于[当小球遇上盒子](https://www.luogu.com.cn/blog/chengni5673/dang-xiao-qiu-yu-shang-he-zi)。
 
 ## 前置知识
 

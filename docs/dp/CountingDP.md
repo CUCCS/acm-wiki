@@ -1,4 +1,8 @@
 
+!!! note "Copyright"
+    本页面贡献者：[CooolKey](https://github.com/CooolKey)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 **要点：**
 
 学会将问题化为**子问题**

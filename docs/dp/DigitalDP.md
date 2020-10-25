@@ -1,4 +1,9 @@
 
+!!! note "Copyright"
+    本页面贡献者：[CooolKey](https://github.com/CooolKey)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
+	
 这类题目中一般给定一些限制条件，
 
 求满足限制条件的第 K 小的数是多少，

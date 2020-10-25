@@ -1,3 +1,8 @@
+!!! note "Copyright"
+    本页面贡献者：[cuccenter](https://blog.csdn.net/Cross_Entropy)，[YanhuiJessica](https://github.com/YanhuiJessica)，[LyuLumos](https://github.com/LyuLumos)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
+
 # vector
 ## 用途
 vector可以理解成可以变长的数组；也就是数组的长度是可以动态变化的。
@@ -246,7 +251,9 @@ clear()的功能这种写法与以下写法相同:
 while( !v.empty() ) v.pop_back();
 ```
 #### insert()
+
 insert()有三种形式：
+
 | 函数 |作用  |
 |--|--|
 | v.insert(it, val)         | 向迭代器it指向的元素前插入新元素val                                                                 |
@@ -340,7 +347,9 @@ size = 4, elements = [ 1 2 3 4 ]
 size = 6, elements = [ 102 103 1 2 3 4 ]
 ```
 #### erase()
+
 erase()有两种形式：
+
 |  函数|作用  |
 |--|--|
 | v.erase(it)               | 删除由迭代器it所指向的元素                                                                          |

@@ -1,3 +1,7 @@
+!!! note "Copyright"
+    本页面贡献者：[cuccenter](https://blog.csdn.net/Cross_Entropy)，[YanhuiJessica](https://github.com/YanhuiJessica)，[LyuLumos](https://github.com/LyuLumos)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 # map
 ## 用途
 map翻译为映射。实际上数组也相当于映射，如double a[100]，则是建立100个从int到double的映射。但是数组如果要实现从字符串到int的映射，或者实现从一个结构体到另一个结构体的映射则就不那么方便了。而map就是为了解决这种情况而产生的。

@@ -1,3 +1,7 @@
+!!! note "Copyright"
+    本页面贡献者：[cuccenter](https://blog.csdn.net/Cross_Entropy)，[YanhuiJessica](https://github.com/YanhuiJessica)，[LyuLumos](https://github.com/LyuLumos)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 ## 用途
 类似数组的结构，它的每一个元素只能是０或１，每个元素仅用１bit空间。用它存储数据回比用数组省空间。
 

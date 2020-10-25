@@ -1,3 +1,8 @@
+!!! note "Copyright"
+    本页面斐波那契数列部分转载于[数列-OI Wiki](https://oi-wiki.org/math/)。
+    本页面贡献者：[LyuLumos](https://github.com/LyuLumos。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 
 ## 斐波那契数列
 ### 定义
@@ -96,5 +101,3 @@ zls在众人齐心协力下，影响力越来越大了！
 
 矩阵快速幂+快速幂+费马小定理求逆元解决
 
-## 参考资料
-[数列-OI Wiki](https://oi-wiki.org/math/)

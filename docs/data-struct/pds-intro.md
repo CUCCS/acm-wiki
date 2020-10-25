@@ -2,6 +2,10 @@
 title: 简介 - 可持久化数据结构
 ---
 
+!!! note "Copyright"
+    本页面贡献者：[YanhuiJessica](https://github.com/YanhuiJessica)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 ## 简介
 
 可持久化数据结构（Persistent data structure）每次修改都会保留其自身每一个历史版本
