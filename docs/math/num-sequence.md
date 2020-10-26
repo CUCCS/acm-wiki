@@ -1,6 +1,6 @@
 !!! note "Copyright"
     本页面斐波那契数列部分转载于[数列-OI Wiki](https://oi-wiki.org/math/)。
-    本页面贡献者：[LyuLumos](https://github.com/LyuLumos。
+    本页面贡献者：[LyuLumos](https://github.com/LyuLumos)。
     本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
 
 

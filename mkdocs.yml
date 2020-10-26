@@ -1,4 +1,16 @@
+# Project Information
 site_name: CUC ACM-Wiki
+site_description: CUC ACM-Wiki用于学习算法和数据结构相关内容，发布中国传媒大学ACM集训队相关安排
+site_author: CUC ACM Team
+site_url: https://cuccs.github.io/acm-wiki/
+strict: true
+
+# Repository
+repo_name: 'CUCCS/acm-wiki'
+repo_url: 'https://github.com/CUCCS/acm-wiki'
+
+copyright: 'Copyright &copy; 2019 - 2020 CUC ACM Team'
+
 
 # Contents
 nav:
