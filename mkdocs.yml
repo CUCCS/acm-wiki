@@ -41,6 +41,8 @@ nav:
   - 动态规划:
       - 数位DP: dp/DigitalDP.md
       - 计数DP: dp/CountingDP.md
+  - 搜索:
+      - 枚举排列和枚举子集: search/enumeration.md
   - 数学:
       - 数论: math/number-theory.md
       - 数列: math/num-sequence.md
