@@ -43,7 +43,9 @@ nav:
       - 计数DP: dp/CountingDP.md
   - 搜索:
       - 枚举排列和枚举子集: search/enumeration.md
+      - 枚举约简: search/simple-enum.-reduction.md
   - 数学:
+      - 简单数学: math/simple-math.md
       - 数论: math/number-theory.md
       - 数列: math/num-sequence.md
       - 组合数学: math/combinatorics.md
