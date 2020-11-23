@@ -27,6 +27,7 @@ nav:
       - 二分: basic-algorithm/binary-research.md
       - 尺取: basic-algorithm/two-pointers.md
       - 倍增: basic-algorithm/adding-doubling.md
+      - 排序: basic-algorithm/sort.md
   - STL:
       - STL简介: STL/introduction.md
       - Vector: STL/vector.md
