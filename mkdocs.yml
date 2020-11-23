@@ -39,6 +39,7 @@ nav:
       - 差分约束: graph/difference-constraint.md
       - 二分图: graph/bipartite-graph.md
   - 动态规划:
+      - DP入门: dp/simpleDP.md
       - 数位DP: dp/DigitalDP.md
       - 计数DP: dp/CountingDP.md
   - 搜索:
