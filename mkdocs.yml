@@ -46,6 +46,7 @@ nav:
   - 搜索:
       - 枚举排列和枚举子集: search/enumeration.md
       - 枚举约简: search/simple-enum.-reduction.md
+      - 栈和深度优先搜索: search/dfs.md
   - 数学:
       - 简单数学: math/simple-math.md
       - 数论: math/number-theory.md
