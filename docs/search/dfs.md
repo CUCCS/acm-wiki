@@ -23,7 +23,8 @@
 
 例如我们有一个存储整型元素的栈，我们依次压栈：{1,2,3}
 
-<img src="https://images2015.cnblogs.com/blog/610439/201601/610439-20160130013806989-121668995.png" alt="avatar" style="zoom:70%;" />
+[![instack.png](https://s3.ax1x.com/2020/11/30/DRFroq.png)](https://imgchr.com/i/DRFroq)
+
 
 在压栈的过程中，栈顶的位置一直在“向上”移动，而栈底是固定不变的。
 
@@ -31,19 +32,18 @@
 
 如果我们要把栈中的元素弹出来：
 
-<img src="https://images2015.cnblogs.com/blog/610439/201601/610439-20160130013814661-295746330.png" alt="avatar" style="zoom:67%;" />
-
+[![outstack.png](https://s3.ax1x.com/2020/11/30/DRFyF0.png)](https://imgchr.com/i/DRFyF0)
 
 
 
 STL就有栈，不需要大家重新手写一个栈。头文件：
-```
-#include< stack>  
+```cpp
+#include <stack>  
 ```   
 调用：
-```
-stack< int> s;
-stack< char> s;
+```cpp
+stack < int > s;
+stack < char > s;
 ```
 
 一些常用的关于栈的函数：
@@ -144,9 +144,7 @@ void dfs(int u,int dep)
 
 DFS搜索的过程其实是一种树型结构，一般称为DFS树。
 
-<img src="https://img-blog.csdnimg.cn/2020032707535368.png#pic_center" alt="在这里插入图片描述" style="zoom:67%;" />
-
-
+[![dfs_tree.gif](https://s3.ax1x.com/2020/11/30/DRFHfK.gif)](https://imgchr.com/i/DRFHfK)
 
 
 

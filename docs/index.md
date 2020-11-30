@@ -11,11 +11,12 @@
 ## Contents
   - [2020秋季训练](https://cuccs.github.io/acm-wiki/training/2020Autumn/)
   - [C语言基础](https://cuccs.github.io/acm-wiki/c-basic/grammar/)
-  - [基础算法](https://cuccs.github.io/acm-wiki/basic-algorithm/introduction/)
+  - [基础算法](basic-algorithm/adding-doubling.md)
   - [STL](https://cuccs.github.io/acm-wiki/STL/introduction/)
-  - [图论](https://cuccs.github.io/acm-wiki/graph/intro/)
-  - [DP](https://cuccs.github.io/acm-wiki/dp/intro/)
-  - [数论](https://cuccs.github.io/acm-wiki/math/intro)
+  - [图论](graph/bipartite-graph.md)
+  - [DP](dp/simpleDP.md)
+  - [搜索](search/dfs.md)
+  - [数论](math/simple-math.md)
   - [数据结构](https://cuccs.github.io/acm-wiki/data-struct/intro/)
   - [如何参与本项目](https://cuccs.github.io/acm-wiki/intro/)
 
