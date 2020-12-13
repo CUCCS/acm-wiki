@@ -45,7 +45,7 @@ nav:
       - 计数DP: dp/CountingDP.md
   - 搜索:
       - 枚举排列和枚举子集: search/enumeration.md
-      - 枚举约简: search/simple-enum.-reduction.md
+      - 枚举约简: search/simple-enum-reduction.md
       - 栈和深度优先搜索: search/dfs.md
   - 数学:
       - 简单数学: math/simple-math.md
@@ -62,6 +62,7 @@ nav:
         - 简介: data-struct/pds-intro.md
         - 可持久化线段树: data-struct/persistent-segment.md
   - 集训安排:
+      - 2021春季集训: training/2021Spring.md
       - 2020秋季集训: training/2020Autumn.md
       - 2020暑期集训:
         - 暑期多校训练: training/2020Summer/official.md
