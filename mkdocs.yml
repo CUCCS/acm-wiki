@@ -9,7 +9,7 @@ strict: true
 repo_name: 'CUCCS/acm-wiki'
 repo_url: 'https://github.com/CUCCS/acm-wiki'
 
-copyright: 'Copyright &copy; 2019 - 2020 CUC ACM Team'
+copyright: 'Copyright &copy; 2019 - 2021 CUC ACM Team'
 
 
 # Contents
@@ -100,6 +100,9 @@ extra:
   social:
     - type: github
       link: https://cuccs.github.io/ctf-wiki/
+    - type: github
+      link: http://39.98.122.96/
+    
 
 extra_javascript:
   - '_static/js/extra.js?v=16'
