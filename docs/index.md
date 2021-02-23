@@ -1,18 +1,17 @@
 # Welcome to CUC ACM-Wiki！
 
-# 欢迎新同学！
+蓝桥杯及校内比赛训练平台：[CUC ACM OJ](http://39.98.122.96/)
 
-中国传媒大学ACM竞赛2020新生QQ群：1146276094
 
-![dRT7Gj.jpg](https://s1.ax1x.com/2020/08/26/dRT7Gj.jpg)
+<center><img src = "https://s1.ax1x.com/2020/08/26/dRT7Gj.jpg" height = "250" width = "200"></center>
 
-图片来源：微信表情 - 嬿晖 - 计小鸡
+<p align="right">图片来源：微信表情 - 嬿晖 - 计小鸡</p>
 
 ## Contents
-  - [2020秋季训练](https://cuccs.github.io/acm-wiki/training/2020Autumn/)
-  - [C语言基础](https://cuccs.github.io/acm-wiki/c-basic/grammar/)
+  - [2021秋季训练](training/2021Spring/)
+  - [C语言基础](c-basic/grammar/)
   - [基础算法](basic-algorithm/adding-doubling.md)
-  - [STL](https://cuccs.github.io/acm-wiki/STL/introduction/)
+  - [STL](STL/introduction/)
   - [图论](graph/bipartite-graph.md)
   - [DP](dp/simpleDP.md)
   - [搜索](search/dfs.md)
