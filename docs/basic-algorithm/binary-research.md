@@ -80,11 +80,11 @@ int main()
 <br/>
 
 ## 两个常用的函数
-lower_bound( )和upper_bound( )都是利用二分查找的方法在一个排好序的数组中进行查找的。<br/><br/>
+`lower_bound( )` 和 `upper_bound( )` 都是利用二分查找的方法在一个排好序的数组中进行查找的。<br/><br/>
 在从小到大的排序数组中，<br/><br/>
-lower_bound( begin,end,num)：从数组的begin位置到end-1位置二分查找第一个大于或等于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。<br/><br/>
-upper_bound( begin,end,num)：从数组的begin位置到end-1位置二分查找第一个大于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。<br/><br/>
-在从大到小的排序数组中，重载lower_bound()和upper_bound()<br/><br/>
-lower_bound( begin,end,num,greater<type>() ):从数组的begin位置到end-1位置二分查找第一个小于或等于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。<br/><br/>
-upper_bound( begin,end,num,greater<type>() ):从数组的begin位置到end-1位置二分查找第一个小于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。<br/>
+`lower_bound(begin,end,num)` ：从数组的begin位置到end-1位置二分查找第一个大于或等于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。<br/><br/>
+`upper_bound( begin,end,num)` ：从数组的begin位置到end-1位置二分查找第一个大于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。<br/><br/>
+在从大到小的排序数组中，重载 `lower_bound()` 和`upper_bound()`<br/><br/>
+`lower_bound( begin,end,num,greater<type>() )` :从数组的begin位置到end-1位置二分查找第一个小于或等于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。<br/><br/>
+`upper_bound( begin,end,num,greater<type>() )` :从数组的begin位置到end-1位置二分查找第一个小于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。<br/>
 

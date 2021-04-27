@@ -53,6 +53,7 @@ nav:
       - 数列: math/num-sequence.md
       - 组合数学: math/combinatorics.md
       - 当小球遇上盒子: math/ball-in-box.md
+      - 快速傅里叶变换: math/fft.md
   - 数据结构:
       - 数据结构简介: data-struct/intro.md
       - 树状数组: data-struct/fenwick-tree.md
