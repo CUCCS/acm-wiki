@@ -16,7 +16,10 @@
 
 ## 队名暂定
 
-
+- [牛客多校第四场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/To_be_continued/2021牛客暑期多校训练营4.md)
+- [牛客多校第五场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/To_be_continued/2021牛客暑期多校训练营5.md)
+- [牛客多校第六场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/To_be_continued/2021牛客暑期多校训练营6.md)
+- [牛客多校第七场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/To_be_continued/2021牛客暑期多校训练营7.md)
 
 ## 案板咸鱼
 
