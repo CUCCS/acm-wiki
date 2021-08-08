@@ -2,7 +2,6 @@
     本页面贡献者：[cuccenter](https://blog.csdn.net/Cross_Entropy)，[YanhuiJessica](https://github.com/YanhuiJessica)，[LyuLumos](https://github.com/LyuLumos)。
     本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
 
-# set
 ## 用途
 set译作集合，set可以实现内部元素自动排序并自动去重。
 使用需添加

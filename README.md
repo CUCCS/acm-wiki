@@ -10,7 +10,7 @@
 
 
 ## Usage
-Follow the instructions in `.travis.yml` to set the environment.
+Follow the instructions in `requirements.txt` to set up the environment.
 
 You can use this command to deploy in local.
 

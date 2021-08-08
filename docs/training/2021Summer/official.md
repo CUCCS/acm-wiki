@@ -3,10 +3,10 @@
 | 队名                   | 人员                                       |
 | ---------------------- | ------------------------------------------ |
 | 三缺一                 | **Qi Zelu**, Zhang Huarui, Zhao Runze      |
-| 队名暂定               | **Pan Dongyijie**,Yang Xueting,Ou Pengpeng |
-| 不爆零就算胜利         | **Li Meiying**,Yang Yusen,Guan Xin         |
-| 案板咸鱼               | **Tan Xingyu**,Hu Lukun                    |
-| 想不出队名就只好这样了 | **Zhu Junjie**,Wang Rui,Tian Yibin         |
+| 队名暂定               | **Pan Dongyijie**, Yang Xueting, Ou Pengpeng |
+| 不爆零就算胜利         | **Li Meiying**, Yang Yusen, Guan Xin         |
+| 案板咸鱼               | **Tan Xingyu**, Hu Lukun                    |
+| 想不出队名就只好这样了 | **Zhu Junjie**, Wang Rui, Tian Yibin         |
 
 ## 训练时间
 
