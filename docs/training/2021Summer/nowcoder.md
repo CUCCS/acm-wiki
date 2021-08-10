@@ -5,6 +5,8 @@
 - [牛客多校第四场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Code-At-Three/Nowcoder多校第四场.md)
 - [牛客多校第五场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Code-At-Three/Nowcoder多校第五场.md)
 - [牛客多校第六场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Code-At-Three/Nowcoder多校第六场.md)
+- [牛客多校第七场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Code-At-Three/Nowcoder多校第七场.md)
+- [牛客多校第八场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Code-At-Three/Nowcoder多校第八场.md)
 
 ## 想不出队名就只好这样了
 
