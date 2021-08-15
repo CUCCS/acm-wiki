@@ -11,10 +11,18 @@
 ## 想不出队名就只好这样了
 
 - [牛客多校第四场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/EnglishName/Newcoder_4.md)
+- [牛客多校第五场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/EnglishName/Newcoder_5.md)
+- [牛客多校第六场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/EnglishName/Newcoder_6.md)
+- [牛客多校第七场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/EnglishName/Newcoder_7.md)
+- [牛客多校第八场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/EnglishName/Newcoder_8.md)
+- [牛客多校第九场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/EnglishName/Newcoder_9.md)
 
 ## 不爆零就算胜利
 
-
+- [牛客多校第四场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/AltPlusF4/ALF Plus F4/牛客第四场比赛.md)
+- [牛客多校第五场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/AltPlusF4/ALF Plus F4/牛客第五场比赛.md)
+- [牛客多校第六场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/AltPlusF4/ALF Plus F4/牛客第六场比赛.md)
+- [牛客多校第七场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/AltPlusF4/ALF Plus F4/牛客比第七场赛.md)
 
 ## 队名暂定
 
@@ -22,6 +30,8 @@
 - [牛客多校第五场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/To_be_continued/2021牛客暑期多校训练营5.md)
 - [牛客多校第六场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/To_be_continued/2021牛客暑期多校训练营6.md)
 - [牛客多校第七场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/To_be_continued/2021牛客暑期多校训练营7.md)
+- [牛客多校第八场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/To_be_continued/2021牛客暑期多校训练营8.md)
+- [牛客多校第九场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/To_be_continued/2021牛客暑期多校训练营9.md)
 
 ## 案板咸鱼
 
