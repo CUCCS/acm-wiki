@@ -35,7 +35,23 @@
 
 ## 案板咸鱼
 
+- [牛客多校第四场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Water/2021牛客暑期多校训练营4（题解部分）.md)
+- [牛客多校第五场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Water/2021牛客暑期多校训练营5（题解部分）.md)
 
+- [牛客多校第六场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Water/2021牛客暑期多校训练营6（题解部分）.md)
+- [牛客多校第七场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Water/2021牛客暑期多校训练营7（题解部分）.md)
+- [牛客多校第八场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Water/2021牛客暑期多校训练营8（题解部分）.md)
+- [牛客多校第九场](https://github.com/KyireQi/2021Nowcoder-Training-Solutions/blob/Water/2021牛客暑期多校训练营9（题解部分）.md)
 
 ## 总榜
+
+排名规则：**过题数优先，相同比较罚时。**
+
+| 队名                   | 总过题数 | Rank |
+| ---------------------- | -------- | ---- |
+| 队名暂定               | 13       | 1    |
+| 三缺一                 | 12       | 2    |
+| 想不出队名就只好这样了 | 12       | 3    |
+| 不爆零就算胜利         | 11       | 4    |
+| 案板咸鱼               | 9        | 5    |
 
