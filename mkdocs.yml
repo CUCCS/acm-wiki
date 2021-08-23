@@ -62,6 +62,7 @@ nav:
         - 简介: data-struct/pds-intro.md
         - 可持久化线段树: data-struct/persistent-segment.md
   - 集训安排:
+      - 2021秋季集训: training/2021Autumn.md
       - 2021暑期集训: 
         - 暑期多校训练: training/2021Summer/official.md
         - 牛客多校总结: training/2021Summer/nowcoder.md
@@ -71,7 +72,6 @@ nav:
         - 暑期多校训练: training/2020Summer/official.md
         - 2020牛客多校题解/总结: training/2020Summer/nowcoder.md
       - 2020春季集训: training/2020Spring.md
-      - 2021秋季集训:training/2021Autumn.md
   - 视频资源:
       - 视频资源: videos/videos.md
   
