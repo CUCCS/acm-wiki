@@ -8,7 +8,6 @@ strict: true
 # Repository
 repo_name: 'CUCCS/acm-wiki'
 repo_url: 'https://github.com/CUCCS/acm-wiki'
-
 copyright: 'Copyright &copy; 2019 - 2021 CUC ACM Team'
 
 
@@ -53,6 +52,7 @@ nav:
       - 数列: math/num-sequence.md
       - 组合数学: math/combinatorics.md
       - 当小球遇上盒子: math/ball-in-box.md
+      - FFT: math/fft.md
   - 数据结构:
       - 数据结构简介: data-struct/intro.md
       - 树状数组: data-struct/fenwick-tree.md
