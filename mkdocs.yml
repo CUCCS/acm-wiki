@@ -22,6 +22,7 @@ nav:
       - 逻辑结构: c-basic/structure.md
       - 数组: c-basic/array.md
       - 函数: c-basic/function.md
+      - 字符数组,string: c-basic/char.md
   - 基础算法:
       - 二分: basic-algorithm/binary-research.md
       - 尺取: basic-algorithm/two-pointers.md
