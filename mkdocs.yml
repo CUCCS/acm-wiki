@@ -24,6 +24,7 @@ nav:
       - 函数: c-basic/function.md
       - 字符数组,string: c-basic/char.md
   - 基础算法:
+      - 时间复杂度: basic-algorithm/time.md
       - 二分: basic-algorithm/binary-research.md
       - 尺取: basic-algorithm/two-pointers.md
       - 倍增: basic-algorithm/adding-doubling.md
