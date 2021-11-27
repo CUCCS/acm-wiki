@@ -57,6 +57,10 @@ nav:
       - FFT: math/fft.md
   - 数据结构:
       - 数据结构简介: data-struct/intro.md
+      - 列表:
+        - 列表简介: data-struct/list/list.md
+        - 数组表: data-struct/list/arraylist.md
+        - 链表: data-struct/list/linkedlist.md
       - 树状数组: data-struct/fenwick-tree.md
       - 线段树: data-struct/segment-tree.md
       - 树链剖分: data-struct/hld.md
