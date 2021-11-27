@@ -134,7 +134,7 @@ int indexOf(Node *node)
 #### 获取节点对应元素的值
 
 ```cpp
-int set(Node *node)
+int get(Node *node)
 {
     return node->value;
 }
@@ -281,7 +281,7 @@ void insertAfter(Node *node, int value)
 #### 在节点前插入元素
 
 ```cpp
-void insertAfter(Node *node, int value)
+void insertBefore(Node *node, int value)
 {
     if (node == first)
     {
