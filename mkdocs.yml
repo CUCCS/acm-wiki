@@ -38,6 +38,7 @@ nav:
       - List: STL/list.md
       - Bitset: STL/bitset.md
   - 图论:
+      - 最短路: graph/shortest-path.md
       - 差分约束: graph/difference-constraint.md
       - 二分图: graph/bipartite-graph.md
   - 动态规划:
@@ -57,6 +58,7 @@ nav:
       - FFT: math/fft.md
   - 数据结构:
       - 数据结构简介: data-struct/intro.md
+      - ST算法: data-struct/ST.md
       - 树状数组: data-struct/fenwick-tree.md
       - 线段树: data-struct/segment-tree.md
       - 树链剖分: data-struct/hld.md
