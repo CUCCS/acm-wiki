@@ -1,4 +1,7 @@
-# 最短路
+!!! note "Copyright"
+    本页面贡献者：[zrz](https://github.com/BehindShadow)。
+    本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
+
 
 ### djikstra 单源最短路
 * 适用条件：无负权边
