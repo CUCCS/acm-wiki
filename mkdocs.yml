@@ -65,6 +65,7 @@ nav:
       - 可持久化数据结构:
         - 简介: data-struct/pds-intro.md
         - 可持久化线段树: data-struct/persistent-segment.md
+      - 莫队算法: data-struct/modui.md
   - 集训安排:
       - 2021秋季集训: training/2021Autumn.md
       - 2021暑期集训: 
