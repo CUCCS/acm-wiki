@@ -200,7 +200,7 @@ print('\n'.join([' '.join(['%2d*%2d=%2d' % (col, row, col * row) for col in rang
 
 ??? note "Python, by YanhuiJessica"
     
-    ```cpp
+    ```py
     def gcd(a,b):
         if(b==0):
             return a
@@ -250,4 +250,4 @@ print('\n'.join([' '.join(['%2d*%2d=%2d' % (col, row, col * row) for col in rang
             ans=-1
     ```
 
-上面C++的代码无法进行超出 `__int128__` 范围的计算，需要进行手写高精度才能实现与Python相同的效果。
+上面C++的代码无法进行超出 `__int128` 范围的计算，需要进行手写高精度才能实现与Python相同的效果。
