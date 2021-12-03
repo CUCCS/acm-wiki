@@ -14,7 +14,7 @@
 ## 输入输出
 
 ### 输入
-请参照 [YanhuiJessica/Tempro/Python](https://github.com/YanhuiJessica/TemPro/tree/master/Templates)。
+请参照 [YanhuiJessica/Tempro/Python](https://github.com/YanhuiJessica/TemPro/blob/master/Templates/Python.md)。
 
 ### 输出
 
@@ -24,13 +24,13 @@ Python 输出非常简单，只需要
 print(a)
 ```
 
-对于 `C++转Python` 选手，也可使用类似于 `printf` 的输出形式。
+对于 `C++转Python` 选手，也可使用类似于 `printf` 的输出形式，在保留指定位小数结果的题目中非常有用。
 
 ```py
 print('The length of %s is %d' % (s,x))
 ```
 
-## 类型和运算符
+## 类型，运算符和流程控制
 
 ### int
 
@@ -40,13 +40,14 @@ print('The length of %s is %d' % (s,x))
 a = 100
 ```
 
-### float
+### float 和 除法
 
 `Python` 没有 `double` 类型，它的 `float` 类型与前者类似。请注意除法是自动转为浮点数的，请严格区分 `/` 与 `//`。除法操作 `/` 永远返回浮点类型，同时仍存在浮点误差。
 
 ```py
-4 / 3 # 1.333333333333333
+4 / 3 # 1.3333333333333333
 4 // 3 # 1
+0.1 + 0.2 # 0.30000000000000004
 ```
 
 ### bool
@@ -61,6 +62,10 @@ elif xxx:
 else:
     # ...
 ```
+
+### switch?
+
+Python 中没有 `switch` 语句，但在 `Python 3.10 beta` 中增加了 `match-case` 的实现。目前仍然只建议使用多个 `if-else` 语句解决。
 
 ## 缩进
 Python是缩进敏感的语言，不严格按照指定缩进语法会报错。
@@ -94,7 +99,7 @@ list2 = list1[:]
 |----|----|----|
 |array/vector|list|严格意义上应该是array对应array, vector对应list，但是我们建议更多地使用list|
 |tuple(C++11)|tuple|Python的tuple是不可修改的|
-|dict|dict|请注意Python对于不存在键的插入操作|
+|map|dict|请注意Python对于不存在键的插入操作|
 |set|set||
 |stack|list||
 |queue|queue||
