@@ -23,6 +23,7 @@ nav:
       - 数组: c-basic/array.md
       - 函数: c-basic/function.md
       - 字符数组,string: c-basic/char.md
+      - Python竞赛基础: c-basic/python.md
   - 基础算法:
       - 时间复杂度: basic-algorithm/time.md
       - 二分: basic-algorithm/binary-research.md
