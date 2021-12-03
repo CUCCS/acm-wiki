@@ -38,6 +38,7 @@ nav:
       - Bitset: STL/bitset.md
   - 图论:
       - 最短路: graph/shortest-path.md
+      - 最小生成树: graph/MST.md
       - 差分约束: graph/difference-constraint.md
       - 二分图: graph/bipartite-graph.md
   - 动态规划:
