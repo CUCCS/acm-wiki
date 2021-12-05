@@ -47,4 +47,4 @@ void dp(int x,int fa){
     }
 }
 ```
-* [树直径](https://www.acwing.com/problem/content/352/)
+- [树直径](https://www.acwing.com/problem/content/352/)

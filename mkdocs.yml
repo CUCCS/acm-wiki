@@ -37,12 +37,13 @@ nav:
       - List: STL/list.md
       - Bitset: STL/bitset.md
   - 图论:
+      - 拓扑排序: graph/topological-sorting.md
       - 最短路: graph/shortest-path.md
       - 最小生成树: graph/MST.md
       - LCA: graph/LCA.md
       - 树直径: graph/diameter-of-tree.md
       - Euler: graph/euler.md
-      - 联通分量: graph/connected-components.md
+      - 连通分量: graph/connected-components.md
       - 2-SAT: graph/2-SAT.md
       - 差分约束: graph/difference-constraint.md
       - 二分图: graph/bipartite-graph.md
