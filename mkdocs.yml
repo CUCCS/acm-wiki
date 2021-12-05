@@ -40,6 +40,7 @@ nav:
       - 最短路: graph/shortest-path.md
       - 最小生成树: graph/MST.md
       - LCA: graph/LCA.md
+      - 树直径: graph/diameter-of-tree.md
       - Euler: graph/euler.md
       - 联通分量: graph/connected-components.md
       - 2-SAT: graph/2-SAT.md

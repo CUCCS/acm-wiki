@@ -1,5 +1,5 @@
 !!! note "Copyright"
-    本页面贡献者：[DcmTruman](https://github.com/DcmTruman)。
+    本页面贡献者：[zrz](https://github.com/BehindShadow)。
     本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
 
 - **先置知识，dfs树**
