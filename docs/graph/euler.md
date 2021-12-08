@@ -65,7 +65,7 @@
 我们直接全搜一下，搜完一定是所有的点都用完了所以不会再搜了。（最后for循环的解释
 因为是一条路一路搜下去就可以了所以不用考虑回溯的vis问题，然后也不要考虑存路径，回溯是输出就好了
 
-```c++
+```cpp
 #include <bits/stdc++.h>
 #define INF 0x3f3f3f3f
 using namespace std;

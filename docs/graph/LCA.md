@@ -16,89 +16,89 @@
 Tarjan的基本思想其实的就是想上标记法的优化，使用并查集优化，就是把回溯的点的合并到父节点，难点其实在于记录闻讯和dfs函数的结构
 复杂度$O(n+m)$
 
-* [How far away ？ ](https://vjudge.net/problem/HDU-2586)
+???+note "problem"
+    [How far away ？](https://vjudge.net/problem/HDU-2586)
 
-```cpp
-#include <bits/stdc++.h>
-#define ms(x,y) memset(x,y,sizeof(x))
-using namespace std;
-const int N = 40005;
-int n,m;
-struct edge{
-    int v,next,w;
-}e[N<<1];
-int head[N],cnt;
-int vis[N],dis[N];
-int ans[N];
-void add(int u,int v,int w){
-    e[cnt].v = v;
-    e[cnt].w = w;
-    e[cnt].next = head[u];
-    head[u] = cnt++;
-}
-int fa[N];
-int get(int x){
-    if(x==fa[x])return x;
-    else return fa[x] = get(fa[x]);
-}
-vector<int>qu[N];
-vector<int>qu_id[N];
-void inits(){
-    cnt = 0;
-    for(int i = 0;i<=n;i++){
-        fa[i] = i;ans[i] = 0;
-        head[i] = -1;vis[i] = 0;dis[i] = 0;
-        qu[i].clear();
-        qu_id[i].clear();
+    ```cpp
+    #include <bits/stdc++.h>
+    #define ms(x,y) memset(x,y,sizeof(x))
+    using namespace std;
+    const int N = 40005;
+    int n,m;
+    struct edge{
+        int v,next,w;
+    }e[N<<1];
+    int head[N],cnt;
+    int vis[N],dis[N];
+    int ans[N];
+    void add(int u,int v,int w){
+        e[cnt].v = v;
+        e[cnt].w = w;
+        e[cnt].next = head[u];
+        head[u] = cnt++;
     }
-}
-void add_query(int x,int y,int id){
-    qu[x].push_back(y);qu_id[x].push_back(id);
-    qu[y].push_back(x);qu_id[y].push_back(id);
-}
-
-void Tarjan(int x,int father){
-    for(int i = head[x];~i;i = e[i].next){
-        int v = e[i].v;
-        int w = e[i].w;
-        if(v==father)continue;
-        dis[v] = dis[x]+w;
-        Tarjan(v,x);
-        fa[v] = x;
+    int fa[N];
+    int get(int x){
+        if(x==fa[x])return x;
+        else return fa[x] = get(fa[x]);
     }
-    for(int i =0;i < qu[x].size();i++){
-        int y = qu[x][i];
-        if(vis[y] == 1){
-            int lca = get(y);
-            ans[qu_id[x][i]] = dis[x]+dis[y]-2*dis[lca];
+    vector<int>qu[N];
+    vector<int>qu_id[N];
+    void inits(){
+        cnt = 0;
+        for(int i = 0;i<=n;i++){
+            fa[i] = i;ans[i] = 0;
+            head[i] = -1;vis[i] = 0;dis[i] = 0;
+            qu[i].clear();
+            qu_id[i].clear();
         }
     }
-    vis[x] = 1;//回溯的时候要标记这个点已经遍历过并且回溯了
-}
-int main(){
-    int T;
-    cin>>T;
-    while(T--){
-        scanf("%d%d",&n,&m);
-        inits();
-        for(int i = 0;i < n-1; i++){
-            int u,v,w;
-            scanf("%d%d%d",&u,&v,&w);
-            add(u,v,w);add(v,u,w);
-        }
-        for(int i = 0;i < m;i++){
-            int x,y;
-            scanf("%d%d",&x,&y);
-            add_query(x,y,i);
-        }
-        Tarjan(1,0);
-        for(int i = 0;i<m;i++){
-            printf("%d\n",ans[i]);
-        }
+    void add_query(int x,int y,int id){
+        qu[x].push_back(y);qu_id[x].push_back(id);
+        qu[y].push_back(x);qu_id[y].push_back(id);
     }
 
-}
-```
+    void Tarjan(int x,int father){
+        for(int i = head[x];~i;i = e[i].next){
+            int v = e[i].v;
+            int w = e[i].w;
+            if(v==father)continue;
+            dis[v] = dis[x]+w;
+            Tarjan(v,x);
+            fa[v] = x;
+        }
+        for(int i =0;i < qu[x].size();i++){
+            int y = qu[x][i];
+            if(vis[y] == 1){
+                int lca = get(y);
+                ans[qu_id[x][i]] = dis[x]+dis[y]-2*dis[lca];
+            }
+        }
+        vis[x] = 1;//回溯的时候要标记这个点已经遍历过并且回溯了
+    }
+    int main(){
+        int T;
+        cin>>T;
+        while(T--){
+            scanf("%d%d",&n,&m);
+            inits();
+            for(int i = 0;i < n-1; i++){
+                int u,v,w;
+                scanf("%d%d%d",&u,&v,&w);
+                add(u,v,w);add(v,u,w);
+            }
+            for(int i = 0;i < m;i++){
+                int x,y;
+                scanf("%d%d",&x,&y);
+                add_query(x,y,i);
+            }
+            Tarjan(1,0);
+            for(int i = 0;i<m;i++){
+                printf("%d\n",ans[i]);
+            }
+        }
+    }
+    ```
 
 
 
