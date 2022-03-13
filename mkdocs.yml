@@ -43,7 +43,8 @@ nav:
       - LCA: graph/LCA.md
       - 树直径: graph/diameter-of-tree.md
       - Euler: graph/euler.md
-      - 连通分量: graph/connected-components.md
+      - 连通分量概述: graph/connected-components.md
+      - 强联通分量: graph/strongly-connected-components.md
       - 2-SAT: graph/2-SAT.md
       - 差分约束: graph/difference-constraint.md
       - 二分图: graph/bipartite-graph.md
