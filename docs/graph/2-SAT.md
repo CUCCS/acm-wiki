@@ -1,7 +1,9 @@
 !!! note "Copyright"
     本页面贡献者：[zrz](https://github.com/BehindShadow)。
     本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
-    
+
+先置知识:Tarjan,dfs
+
 **2-satisfiability(2-可满足性)**
 
 **描述：有N个变量，每个变量只有两种可能的取值。再给定M个条件，每个条件都是对两个变量取值的限制。求是否存在对N个变量的合法赋值，使M个条件均可满足。**
