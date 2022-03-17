@@ -2,10 +2,10 @@
     本页面贡献者：[zrz](https://github.com/BehindShadow)。
     本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
 
-- **先置知识，dfs树**
+先置知识:dfs树,图论基本知识
 
 ### 无向图
-* 在无向图中，如果顶点Vi到顶点Vj有路径，则称顶点Vi和Vj连通。
+* 在无向图中，如果顶点$V_i$到顶点$V_j$有路径，则称顶点$V_i$和$V_j$连通。
 
 * 如果无向图中任意两个顶点之间都连通，则称为连通图。
 
@@ -19,7 +19,7 @@
 
 **进一步，到有向图中，概念就变为强连通，强连通图，强连通分量**
 ### 有向图
-* 在有向图中，如果从Vi到Vj  和  从Vj到Vi之间都有路径，则称这两个顶点是强连通的
+* 在有向图中，如果从$V_i$到$V_j$  和  从$V_j$到$V_i$之间都有路径，则称这两个顶点是强连通的
 
 * 若图中任何一对顶点都是强连通的，则称此图为强连通图
 
@@ -32,90 +32,25 @@
 
 ### 有向图Tarjan与强连通分量
 
-求强连通分量，无法使用并查集判断，并查集无法表示有向图
+参考[强联通分量](./strongly-connected-components.md)
 
-
-变量说明
-```cpp
-#define ms(a,v)  memset(a,v,sizeof(a))
-int n,m;
-const int maxn = 10005; //点数
-int head[maxn],cnt = 0;
-struct {
-	int u,v,next;
-}e[100005];
-void add(int u,int v){
-	e[cnt].u = u;
-	e[cnt].v = v;
-	e[cnt].next = head[u];
-	head[u] = cnt++;
-}
-int low[maxn],dfn[maxn],vis[maxn];//vis数组是记录点是否在栈内  dfn是记录每个点dfs序
-stack<int> s;
-int num = 0;//dfs序计数，或者理解为时间戳 
-int lis_num = 0;//强连通分量的个数 
-int tag[maxn];//tag是记录每个点的属于几号连通分量
-```
-> 初始化代码
-```c++
-void inits(){
-	lis_num = 0;num = 0;cnt = 0;
-	ms(head,-1);
-	ms(vis,0);
-	ms(tag,0);
-	ms(dfn,0);
-	ms(low,0);
-}
-```
-Tarjan
-```c++
-void Tarjan(int now){
-	s.push(now);//栈可以数组代替
-	vis[now] = 1;
-	dfn[now] = low[now]= ++num;
-	for(int i=head[now];~i;i=e[i].next){
-		int v = e[i].v;
-		if(!dfn[v]){
-			Tarjan(v);
-			low[now]  = min(low[now],low[v]);
-		}
-		else if(vis[v]){
-			low[now] = min(low[now],dfn[v]);
-		}
-	}
-	if(dfn[now]==low[now]){//出栈
-		lis_num++;
-		int t;
-		do{
-			t = s.top();
-			vis[t] = 0;
-			tag[t] = lis_num;//这个可以没有如果不需要记录联通分量的序号
-			s.pop();	
-		}while(t!=now);
-	}
-}
-```
-这个还可用于DAG的缩点（有别于并查集的缩点）
-例如：
-```c++
- for(int i=1; i<=n; i++)
-    {
-        int sz=g[i].size();
-        for(int j=0; j<sz; j++)
-        {
-            int v=g[i][j];
-            if(color[v]!=color[i])
-            {
-                du[color[i]]++;
-				//在这里可以建一个新的图
-            }
-        }
-        cnt[color[i]]++;//统计每一个分量的点数
-    }
-```
 
 
 ### 无向图求连通分量，割点（关节点）
+
+
+对于一个无向图，如果把一个点删除后这个图的极大连通分量数增加了，那么这个点就是这个图的割点（又称割顶）。
+
+**割点判定法则：**
+
+**若x不是搜索树的根节点(dfs起点)**，则$x$是割点当且仅当搜索树上存在$x$的一个子节点$y$,满足：
+
+$$dfn[x] \leq low[y]$$
+
+**思考:**
+
+- 为何起点不是割点
+- 为何要求小于等于
 
 
 ```cpp
@@ -145,6 +80,14 @@ void Tarjan(int u,int fa)
 ```
 
 ### 无向图求连通分量，割边（桥）
+
+对于一个无向图，如果删掉一条边后图中的连通分量数增加了，则称这条边为桥或者割边。严谨来说，就是：假设有连通图$G = \{V,E\}$，$e$是其中一条边（即$e\in E$），如果$G-e$是不连通的，则边$e$是图$G$的一条割边（桥）。
+
+**割边判定法则：**
+
+无向边$(x,y)$是桥，当且仅当搜索树上存在$x$的一个子节点$y$,满足:
+
+$$dfn[x] < low[y]$$
 
 ```cpp
 const int N = 1005;
@@ -193,3 +136,10 @@ void Tarjan(int x,int in_edge){
 ```cpp
 Tarjan(1,-1); 
 ```
+
+### 双联通分量
+
+在一张连通的无向图中，对于两个点$u$和$v$，如果无论删去哪条边（只能删去一条）都不能使它们不连通，我们就说$u$和$v$边双连通。
+
+在一张连通的无向图中，对于两个点$u$和$v$，如果无论删去哪个点（只能删去一个，且不能删$u$和$v$自己）都不能使它们不连通，我们就说$u$和$v$点双连通。
+
