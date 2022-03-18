@@ -148,5 +148,91 @@ Tarjan的本质就是在dfs时维护一些变量，并根据变量的值进行�
     }
     ```
 
+### 参考例题
+
+???+note "problem"
+    [学校网络](https://www.acwing.com/problem/content/description/369/)
+
+    ```
+    #include <bits/stdc++.h>
+    #define ms(a,v)  memset(a,v,sizeof(a))
+    using namespace std;
+    int n;
+    const int maxn = 105; //点数
+    int head[maxn],cnt = 0;
+    struct {
+        int v,next;
+    }e[100005];
+    void add(int u,int v){
+        e[cnt].v = v;
+        e[cnt].next = head[u];
+        head[u] = cnt++;
+    }
+    int low[maxn],dfn[maxn],vis[maxn];
+    stack<int> s;
+    int num = 0;//dfs序计数，或者理解为时间戳 
+    int lis_num = 0;//强连通分量的个数 
+    int tag[maxn];//tag是记录每个点的属于几号连通分量
+    int in[maxn],ot[maxn];
+    void Tarjan(int now){
+        s.push(now);//栈可以数组代替
+        vis[now] = 1;
+        dfn[now] = low[now]= ++num;
+        for(int i=head[now];~i;i=e[i].next){
+            int v = e[i].v;
+            if(!dfn[v]){
+                Tarjan(v);
+                low[now]  = min(low[now],low[v]);
+            }
+            else if(vis[v]){
+                low[now] = min(low[now],dfn[v]);
+            }
+        }
+        if(dfn[now]==low[now]){//出栈
+            lis_num++;
+            int t;
+            do{
+                t = s.top();
+                vis[t] = 0;
+                tag[t] = lis_num;//这个可以没有如果不需要记录联通分量的序号
+                s.pop();    
+            }while(t!=now);
+        }
+    }
+    int main(){
+        cin>>n;
+        ms(head,-1);
+        for(int i = 1; i <= n;i++){
+            int x;
+            while(1){
+                scanf("%d",&x);
+                if(x==0)break;
+                add(i,x);
+            }
+        }
+        for(int i = 1;i <= n;i++)if(!dfn[i]){
+            Tarjan(i);
+        }
+        for(int i = 1; i <= n; i++){
+            for(int j = head[i]; ~j; j = e[j].next)
+            {
+                int v = e[j].v;
+                if(tag[v] != tag[i])
+                {
+                    in[tag[v]]++;
+                    ot[tag[i]]++;
+                }
+            }
+        }
+        int a = 0,b = 0;
+        for(int i = 1;i <= lis_num; i++){
+            if(in[i] == 0)a ++;
+            if(ot[i] == 0)b ++;
+        }
+        if(lis_num == 1)printf("1\n0");
+        else printf("%d\n%d\n",a,max(a,b));
+    }
+    ```
+
 ## 参考资料
 - [图论 OI Wiki](https://oi-wiki.org/graph/mst/)
