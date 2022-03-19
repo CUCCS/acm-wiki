@@ -153,7 +153,45 @@ if(tot!=n){//有环
 
 
 ???+note "problem"
-	[P4017 最大食物链计数](https://www.luogu.com.cn/problem/P4017)
+	[U107394 拓扑排序模板](https://www.luogu.com.cn/problem/U107394)
+
+	```
+	#include <bits/stdc++.h>
+	using namespace std;
+	const int maxn = 1e5+5;
+	int in[maxn];
+	vector<int>g[maxn];
+	int ans[maxn];
+	int num = 0;
+	int main(){
+		int n,m;
+		scanf("%d%d",&n,&m);
+		for(int i = 0 ;i < m ;i++){
+			int x,y;scanf("%d%d",&x,&y);
+			in[y]+=1;
+			g[x].push_back(y);
+		}
+		priority_queue<int,vector<int>,greater<int> >q;
+		for(int i = 1;i <= n;i++){
+			if(in[i]==0)q.push(i);
+		}
+		while(!q.empty()){
+			int f = q.top();
+			q.pop();
+			ans[num++] = f;
+			for(int i = 0 ;i < g[f].size(); i++){
+				int v = g[f][i];
+				in[v]--;
+				if(!in[v]){
+					q.push(v);
+				}
+			}
+		}
+		for(int i = 0;i < num;i++){
+			printf("%d ",ans[i]);
+		}
+	}
+	```
 
 ???+note "problem"
 	[Directing Edges](https://vjudge.net/problem/CodeForces-1385E)
