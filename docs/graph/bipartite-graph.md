@@ -1,6 +1,6 @@
 
 !!! note "Copyright"
-    本页面贡献者：[DcmTruman](https://github.com/DcmTruman),[zrz](https://github.com/BehindShadow)。
+    本页面贡献者：[DcmTruman](https://github.com/DcmTruman)，[zrz](https://github.com/BehindShadow)。
     本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
 
 ## 二分匹配
@@ -9,7 +9,7 @@
 ### 二分图
 
 
-二分图：又称二部图。简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。U,V可分别乘左部和右部。
+二分图：又称二部图。简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和 V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。U、V可分别乘左部和右部。
 
 二分图的一个等价定义是：不含有「含奇数条边的环」的图。
 
@@ -17,7 +17,7 @@
 
 ### 例题
 
-有n个人，其中有m对关系(x,y)表示x和y互相仇恨，x和y不能出现在同一个场合。问，能不能将这n个人，分成两组且每组之间任意两个人都不仇恨？
+有$n$个人，其中有$m$对关系$(x,y)$表示x和y互相仇恨，$x$和$y$不能出现在同一个场合。问，能不能将这$n$个人，分成两组且每组之间任意两个人都不仇恨？
 
 
 染色法判定：
@@ -104,38 +104,33 @@ bool dfs(int now,int col)
 本质桑使用的还是dfs递归的从$x$出发寻找增广路，回溯时将路径上的匹配标记取反。
 
 ```cpp
-bool findp(int now)
-{
-    for(int i = head[now];~i;i = edge[i].next)
-    {
-        int to = edge[i].v;
-        if(!vis[to])
-        {
-            vis[to] = true;
-            if(matching[to] == -1 || findp(matching[to]))
-            {
-                matching[now] = to;
-                matching[to] = now;
+int vis[maxn];
+vector<int>g[maxn];
+int match[maxn];
+bool dfs(int x){
+    for(int i =0;i<g[x].size();i++){
+        int v = g[x][i];
+        if(!vis[v]){
+            vis[v] = 1;
+            if(!match[v]||dfs(match[v])){
+                match[v] = x;
                 return true;
             }
         }
     }
-    return false;
+    return false ;
 }
 ```
 
 ```cpp
-int hung(int n)
-{
-   int ans = 0;
-   for(int i = 1;i <= n ;i++)
-   {
-       if(matching[i] == -1){
-            memset(vis,0,sizeof(vis));
-            if(findp(i))ans++;
-       }
-   }
-   return ans;
+//主函数内
+int ans = 0;
+memset(match,0,sizeof match);
+for(int i = 1;i <= n;i++){
+    memset(vis,0,sizeof(vis));
+    if(dfs(i)){
+        ans++;
+    }
 }
 ```
 
@@ -157,11 +152,10 @@ int hung(int n)
 
 性质：
 
-- ==二分图==的最大匹配 = 最小点覆盖  --《Konig定理》
-- ==二分图==的最小边覆盖=顶点数-最大匹配
+- ==二分图== 的最大匹配 = 最小点覆盖  --《Konig定理》
 - ==对于不存在孤点的任意图==，最大匹配+最小边覆盖=顶点数
 
-![微信截图_20200318023053](https://i.imgur.com/T1K8Odm.png)
+![img1](./img/Match1.png)
 
 概念：
 
@@ -171,26 +165,33 @@ int hung(int n)
 
 - 无向图$G$，的最大团等于其补图$G'$的最大独立集
 
-- ==任意图==中，最大独立集+最小点覆盖=顶点数
-- ==二分图==中，最大独立集 = 顶点数 - 最大匹配数
-- ==二分图==中，最大独立集 = 最小边覆盖
+- ==任意图== 中，最大独立集+最小点覆盖=顶点数
+- ==二分图== 中，最大独立集 = 顶点数 - 最大匹配数
+- ==二分图== 中，最大独立集 = 最小边覆盖
 
 
 ### 图论的精髓 ： 建图
 
 因为疫情，大家都不想在电影院离得太近，每个人x曼哈顿距离内都不想有其他人，问怎么安排使得做的人做多？
 
-![微信图片_20200318030348](https://i.imgur.com/0jj7UHl.jpg)
+![img2](./img/Match2.png)
+
+
 
 ??? note "例题1"
+    
     [行列建边](http://poj.org/problem?id=3041)
 
 ??? note "例题2"
     给你个棋盘，棋盘上某些位置有棋子，每行每列最多只能选一个棋子，让你选尽可能多的棋子
+
     [awing](https://www.acwing.com/problem/content/375/)
 
-
 ??? note "例题3"
+
+    [The 2021 ICPC Asia Shenyang Regional ContestEditorial](https://codeforces.com/gym/103427/problem/B)
+
+??? note "例题4"
 
     给一个数k，问他的正整数倍数中，（十进制下）每一位的和最小是多少,$2\leq k \leq 10^{5}$
 
