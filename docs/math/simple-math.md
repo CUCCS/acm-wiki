@@ -1,5 +1,5 @@
 !!! note "Copyright"
-本页面贡献者：[LyuLumos](https://github.com/LyuLumos)，[YanhuiJessica](https://github.com/YanhuiJessica),[Zhang1933](https://github.com/Zhang1933)。
+本页面贡献者：[LyuLumos](https://github.com/LyuLumos)，[YanhuiJessica](https://github.com/YanhuiJessica)，[Zhang1933](https://github.com/Zhang1933)。
 本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。
 
 ## 素数与合数
