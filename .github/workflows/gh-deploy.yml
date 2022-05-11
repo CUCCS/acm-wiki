@@ -8,11 +8,11 @@ on:
 # Reference: https://github.com/marketplace/actions/deploy-mkdocs
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - name: Deploy to GitHub Pages
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        uses: YanhuiJessica/mkdocs-deploy-gh-pages@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REQUIREMENTS: requirements.txt
