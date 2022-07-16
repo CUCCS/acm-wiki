@@ -89,6 +89,50 @@ nav:
       - 2020春季集训: training/2020Spring.md
   - 视频资源:
       - 视频资源: videos/videos.md
+  - 题库:
+      - 使用指南: problems/How-to-use.md
+      - 递归:
+        - 题目: problems/recursion.md
+        - 题解: problems/recursion-solution.md
+      - 差分:
+        - 题目: problems/difference.md
+        - 题解: problems/difference-solution.md
+      - 动态规划:
+        - 题目: problems/dp.md
+        - 题解: problems/dp-solution.md
+      - 二分:
+        - 题目: problems/dichotomy.md
+        - 题解: problems/dichotomy-solution.md
+      - 分治:
+        - 题目: problems/divide.md
+        - 题解: problems/divide-solution.md
+      - 构造:
+        - 题目: problems/construct.md
+        - 题解: problems/construct-solution.md
+      - 计数:
+        - 题目: problems/count.md
+        - 题解: problems/count-solution.md
+      - 排序:
+        - 题目: problems/sort.md
+        - 题解: problems/sort-solution.md
+      - 前缀和:
+        - 题目: problems/presum.md
+        - 题解: problems/presum-solution.md
+      - 树状数组:
+        - 题目: problems/ta.md
+        - 题解: problems/ta-solution.md
+      - 数学:
+        - 题目: problems/math.md
+        - 题解: problems/math-solution.md
+      - 贪心:
+        - 题目: problems/greedy.md
+        - 题解: problems/greedy-solution.md
+      - 位运算:
+        - 题目: problems/bit.md
+        - 题解: problems/bit-solution.md
+      - 优化枚举:
+        - 题目: problems/op.md
+        - 题解: problems/op-solution.md
   
 ## Theme
 theme:
