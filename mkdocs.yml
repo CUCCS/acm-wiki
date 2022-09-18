@@ -76,6 +76,7 @@ nav:
         - 可持久化线段树: data-struct/persistent-segment.md
       - 莫队算法: data-struct/modui.md
   - 集训安排:
+      - 2022秋季集训: training/2022Autumn.md
       - 2022春季集训: training/2022Spring.md
       - 2021秋季集训: training/2021Autumn.md
       - 2021暑期集训: 
