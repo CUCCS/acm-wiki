@@ -134,7 +134,9 @@ nav:
       - 优化枚举:
         - 题目: problems/op.md
         - 题解: problems/op-solution.md
-  
+  - 参赛:  
+    - ICPC: enroll/icpc.md 
+    - CCPC: enroll/ccpc.md
 ## Theme
 theme:
   name: 'material'
