@@ -1,0 +1,2668 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="CUC ACM-Wiki用于学习算法和数据结构相关内容，发布中国传媒大学ACM集训队相关安排">
+      
+      
+        <link rel="canonical" href="https://cuccs.github.io/acm-wiki/c-basic/char/">
+      
+      
+        <meta name="author" content="CUC ACM Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>字符数组,string - CUC ACM-Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700%7CFira+Mono&display=fallback">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" type="application/manifest+json" href="../../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../_static/css/extra.css?v=12">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="0" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://cuccs.github.io/acm-wiki/" title="CUC ACM-Wiki" aria-label="CUC ACM-Wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              CUC ACM-Wiki
+            </span>
+            <span class="md-header-nav__topic">
+              
+                字符数组,string
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/CUCCS/acm-wiki" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    CUCCS/acm-wiki
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          首页
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../grammar/" class="md-tabs__link md-tabs__link--active">
+          C语言基础
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../basic-algorithm/time/" class="md-tabs__link">
+          基础算法
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../STL/introduction/" class="md-tabs__link">
+          STL
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../graph/topological-sorting/" class="md-tabs__link">
+          图论
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../dp/simpleDP/" class="md-tabs__link">
+          动态规划
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../search/enumeration/" class="md-tabs__link">
+          搜索
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../math/simple-math/" class="md-tabs__link">
+          数学
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data-struct/intro/" class="md-tabs__link">
+          数据结构
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../training/2022Autumn/" class="md-tabs__link">
+          集训安排
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../videos/videos/" class="md-tabs__link">
+          视频资源
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../problems/How-to-use/" class="md-tabs__link">
+          题库
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../enroll/icpc/" class="md-tabs__link">
+          参赛
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://cuccs.github.io/acm-wiki/" title="CUC ACM-Wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    CUC ACM-Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/CUCCS/acm-wiki" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    CUCCS/acm-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      首页
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        首页
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/" title="关于本项目" class="md-nav__link">
+      关于本项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="F.A.Q" class="md-nav__link">
+      F.A.Q
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      C语言基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        C语言基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grammar/" title="基本语法" class="md-nav__link">
+      基本语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../structure/" title="逻辑结构" class="md-nav__link">
+      逻辑结构
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../array/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../function/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="字符数组,string" class="md-nav__link md-nav__link--active">
+      字符数组,string
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python/" title="Python竞赛基础" class="md-nav__link">
+      Python竞赛基础
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      基础算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        基础算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/time/" title="时间复杂度" class="md-nav__link">
+      时间复杂度
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/binary-research/" title="二分" class="md-nav__link">
+      二分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/two-pointers/" title="尺取" class="md-nav__link">
+      尺取
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/adding-doubling/" title="倍增" class="md-nav__link">
+      倍增
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/sort/" title="排序" class="md-nav__link">
+      排序
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      STL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        STL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/introduction/" title="STL简介" class="md-nav__link">
+      STL简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/vector/" title="Vector" class="md-nav__link">
+      Vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/map/" title="Map" class="md-nav__link">
+      Map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/set/" title="Set" class="md-nav__link">
+      Set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/queue/" title="Queue" class="md-nav__link">
+      Queue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/list/" title="List" class="md-nav__link">
+      List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/bitset/" title="Bitset" class="md-nav__link">
+      Bitset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      图论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        图论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/topological-sorting/" title="拓扑排序" class="md-nav__link">
+      拓扑排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/shortest-path/" title="最短路" class="md-nav__link">
+      最短路
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/MST/" title="最小生成树" class="md-nav__link">
+      最小生成树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/LCA/" title="LCA" class="md-nav__link">
+      LCA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/diameter-of-tree/" title="树直径" class="md-nav__link">
+      树直径
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/euler/" title="Euler" class="md-nav__link">
+      Euler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/connected-components/" title="连通分量概述" class="md-nav__link">
+      连通分量概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/strongly-connected-components/" title="强联通分量" class="md-nav__link">
+      强联通分量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/2-SAT/" title="2-SAT" class="md-nav__link">
+      2-SAT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/difference-constraint/" title="差分约束" class="md-nav__link">
+      差分约束
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/bipartite-graph/" title="二分图" class="md-nav__link">
+      二分图
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/simpleDP/" title="DP入门" class="md-nav__link">
+      DP入门
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/DigitalDP/" title="数位DP" class="md-nav__link">
+      数位DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/CountingDP/" title="计数DP" class="md-nav__link">
+      计数DP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      搜索
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        搜索
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/enumeration/" title="枚举排列和枚举子集" class="md-nav__link">
+      枚举排列和枚举子集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/simple-enum-reduction/" title="枚举约简" class="md-nav__link">
+      枚举约简
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/dfs/" title="栈和深度优先搜索" class="md-nav__link">
+      栈和深度优先搜索
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/simple-math/" title="简单数学" class="md-nav__link">
+      简单数学
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/number-theory/" title="数论" class="md-nav__link">
+      数论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/num-sequence/" title="数列" class="md-nav__link">
+      数列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/combinatorics/" title="组合数学" class="md-nav__link">
+      组合数学
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/ball-in-box/" title="当小球遇上盒子" class="md-nav__link">
+      当小球遇上盒子
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/fft/" title="FFT" class="md-nav__link">
+      FFT
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/intro/" title="数据结构简介" class="md-nav__link">
+      数据结构简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/ST/" title="ST算法" class="md-nav__link">
+      ST算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/fenwick-tree/" title="树状数组" class="md-nav__link">
+      树状数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/segment-tree/" title="线段树" class="md-nav__link">
+      线段树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/hld/" title="树链剖分" class="md-nav__link">
+      树链剖分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6" type="checkbox" id="nav-9-6">
+    
+    <label class="md-nav__link" for="nav-9-6">
+      可持久化数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-6">
+        可持久化数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/pds-intro/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/persistent-segment/" title="可持久化线段树" class="md-nav__link">
+      可持久化线段树
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/modui/" title="莫队算法" class="md-nav__link">
+      莫队算法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      集训安排
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        集训安排
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2022Autumn/" title="2022秋季集训" class="md-nav__link">
+      2022秋季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2022Spring/" title="2022春季集训" class="md-nav__link">
+      2022春季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Autumn/" title="2021秋季集训" class="md-nav__link">
+      2021秋季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4">
+    
+    <label class="md-nav__link" for="nav-10-4">
+      2021暑期集训
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-4">
+        2021暑期集训
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Summer/official/" title="暑期多校训练" class="md-nav__link">
+      暑期多校训练
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Summer/nowcoder/" title="牛客多校总结" class="md-nav__link">
+      牛客多校总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Spring/" title="2021春季集训" class="md-nav__link">
+      2021春季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Autumn/" title="2020秋季集训" class="md-nav__link">
+      2020秋季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-7" type="checkbox" id="nav-10-7">
+    
+    <label class="md-nav__link" for="nav-10-7">
+      2020暑期集训
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-7">
+        2020暑期集训
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Summer/official/" title="暑期多校训练" class="md-nav__link">
+      暑期多校训练
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Summer/nowcoder/" title="2020牛客多校题解/总结" class="md-nav__link">
+      2020牛客多校题解/总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Spring/" title="2020春季集训" class="md-nav__link">
+      2020春季集训
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      视频资源
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        视频资源
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../videos/videos/" title="视频资源" class="md-nav__link">
+      视频资源
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      题库
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        题库
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/How-to-use/" title="使用指南" class="md-nav__link">
+      使用指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-2" type="checkbox" id="nav-12-2">
+    
+    <label class="md-nav__link" for="nav-12-2">
+      递归
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-2">
+        递归
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/recursion/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/recursion-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-3" type="checkbox" id="nav-12-3">
+    
+    <label class="md-nav__link" for="nav-12-3">
+      差分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-3">
+        差分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/difference/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/difference-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-4" type="checkbox" id="nav-12-4">
+    
+    <label class="md-nav__link" for="nav-12-4">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-4">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dp/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dp-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-5" type="checkbox" id="nav-12-5">
+    
+    <label class="md-nav__link" for="nav-12-5">
+      二分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-5">
+        二分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dichotomy/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dichotomy-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-6" type="checkbox" id="nav-12-6">
+    
+    <label class="md-nav__link" for="nav-12-6">
+      分治
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-6">
+        分治
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/divide/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/divide-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-7" type="checkbox" id="nav-12-7">
+    
+    <label class="md-nav__link" for="nav-12-7">
+      构造
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-7">
+        构造
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/construct/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/construct-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-8" type="checkbox" id="nav-12-8">
+    
+    <label class="md-nav__link" for="nav-12-8">
+      计数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-8">
+        计数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/count/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/count-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-9" type="checkbox" id="nav-12-9">
+    
+    <label class="md-nav__link" for="nav-12-9">
+      排序
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-9">
+        排序
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/sort/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/sort-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-10" type="checkbox" id="nav-12-10">
+    
+    <label class="md-nav__link" for="nav-12-10">
+      前缀和
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-10">
+        前缀和
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/presum/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/presum-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-11" type="checkbox" id="nav-12-11">
+    
+    <label class="md-nav__link" for="nav-12-11">
+      树状数组
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-11">
+        树状数组
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/ta/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/ta-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-12" type="checkbox" id="nav-12-12">
+    
+    <label class="md-nav__link" for="nav-12-12">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-12">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/math/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/math-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-13" type="checkbox" id="nav-12-13">
+    
+    <label class="md-nav__link" for="nav-12-13">
+      贪心
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-13">
+        贪心
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/greedy/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/greedy-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-14" type="checkbox" id="nav-12-14">
+    
+    <label class="md-nav__link" for="nav-12-14">
+      位运算
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-14">
+        位运算
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/bit/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/bit-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-15" type="checkbox" id="nav-12-15">
+    
+    <label class="md-nav__link" for="nav-12-15">
+      优化枚举
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-15">
+        优化枚举
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/op/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/op-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      参赛
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        参赛
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../enroll/icpc/" title="ICPC" class="md-nav__link">
+      ICPC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../enroll/ccpc/" title="CCPC" class="md-nav__link">
+      CCPC
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/CUCCS/acm-wiki/edit/master/docs/c-basic/char.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="_1">字符数组与字符串<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Copyright</p>
+<p>本页面贡献者：<a href="https://github.com/SGDBS">水之幡米拉</a>。
+本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。</p>
+</div>
+<h1 id="_2">内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<ul>
+<li>计算机如何储存变量</li>
+<li>char数组与string</li>
+</ul>
+<h1 id="_3">计算机是如何储存数字的<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h2 id="_4">用二进制存储数字<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>因为计算机的构造原理，计算机只能储存0，1这两种状态(低电位代表0，高电位代表1)</p>
+<p>那么如何表示一个我们日常生活中的数呢？这就要用到<strong>二进制</strong></p>
+<p>假如一段二进制数为 <span class="arithmatex"><span class="MathJax_Preview">1010</span><script type="math/tex">1010</script></span>，那么它转化为10进制就是</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">0 * 2^0 + 1 * 2^1 + 0 * 2^2 + 1 * 2^3= 10</span><script type="math/tex">0 * 2^0 + 1 * 2^1 + 0 * 2^2 + 1 * 2^3= 10</script></span></p>
+<h2 id="_5">内存单元<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>每一个<span class="arithmatex"><span class="MathJax_Preview">0/1</span><script type="math/tex">0/1</script></span>数字占一位，而一个内存单元有<span class="arithmatex"><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span>位，称为<strong>字节</strong>，即<strong>bit</strong>，它的单位是<strong>byte</strong>。
+所以，理论上<span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> byte能表示的最大数是<span class="arithmatex"><span class="MathJax_Preview">(11111111)_{(2)} =\sum_{i=0}^{7}2^i =2^8 - 1</span><script type="math/tex">(11111111)_{(2)} =\sum_{i=0}^{7}2^i =2^8 - 1</script></span></p>
+<h1 id="c">C++中的变量<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
+<p>C++中 int 类型的变量占用四个字节，也就是有32个<span class="arithmatex"><span class="MathJax_Preview">0/1</span><script type="math/tex">0/1</script></span>位</p>
+<p>那么理论上它能表示的最大的数应该是<span class="arithmatex"><span class="MathJax_Preview">2^{32}-1</span><script type="math/tex">2^{32}-1</script></span></p>
+<p><strong>但是！！</strong></p>
+<p>问题在于，它该怎么表示负数？</p>
+<p>为了表示负数，C++中把int的最高位，即代表<span class="arithmatex"><span class="MathJax_Preview">2^{31}</span><script type="math/tex">2^{31}</script></span>的那一位作为符号位，如果它是<span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，那就是正数，如果它是<span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，那就是负数，所以它可以表示
+<span class="arithmatex"><span class="MathJax_Preview">[-(2^{31}-1),2^{31}-1]</span><script type="math/tex">[-(2^{31}-1),2^{31}-1]</script></span></p>
+<p>同样的，long long是<span class="arithmatex"><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span>个字节，它的最高位也是表示正负，所以它可以表示
+<span class="arithmatex"><span class="MathJax_Preview">[-(2^{63}-1), 2^{63}-1]</span><script type="math/tex">[-(2^{63}-1), 2^{63}-1]</script></span></p>
+<p>所以说，在爆int的时候，有时候结果就会变成负数</p>
+<h2 id="unsigned">unsigned 类型变量<a class="headerlink" href="#unsigned" title="Permanent link">&para;</a></h2>
+<p>使用unsigned int/unsigned long long时，它就将所有<span class="arithmatex"><span class="MathJax_Preview">0/1位</span><script type="math/tex">0/1位</script></span>都用来表示数值，所以它无法表示负数，但是表示范围扩大了。</p>
+<p>且发生算术溢出时，就相当于自动对<strong>最高位取模。</strong></p>
+<p>比如unsigned int ,发生溢出时，高于最高位的所有数被丢弃，就相当于对<span class="arithmatex"><span class="MathJax_Preview">2^{31}</span><script type="math/tex">2^{31}</script></span>取模。</p>
+<h1 id="_6">计算机如何储存字符<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<p>我们可以用二进制来表示数字，但是该如何去表示字母呢？</p>
+<p>字母与数字可以说是完全没有关系，所以肯定无法某些运算来得到</p>
+<p>所以为了解决这个问题，大家规定，用<strong>特定数值来表示某个字母</strong></p>
+<p>即，<strong>建立数值与字母一一对应关系。</strong></p>
+<p>比如说，用<span class="arithmatex"><span class="MathJax_Preview">65</span><script type="math/tex">65</script></span>表示A，用<span class="arithmatex"><span class="MathJax_Preview">66</span><script type="math/tex">66</script></span>表示B。</p>
+<h2 id="ascll">ASCLL码<a class="headerlink" href="#ascll" title="Permanent link">&para;</a></h2>
+<p>因为用<strong>特定数值表示特定字母</strong>这种方式是人为规定的，不同地区会有不同的规定，所以为了防止混乱，现在一般采用<strong>ASCII码</strong>这种对应规则。</p>
+<blockquote>
+<p>美国信息交换标准代码是由美国国家标准学会(American National Standard Institute , ANSI )制定的，是一种标准的单字节字符编码方案，用于基于文本的数据。它最初是美国国家标准，供不同计算机在相互通信时用作共同遵守的西文字符编码标准，后来它被国际标准化组织（International Organization for Standardization, ISO）定为国际标准，称为ISO 646标准。适用于所有拉丁文字字母。</p>
+</blockquote>
+<p><img alt="" src="../../img/ASCII.png" /></p>
+<p>我们发现，大写字母、小写字母、数字的ASCII码是分别连续的。</p>
+<p>即， A的ASCII码下一位就是B，c的ASCLL码下一位就是d。</p>
+<h2 id="_7">具体应用<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>我们可以尝试以下程序
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p>那么具体发生了什么？</p>
+<ul>
+<li>%d是告诉计算机，接下来要输出的内容，是按照int类型来输出的，所以，计算机会把<span class="arithmatex"><span class="MathJax_Preview">65</span><script type="math/tex">65</script></span>对应的值，也就是<span class="arithmatex"><span class="MathJax_Preview">65</span><script type="math/tex">65</script></span>本身，输出。</li>
+<li>%c是告诉计算机，接下来要输出的内容，是按照char类型来输出的，所以，计算机会把<span class="arithmatex"><span class="MathJax_Preview">65</span><script type="math/tex">65</script></span>作为ASCII码，来输出其对应的字符，也就是‘A’，输出。</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>%d是把'A'的ASCII码输出，%c就是输出'A'本身
+因为'A'本身在内存中储存形式，其实就是<strong>数值</strong>，即<span class="arithmatex"><span class="MathJax_Preview">65</span><script type="math/tex">65</script></span>，只是根据输出方式不同，而采取不同的表现形式。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c &quot;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c &quot;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+利用字母ASCII码连续的性质，输出'A'到'Z'，'a'到'z'的所有字母。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;2&#39;</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+通过减去'<span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>'，就可以将字符型数字，转化为数值。</p>
+<h1 id="_8">转义符<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h1>
+<p>假如我们想让计算机输出一个空格，或者换行，怎么实现？又或者说，空格和换行，在计算机中是怎么保存的？</p>
+<p>这就用到了转义符，在C++中，它是'\'。</p>
+<p>比如:
+* 空格: '\0'
+* 换行符'\n'</p>
+<p>当读入到'\'时，计算机就不会输出'\'了，而是会再读取它后面一位，以此来确定内容。</p>
+<p>那么怎么输出一个'\'？
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\\</span><span class="s">&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<h1 id="_9">字符数组<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h1>
+<p>如果我们需要储存一串字符的话，比如'ldstql'，那么我们就需要使用<strong>字符数组</strong>。</p>
+<h3 id="_10">定义<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">10005</span><span class="p">];</span>
+</code></pre></div></td></tr></table></div>
+之后的实例中，默认s数组已经被声明过了。</p>
+<h3 id="_11">读入<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+注意，仅在读入字符串，即'%s'时，不需要在变量前加'&amp;'。</p>
+<h3 id="_12">输出<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="_13">读入<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+这种方法就是将读入的字符串从s[0]开始，依次往后复制，<strong>一直读入到空格/换行符才会停止</strong>。
+比如你想读入两个字符串，用空格把它们分割，那么当你敲下空格时，计算机看到的其实是'\0'，然后它就知道这个字符串结束了。</p>
+<p>顺带一提，当你建立一个char数组时，它的每一位默认为是'\0'。</p>
+<p>当我们用上述方法读入字符串'ldstql'时,得到的结果就是
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;d&#39;</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;s&#39;</span><span class="p">;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;t&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>那么假如我习惯数组下标是从<span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>开始的，怎么样才能读入的时候，s[1]开始赋值呢？</p>
+<p>很简单，只需要在数组名后加上你想要从第几位开始的数字即可。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+这样做，就是从第<span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>位开始读入。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;d&#39;</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;s&#39;</span><span class="p">;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;t&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="_14">输出<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">输出整个字符串<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+它的输出规则是和读入一样的，从第<span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>位开始依次往后输出，<strong>一直读入到空格/换行符才会停止</strong>。</p>
+<p><strong>注意！！！！</strong>
+上述规则意味着，<strong>当你读入时，如果是从第一位读入的话，那么输出的时候，也要从第一位开始</strong>，因为第<span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>位是空格，即'\0',所以假如还是从第<span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>位输出的话，那么它什么都不会输出。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 从第$1位开始输出。</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="_16">字符串中单个字符<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<p>s[i]可以访问字符串中第<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>个字符，此时可以把它当作字符处理。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="sc">&#39;l&#39;</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="sc">&#39;d&#39;</span><span class="p">;</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="sc">&#39;s&#39;</span>
+</code></pre></div></td></tr></table></div>
+同样的，也可以按照<strong>单个字符的形式输出</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</code></pre></div></td></tr></table></div></p>
+<h1 id="cstring">cstring库<a class="headerlink" href="#cstring" title="Permanent link">&para;</a></h1>
+<p>C++中有一个专门用来帮助我们处理字符串的库，它就叫<cstring>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;cstring&gt;</span>
+</code></pre></div></td></tr></table></div>
+里面提供了很多类、函数可供我们使用</p>
+<p><strong>注意</strong></p>
+<p>当你使用库中内容时，必须要include<cstring>这个库。</p>
+<h2 id="strlen">strlen()<a class="headerlink" href="#strlen" title="Permanent link">&para;</a></h2>
+<p>strlen()这个函数，会返回给定的字符串的长度
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+它的遍历字符串方式，和scanf/printf是一样的，所以如果字符串是从第一位读入的话，那么如果想要得到正确结果，也必须把第一位传入进去。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>我们以后读入了一个字符串，就可以用这个函数来快速获取它的长度了。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="strcpy">strcpy()<a class="headerlink" href="#strcpy" title="Permanent link">&para;</a></h2>
+<p>strcpy(x, y)的作用是把y字符串拷贝给x
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">s1</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span><span class="w"> </span><span class="n">s2</span><span class="p">[</span><span class="mi">21</span><span class="p">];</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">);</span>
+<span class="n">strcmp</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+同样的，它的遍历数组方式与strlen一样。
+所以如果是从第一位开始读入的，复制的时候也要从第一位
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">s1</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span><span class="w"> </span><span class="n">s2</span><span class="p">[</span><span class="mi">21</span><span class="p">];</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">strcmp</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">//从s2的第0位开始粘贴</span>
+<span class="n">strcmp</span><span class="p">(</span><span class="n">s2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">//从s2的第1位开始粘贴</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="string">string<a class="headerlink" href="#string" title="Permanent link">&para;</a></h2>
+<p>cstring为我们提供了一个类（现在可以认为是个又特殊功能的变量），叫做 string，<strong>它本身就是一个字符串。</strong></p>
+<h3 id="_17">声明<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="_18">读入<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+string类型变量只能用cin来进行读入，不能使用scanf，且只能从第<span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>位开始读入。
+string是不需要声明大小的，它是‘动态’的，即会根据输入的内容自己控制大小。</p>
+<p>string其余部分，与char数组一致。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">//读入第$1$位</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">//然后输出</span>
+</code></pre></div></td></tr></table></div></p>
+<p>string还自带很多功能。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="c1">// 返回s的字符串长度</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="c1">// 这样遍历s</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="n">s</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span><span class="w"> </span><span class="c1">// 清除s内的所有内容</span>
+</code></pre></div></td></tr></table></div></p>
+<p>两个string类型之间可以直接相加，相当于<strong>把后面string的加到前面string</strong>的后面。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;lds&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tql&quot;</span><span class="p">;</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>但是，string类型之间是没有减法运算的 : (</p>
+<h1 id="_19">一些细节<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h1>
+<p>不管是string，还是char数组，当你对整个数组进行读入时，会直接覆盖掉之前的<strong>所有字符</strong>，哪怕之前字符串长度是114514，你对<strong>整个字符串</strong>输入了一个字符串，那就会清除掉之前所有的字符。但如果你对单个位置进行读入，那么是不会覆盖掉其余部分的。 </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">10005</span><span class="p">];</span>
+<span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">//第一次读入</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">//会覆盖掉所有第一次读入的内容</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c1">//只会覆盖掉0,1,2这三个位置</span>
+
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"> </span><span class="c1">//第一次读入</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"> </span><span class="c1">//会覆盖掉所有第一次读入的内容</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c1">//只会覆盖掉0,1,2这三个位置</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="string_1">string数组<a class="headerlink" href="#string_1" title="Permanent link">&para;</a></h2>
+<p>string 也是可以开成数组形式的。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span><span class="w"> </span><span class="c1">// 声明10个string类型的数组</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="c1">//向第0个string中进行读入</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="c1">// 输出第0个string的第0个字符</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">length</span><span class="p">()</span><span class="c1">//获得第0个string的长度</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="c1">//遍历这个第0个string</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<h1 id="_20">例题 判断回文串<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h1>
+<p>给定一个由小写英文字母组成的字符串，判断它是否为回文串。</p>
+<p>回文串的定义为:这个字符串<strong>从左往右读和从右往左着读是一样的</strong>，比如'cucuc'是回文串，而'niconiconi'就不是回文串。</p>
+<h2 id="_21">提示<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<p>对于一个字符串，假如它的长度为<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，我们从第<span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>位开始读入,那么我们怎么知道与它对应的字符呢？</p>
+<p>比如第<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>位，与之对应的就是<span class="arithmatex"><span class="MathJax_Preview">n - i + 1</span><script type="math/tex">n - i + 1</script></span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">succ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">succ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="c1">//既然已经对应不上了，那么它肯定不是回文串，那么就没有继续判断的必要了</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../function/" title="函数" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                函数
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../python/" title="Python竞赛基础" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                Python竞赛基础
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2021 CUC ACM Team
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://cuccs.github.io/ctf-wiki/" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="http://39.98.122.96/" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.3.1",url:{base:"../.."}})</script>
+      
+        <script src="../../_static/js/extra.js?v=16"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

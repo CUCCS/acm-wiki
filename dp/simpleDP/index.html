@@ -1,0 +1,2723 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="CUC ACM-Wiki用于学习算法和数据结构相关内容，发布中国传媒大学ACM集训队相关安排">
+      
+      
+        <link rel="canonical" href="https://cuccs.github.io/acm-wiki/dp/simpleDP/">
+      
+      
+        <meta name="author" content="CUC ACM Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>DP入门 - CUC ACM-Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700%7CFira+Mono&display=fallback">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" type="application/manifest+json" href="../../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../_static/css/extra.css?v=12">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="0" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://cuccs.github.io/acm-wiki/" title="CUC ACM-Wiki" aria-label="CUC ACM-Wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              CUC ACM-Wiki
+            </span>
+            <span class="md-header-nav__topic">
+              
+                DP入门
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/CUCCS/acm-wiki" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    CUCCS/acm-wiki
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          首页
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../c-basic/grammar/" class="md-tabs__link">
+          C语言基础
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../basic-algorithm/time/" class="md-tabs__link">
+          基础算法
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../STL/introduction/" class="md-tabs__link">
+          STL
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../graph/topological-sorting/" class="md-tabs__link">
+          图论
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          动态规划
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../search/enumeration/" class="md-tabs__link">
+          搜索
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../math/simple-math/" class="md-tabs__link">
+          数学
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data-struct/intro/" class="md-tabs__link">
+          数据结构
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../training/2022Autumn/" class="md-tabs__link">
+          集训安排
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../videos/videos/" class="md-tabs__link">
+          视频资源
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../problems/How-to-use/" class="md-tabs__link">
+          题库
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../enroll/icpc/" class="md-tabs__link">
+          参赛
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://cuccs.github.io/acm-wiki/" title="CUC ACM-Wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    CUC ACM-Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/CUCCS/acm-wiki" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    CUCCS/acm-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      首页
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        首页
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/" title="关于本项目" class="md-nav__link">
+      关于本项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="F.A.Q" class="md-nav__link">
+      F.A.Q
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      C语言基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        C语言基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/grammar/" title="基本语法" class="md-nav__link">
+      基本语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/structure/" title="逻辑结构" class="md-nav__link">
+      逻辑结构
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/array/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/function/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/char/" title="字符数组,string" class="md-nav__link">
+      字符数组,string
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/python/" title="Python竞赛基础" class="md-nav__link">
+      Python竞赛基础
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      基础算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        基础算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/time/" title="时间复杂度" class="md-nav__link">
+      时间复杂度
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/binary-research/" title="二分" class="md-nav__link">
+      二分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/two-pointers/" title="尺取" class="md-nav__link">
+      尺取
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/adding-doubling/" title="倍增" class="md-nav__link">
+      倍增
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/sort/" title="排序" class="md-nav__link">
+      排序
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      STL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        STL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/introduction/" title="STL简介" class="md-nav__link">
+      STL简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/vector/" title="Vector" class="md-nav__link">
+      Vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/map/" title="Map" class="md-nav__link">
+      Map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/set/" title="Set" class="md-nav__link">
+      Set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/queue/" title="Queue" class="md-nav__link">
+      Queue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/list/" title="List" class="md-nav__link">
+      List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/bitset/" title="Bitset" class="md-nav__link">
+      Bitset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      图论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        图论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/topological-sorting/" title="拓扑排序" class="md-nav__link">
+      拓扑排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/shortest-path/" title="最短路" class="md-nav__link">
+      最短路
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/MST/" title="最小生成树" class="md-nav__link">
+      最小生成树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/LCA/" title="LCA" class="md-nav__link">
+      LCA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/diameter-of-tree/" title="树直径" class="md-nav__link">
+      树直径
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/euler/" title="Euler" class="md-nav__link">
+      Euler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/connected-components/" title="连通分量概述" class="md-nav__link">
+      连通分量概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/strongly-connected-components/" title="强联通分量" class="md-nav__link">
+      强联通分量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/2-SAT/" title="2-SAT" class="md-nav__link">
+      2-SAT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/difference-constraint/" title="差分约束" class="md-nav__link">
+      差分约束
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/bipartite-graph/" title="二分图" class="md-nav__link">
+      二分图
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        DP入门
+      </label>
+    
+    <a href="./" title="DP入门" class="md-nav__link md-nav__link--active">
+      DP入门
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    学习目标
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    动态规划基本思想
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    例题引入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dp" class="md-nav__link">
+    什么是DP？？？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    关于无后效性：
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DigitalDP/" title="数位DP" class="md-nav__link">
+      数位DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CountingDP/" title="计数DP" class="md-nav__link">
+      计数DP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      搜索
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        搜索
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/enumeration/" title="枚举排列和枚举子集" class="md-nav__link">
+      枚举排列和枚举子集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/simple-enum-reduction/" title="枚举约简" class="md-nav__link">
+      枚举约简
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/dfs/" title="栈和深度优先搜索" class="md-nav__link">
+      栈和深度优先搜索
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/simple-math/" title="简单数学" class="md-nav__link">
+      简单数学
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/number-theory/" title="数论" class="md-nav__link">
+      数论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/num-sequence/" title="数列" class="md-nav__link">
+      数列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/combinatorics/" title="组合数学" class="md-nav__link">
+      组合数学
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/ball-in-box/" title="当小球遇上盒子" class="md-nav__link">
+      当小球遇上盒子
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/fft/" title="FFT" class="md-nav__link">
+      FFT
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/intro/" title="数据结构简介" class="md-nav__link">
+      数据结构简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/ST/" title="ST算法" class="md-nav__link">
+      ST算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/fenwick-tree/" title="树状数组" class="md-nav__link">
+      树状数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/segment-tree/" title="线段树" class="md-nav__link">
+      线段树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/hld/" title="树链剖分" class="md-nav__link">
+      树链剖分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6" type="checkbox" id="nav-9-6">
+    
+    <label class="md-nav__link" for="nav-9-6">
+      可持久化数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-6">
+        可持久化数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/pds-intro/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/persistent-segment/" title="可持久化线段树" class="md-nav__link">
+      可持久化线段树
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/modui/" title="莫队算法" class="md-nav__link">
+      莫队算法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      集训安排
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        集训安排
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2022Autumn/" title="2022秋季集训" class="md-nav__link">
+      2022秋季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2022Spring/" title="2022春季集训" class="md-nav__link">
+      2022春季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Autumn/" title="2021秋季集训" class="md-nav__link">
+      2021秋季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4">
+    
+    <label class="md-nav__link" for="nav-10-4">
+      2021暑期集训
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-4">
+        2021暑期集训
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Summer/official/" title="暑期多校训练" class="md-nav__link">
+      暑期多校训练
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Summer/nowcoder/" title="牛客多校总结" class="md-nav__link">
+      牛客多校总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Spring/" title="2021春季集训" class="md-nav__link">
+      2021春季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Autumn/" title="2020秋季集训" class="md-nav__link">
+      2020秋季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-7" type="checkbox" id="nav-10-7">
+    
+    <label class="md-nav__link" for="nav-10-7">
+      2020暑期集训
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-7">
+        2020暑期集训
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Summer/official/" title="暑期多校训练" class="md-nav__link">
+      暑期多校训练
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Summer/nowcoder/" title="2020牛客多校题解/总结" class="md-nav__link">
+      2020牛客多校题解/总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Spring/" title="2020春季集训" class="md-nav__link">
+      2020春季集训
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      视频资源
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        视频资源
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../videos/videos/" title="视频资源" class="md-nav__link">
+      视频资源
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      题库
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        题库
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/How-to-use/" title="使用指南" class="md-nav__link">
+      使用指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-2" type="checkbox" id="nav-12-2">
+    
+    <label class="md-nav__link" for="nav-12-2">
+      递归
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-2">
+        递归
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/recursion/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/recursion-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-3" type="checkbox" id="nav-12-3">
+    
+    <label class="md-nav__link" for="nav-12-3">
+      差分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-3">
+        差分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/difference/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/difference-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-4" type="checkbox" id="nav-12-4">
+    
+    <label class="md-nav__link" for="nav-12-4">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-4">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dp/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dp-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-5" type="checkbox" id="nav-12-5">
+    
+    <label class="md-nav__link" for="nav-12-5">
+      二分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-5">
+        二分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dichotomy/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dichotomy-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-6" type="checkbox" id="nav-12-6">
+    
+    <label class="md-nav__link" for="nav-12-6">
+      分治
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-6">
+        分治
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/divide/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/divide-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-7" type="checkbox" id="nav-12-7">
+    
+    <label class="md-nav__link" for="nav-12-7">
+      构造
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-7">
+        构造
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/construct/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/construct-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-8" type="checkbox" id="nav-12-8">
+    
+    <label class="md-nav__link" for="nav-12-8">
+      计数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-8">
+        计数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/count/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/count-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-9" type="checkbox" id="nav-12-9">
+    
+    <label class="md-nav__link" for="nav-12-9">
+      排序
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-9">
+        排序
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/sort/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/sort-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-10" type="checkbox" id="nav-12-10">
+    
+    <label class="md-nav__link" for="nav-12-10">
+      前缀和
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-10">
+        前缀和
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/presum/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/presum-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-11" type="checkbox" id="nav-12-11">
+    
+    <label class="md-nav__link" for="nav-12-11">
+      树状数组
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-11">
+        树状数组
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/ta/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/ta-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-12" type="checkbox" id="nav-12-12">
+    
+    <label class="md-nav__link" for="nav-12-12">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-12">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/math/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/math-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-13" type="checkbox" id="nav-12-13">
+    
+    <label class="md-nav__link" for="nav-12-13">
+      贪心
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-13">
+        贪心
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/greedy/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/greedy-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-14" type="checkbox" id="nav-12-14">
+    
+    <label class="md-nav__link" for="nav-12-14">
+      位运算
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-14">
+        位运算
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/bit/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/bit-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-15" type="checkbox" id="nav-12-15">
+    
+    <label class="md-nav__link" for="nav-12-15">
+      优化枚举
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-15">
+        优化枚举
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/op/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/op-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      参赛
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        参赛
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../enroll/icpc/" title="ICPC" class="md-nav__link">
+      ICPC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../enroll/ccpc/" title="CCPC" class="md-nav__link">
+      CCPC
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    学习目标
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    动态规划基本思想
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    例题引入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dp" class="md-nav__link">
+    什么是DP？？？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    关于无后效性：
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/CUCCS/acm-wiki/edit/master/docs/dp/simpleDP.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>DP入门</h1>
+                
+                <div class="admonition note">
+<p class="admonition-title">Copyright</p>
+<p>本页面贡献者：<a href="https://github.com/HBlade">HBlade</a>。
+本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。</p>
+</div>
+<h2 id="_1">学习目标<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>PS:一节课想搞清楚DP是不可能的,回去如果不多看看什么是DP，什么叫状态、决策和转移，那就会一直都搞不懂什么是DP</p>
+<ul>
+<li>
+<p>动态规划的概念(状态、决策和转移)</p>
+</li>
+<li>
+<p>动态规划的原理</p>
+</li>
+<li>
+<p>记忆化搜索</p>
+</li>
+<li>
+<p>动态规划解题的一般思路</p>
+</li>
+<li>
+<p>动态规划样例分析</p>
+</li>
+</ul>
+<h2 id="_2">动态规划基本思想<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>抽象来看，动态规划就是将一个庞大的问题分解成小问题，通过小问题之间的关联，逐步解决每一个小问题，从而解决大问题。</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">组合木块</p>
+<p>你有两种木块，一种长度为1，一种长度为2，现在让你组成一个长度为n的长条木块，有多少种排列组合方案？<span class="arithmatex"><span class="MathJax_Preview">n&lt;=10^5</span><script type="math/tex">n<=10^5</script></span></p>
+</div>
+<p>拆分方案：用F[i]表示长度为i的长条有多少种情况
+关联：F(n)=F(n-1)+F(n-2)
+从而往后推导到F(n)，时间复杂度为O(n)。</p>
+<h2 id="_3">例题引入<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>zls想成为世界无敌的dp大师，他的训练一共有n天，第i天有a[i]种训练计划,选择第j种训练能提高f[i][j]分。zls每天只能选一种训练，请问n天之后zls的分值最高可以到达多少? </p>
+<p>1≤n,a[i]≤1000</p>
+</div>
+<p>​   做法：贪心即可</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">    </span><span class="n">sum</span><span class="o">+=</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">max_element</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+<span class="w">    </span><span class="c1">//max_element为STL的函数，用于找到数组中的最大值，返回数组最大值所在的元素的指针（地址），具体用法大家自行上网查询</span>
+<span class="p">}</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">sum</span><span class="p">);</span><span class="c1">//时间复杂度:O(n*a[i]) 1e6</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>zls想成为世界无敌的dp大师，他的训练一共有n天，第i天有i种训练方式，如果今天zls用了第j种训练方式，明天他只能用第j种或者第j+1种训练方式了，第i天的第j种训练方式增加的Rating是f[i][j]，这样的话zls最终能达到最大的Rating值会是多少呢？
+1≤n,m,a[i]≤1000</p>
+</div>
+<p>数字三角形(dp始祖)：不能通过贪心来选择当前层的最大值，因为下一层的选择会被上一层的选择所影响（可能下一层有一个很大的值却因为上一层没选好就选不到它了）。因此使用DP来处理。<br></p>
+<h2 id="dp">什么是DP？？？<a class="headerlink" href="#dp" title="Permanent link">&para;</a></h2>
+<p>先知道一下什么是记忆化搜索：<br></p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>用递归实现求斐波那契数列对1e9+7取模的前100000项。</p>
+</div>
+<p>（单纯的递归100项左右就卡死了，不信你可以试试），所以要怎么做呢？斐波那契数列：1,1,2,3,5,8……f(n)=f(n-1)+f(n-2)，(n≥3)</p>
+<p>单纯的看递归求fib,假设我们要递归求fib(10)，那么fib(10)=fib(9)+fib(8)，求fib(9)又需要fib(8)+fib(7)，求fib(8)又需要fib(7)+fib(6)……</p>
+<p>我们可以看出，其实上面的搜索是有重复的部分的，比如在fib(10)=fib(9)+fib(8)这一步，对于fib(9)，求出它的时候就已经知道了fib(8)、fib(7)是多少，但是再求fib(8)的时候又是当作我们不知道fib(8)是多少来往下递归去找fib(7)和fib(6)，其实这些部分在搜索fib(9)的时候已经搜索过了，这样会导致很多重复搜索的部分。当数量级很大的时候，重复搜索的部分会被放得很大，从而导致时间复杂度很高。</p>
+<p>那咋办呢？？？</p>
+<p>存下来刚刚搜过的数不就好了嘛！下次再搜的时候，发现这个地方是存在一个值的，那就说明这个地方已经被搜索过了，返回那个值就好了。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxn</span><span class="o">=</span><span class="mf">1e6</span><span class="o">+</span><span class="mi">6</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mod</span><span class="o">=</span><span class="mf">1e9</span><span class="o">+</span><span class="mi">7</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fib</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">1</span><span class="o">||</span><span class="n">a</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fib</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">fib</span><span class="p">[</span><span class="n">a</span><span class="p">];</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fib</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="mi">-1</span><span class="p">)</span><span class="o">+</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="mi">-2</span><span class="p">))</span><span class="o">%</span><span class="n">mod</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这就是记忆化搜索了，其实就是把搜过的东西都记下来，以后再搜到一样的部分就不用计算直接输出了。</p>
+<p>那什么是DP？DP就是通过记忆化搜索，先记录下第一步是什么状态，之后的每一步根据上一步的状态来决定并存储，直到最后一步。最后利用我们通过DP得到的数组处理输出想要的答案。</p>
+<p>对于数字三角形，我们只需要记录下每个状态的和的最大值即可，我们选择的状态是当到了第i行第j列的时候，此时能得到的和最大值是多少。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="mi">1010</span><span class="p">][</span><span class="mi">1010</span><span class="p">];</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">1010</span><span class="p">][</span><span class="mi">1010</span><span class="p">];</span>
+<span class="n">memset</span><span class="p">(</span><span class="n">dp</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">dp</span><span class="p">));</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>zls又想成为世界无敌的dp大师，他的训练一共有m天，一共有n种训练可供选择，第i种训练需要花费a[i]天，结束以后会增长b[i]点Rating,一种训练只能进行一次，请问n天之后zls的Rating值最高可以到达多少?      1≤n,m,a[i]≤1000</p>
+</div>
+<p>难点：贪心去贪b[i]最大值无效，因为有a[i]的限制;a[i]的限制使得它跟贪心的问题完全不一样，因此需要用DP来实现编程。（背包DP）</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="mi">1010</span><span class="p">][</span><span class="mi">1010</span><span class="p">];</span>
+<span class="c1">//第一维下标：前i个训练得到的状态；</span>
+<span class="c1">//第二维下标:当前状态已花费多少时间;数组存放当前状态的最大价值是多少。</span>
+<span class="n">memset</span><span class="p">(</span><span class="n">dp</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">dp</span><span class="p">));</span><span class="c1">//初始化为0</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="c1">//前i个物品的状态</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="o">--</span><span class="n">j</span><span class="p">){</span>
+<span class="c1">//枚举放入当前物品的背包容量会是多少</span>
+<span class="w">        </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="c1">//当前状态是从上一个i-1的状态的背包容量j-a[i]选择放不放入这个东西的容量转移过来</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">m</span><span class="p">]);</span><span class="c1">//时间复杂度O(n*m) 1e6</span>
+</code></pre></div></td></tr></table></div>
+<p>背包问题其实可以用一维数组去解决，这样就会更加节省空间复杂度。但是时间复杂度并没有变化。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="mi">1010</span><span class="p">];</span><span class="c1">//下标是背包的容量</span>
+<span class="n">memset</span><span class="p">(</span><span class="n">dp</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">dp</span><span class="p">));</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="n">m</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;=</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="o">--</span><span class="n">j</span><span class="p">){</span>
+<span class="w">        </span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="c1">//背包容量为j的状态从背包容量为j-a[i]的状态转移（选择放入这个东西）</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="n">dp</span><span class="p">[</span><span class="n">m</span><span class="p">]);</span>
+</code></pre></div></td></tr></table></div>
+<p>大家可以看到，转移过程中背包容量转移是从大到小转移的，为什么要从大到小转移而不是从小到大转移呢？（什么是状态转移（更新状态）?）</p>
+<p>当状态未进行过更新时，我们可以认为未更新的状态是不存在当前的状态转移的，也就是说，在这个问题中，未更新的状态是还没有做当前的训练的。</p>
+<p>举例：如果从小到大更新dp值，假设dp[j]从dp[j-a[i]]处经过了更新，那么之后的dp[j+a[i]]也就会从dp[j]处   更新。假设dp[j]的决策是取第i件物品，那么dp[j]的状态是做了第i次训练了；之后我们的dp[j+a[i]]会从dp[j]这个状态转移，因为之前已经做了第i次训练，按理来说是不能再做这个训练了，但是如果继续做第i个训练，就会导致决策与题意不符。</p>
+<p>那么，如果从大到小更新dp值，假设dp[j]从dp[j-a[i]]处更新dp值，由于dp[j-a[i]]处还未进行过更新，所以这个状态是不会去做第i次训练的，所以转移有效。而dp[j-a[i]]是从dp[j-a[i]-a[i]]状态转移过来，同理因为dp[j-a[i]-a[i]]也是未经过状态转移的，所以那个状态也不会做第i个训练，因此转移同样有效，而转移后的dp[j-a[i]]也不会影响之前转移的dp[j]，因为dp[j]是从未进行更新的dp[j-a[i]]转移过来。</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>zls更想成为世界无敌的dp大师，他的训练一共有n天，一共有m种训练可供选择，第i种训练需要花费a[i]天，结束以后会增长到b[i]点Rating,一种训练可以进行无数次，请问n天之后zls的Rating值最高可以到达多少?       1≤n,m,a[i]≤1000</p>
+</div>
+<p>难点：与刚刚的题很类似，但是每种训练可以无数次了，所以只需要变一下刚刚的代码，用训练数量为无数次的方法来转移就好。（完全背包DP）</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="mi">1010</span><span class="p">];</span><span class="c1">//下标是背包的容量</span>
+<span class="n">memset</span><span class="p">(</span><span class="n">dp</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">dp</span><span class="p">));</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="o">++</span><span class="n">j</span><span class="p">){</span>
+<span class="w">        </span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="c1">//背包容量为j的状态从背包容量为j-a[i]的状态转移（选择放入这个东西）</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="n">dp</span><span class="p">[</span><span class="n">m</span><span class="p">]);</span><span class="c1">//时间复杂度：O(n*m) 1e6</span>
+</code></pre></div></td></tr></table></div>
+也就是刚刚的背包dp中背包容量从小到大转移，因为从小到大转移是一个物品可以取多次的。</p>
+<p><strong>思考：如果训练时间（weight）很大(1e9)，但是训练成果（value）很小（1e3），这样的话应该怎么进行dp？</strong></p>
+<p>如果有兴趣，还可以想想，如果每种训练是有次数的但不是无限次，那又要怎么转移？（多重背包dp）</p>
+<p>除了上面的基本的DP，还有状压DP(通过数字来存储状态)，插头DP，树形DP（需要知道什么是树）等等。<br>
+还有两个比较经典的DP是最长上升子序列（LCS），最长公共子序列（LIS），由于讲是很难讲懂的，如果你们能真正了解了什么是DP，上面的两个题就会迎刃而解，也能在脑中留下深刻的记忆。</p>
+<h2 id="_4">关于无后效性：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>因为之前往后面转移的时候，前面记录下的都是前面每种状态的最优值，有可能会遇到这样一种情况：之前的某个状态的最优值可能因为后面某个值而导致之前取的最优值并不是适合当前值的最优值（例如：A、B两个公司都需要招8个人，候选者都有a,b能力值，如何取人才能使得A公司招到员工的a能力值总和和B公司员工的b能力值总和加起来最大。这个就不能用动态规划去做，因为会遇到一种情况是，假设前面A公司取到一个a,b能力值同样优秀的人，但是后面如果有一个a能力值很优秀但是没有前面那个人优秀，同时这个人b能力值很差劲，所以需要让前面的人去B公司，让这个人去A公司来保持总和最大这个条件，这就违反了无后效性这个要求。</p>
+<h2 id="_5">总结<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>状态：这个变量的数组下标代表了什么情况(i不一定是前i个东西，下标代表的情况要根据题意和数据范围来决定)  </p>
+</li>
+<li>
+<p>决策：应该怎么从当前状态变化到下一个状态  </p>
+</li>
+<li>
+<p>转移：如何在代码上进行状态变化  </p>
+</li>
+<li>无后效性：未来与过去无关，以后做的决定不会影响之前做的决定（只有符合这一点才可以使用动态规划来做）  </li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../graph/bipartite-graph/" title="二分图" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                二分图
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../DigitalDP/" title="数位DP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                数位DP
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2021 CUC ACM Team
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://cuccs.github.io/ctf-wiki/" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="http://39.98.122.96/" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.3.1",url:{base:"../.."}})</script>
+      
+        <script src="../../_static/js/extra.js?v=16"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

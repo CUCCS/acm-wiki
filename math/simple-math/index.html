@@ -1,0 +1,3527 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="CUC ACM-Wiki用于学习算法和数据结构相关内容，发布中国传媒大学ACM集训队相关安排">
+      
+      
+        <link rel="canonical" href="https://cuccs.github.io/acm-wiki/math/simple-math/">
+      
+      
+        <meta name="author" content="CUC ACM Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>简单数学 - CUC ACM-Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700%7CFira+Mono&display=fallback">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" type="application/manifest+json" href="../../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../_static/css/extra.css?v=12">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="0" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://cuccs.github.io/acm-wiki/" title="CUC ACM-Wiki" aria-label="CUC ACM-Wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              CUC ACM-Wiki
+            </span>
+            <span class="md-header-nav__topic">
+              
+                简单数学
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/CUCCS/acm-wiki" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    CUCCS/acm-wiki
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          首页
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../c-basic/grammar/" class="md-tabs__link">
+          C语言基础
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../basic-algorithm/time/" class="md-tabs__link">
+          基础算法
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../STL/introduction/" class="md-tabs__link">
+          STL
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../graph/topological-sorting/" class="md-tabs__link">
+          图论
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../dp/simpleDP/" class="md-tabs__link">
+          动态规划
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../search/enumeration/" class="md-tabs__link">
+          搜索
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          数学
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data-struct/intro/" class="md-tabs__link">
+          数据结构
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../training/2022Autumn/" class="md-tabs__link">
+          集训安排
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../videos/videos/" class="md-tabs__link">
+          视频资源
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../problems/How-to-use/" class="md-tabs__link">
+          题库
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../enroll/icpc/" class="md-tabs__link">
+          参赛
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://cuccs.github.io/acm-wiki/" title="CUC ACM-Wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    CUC ACM-Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/CUCCS/acm-wiki" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    CUCCS/acm-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      首页
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        首页
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/" title="关于本项目" class="md-nav__link">
+      关于本项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="F.A.Q" class="md-nav__link">
+      F.A.Q
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      C语言基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        C语言基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/grammar/" title="基本语法" class="md-nav__link">
+      基本语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/structure/" title="逻辑结构" class="md-nav__link">
+      逻辑结构
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/array/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/function/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/char/" title="字符数组,string" class="md-nav__link">
+      字符数组,string
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../c-basic/python/" title="Python竞赛基础" class="md-nav__link">
+      Python竞赛基础
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      基础算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        基础算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/time/" title="时间复杂度" class="md-nav__link">
+      时间复杂度
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/binary-research/" title="二分" class="md-nav__link">
+      二分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/two-pointers/" title="尺取" class="md-nav__link">
+      尺取
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/adding-doubling/" title="倍增" class="md-nav__link">
+      倍增
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic-algorithm/sort/" title="排序" class="md-nav__link">
+      排序
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      STL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        STL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/introduction/" title="STL简介" class="md-nav__link">
+      STL简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/vector/" title="Vector" class="md-nav__link">
+      Vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/map/" title="Map" class="md-nav__link">
+      Map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/set/" title="Set" class="md-nav__link">
+      Set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/queue/" title="Queue" class="md-nav__link">
+      Queue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/list/" title="List" class="md-nav__link">
+      List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STL/bitset/" title="Bitset" class="md-nav__link">
+      Bitset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      图论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        图论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/topological-sorting/" title="拓扑排序" class="md-nav__link">
+      拓扑排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/shortest-path/" title="最短路" class="md-nav__link">
+      最短路
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/MST/" title="最小生成树" class="md-nav__link">
+      最小生成树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/LCA/" title="LCA" class="md-nav__link">
+      LCA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/diameter-of-tree/" title="树直径" class="md-nav__link">
+      树直径
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/euler/" title="Euler" class="md-nav__link">
+      Euler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/connected-components/" title="连通分量概述" class="md-nav__link">
+      连通分量概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/strongly-connected-components/" title="强联通分量" class="md-nav__link">
+      强联通分量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/2-SAT/" title="2-SAT" class="md-nav__link">
+      2-SAT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/difference-constraint/" title="差分约束" class="md-nav__link">
+      差分约束
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/bipartite-graph/" title="二分图" class="md-nav__link">
+      二分图
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/simpleDP/" title="DP入门" class="md-nav__link">
+      DP入门
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/DigitalDP/" title="数位DP" class="md-nav__link">
+      数位DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/CountingDP/" title="计数DP" class="md-nav__link">
+      计数DP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      搜索
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        搜索
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/enumeration/" title="枚举排列和枚举子集" class="md-nav__link">
+      枚举排列和枚举子集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/simple-enum-reduction/" title="枚举约简" class="md-nav__link">
+      枚举约简
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/dfs/" title="栈和深度优先搜索" class="md-nav__link">
+      栈和深度优先搜索
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        简单数学
+      </label>
+    
+    <a href="./" title="简单数学" class="md-nav__link md-nav__link--active">
+      简单数学
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    素数与合数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    试除法判断素数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-eratosthenes" class="md-nav__link">
+    素数普通筛-埃拉托斯特尼(Eratosthenes)筛法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    素数线性筛(数论部分会涉及)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    斐波那契数列
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    简单性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    拓展
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    卡特兰数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    递推公式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    整数的整除
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    最大公因子与辗转相除法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    欧几里得算法(辗转相除法)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    裴蜀定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    同余式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    同余式的一些性质：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    剩余类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    欧拉函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    欧拉定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    费马小定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    欧拉函数的一些定理：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    线性同余方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    逆元
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    简单数学实战
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    找规律
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    结论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    举个栗子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    反例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oeis" class="md-nav__link">
+    OEIS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../number-theory/" title="数论" class="md-nav__link">
+      数论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../num-sequence/" title="数列" class="md-nav__link">
+      数列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../combinatorics/" title="组合数学" class="md-nav__link">
+      组合数学
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ball-in-box/" title="当小球遇上盒子" class="md-nav__link">
+      当小球遇上盒子
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fft/" title="FFT" class="md-nav__link">
+      FFT
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/intro/" title="数据结构简介" class="md-nav__link">
+      数据结构简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/ST/" title="ST算法" class="md-nav__link">
+      ST算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/fenwick-tree/" title="树状数组" class="md-nav__link">
+      树状数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/segment-tree/" title="线段树" class="md-nav__link">
+      线段树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/hld/" title="树链剖分" class="md-nav__link">
+      树链剖分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6" type="checkbox" id="nav-9-6">
+    
+    <label class="md-nav__link" for="nav-9-6">
+      可持久化数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-6">
+        可持久化数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/pds-intro/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/persistent-segment/" title="可持久化线段树" class="md-nav__link">
+      可持久化线段树
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-struct/modui/" title="莫队算法" class="md-nav__link">
+      莫队算法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      集训安排
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        集训安排
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2022Autumn/" title="2022秋季集训" class="md-nav__link">
+      2022秋季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2022Spring/" title="2022春季集训" class="md-nav__link">
+      2022春季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Autumn/" title="2021秋季集训" class="md-nav__link">
+      2021秋季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4">
+    
+    <label class="md-nav__link" for="nav-10-4">
+      2021暑期集训
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-4">
+        2021暑期集训
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Summer/official/" title="暑期多校训练" class="md-nav__link">
+      暑期多校训练
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Summer/nowcoder/" title="牛客多校总结" class="md-nav__link">
+      牛客多校总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2021Spring/" title="2021春季集训" class="md-nav__link">
+      2021春季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Autumn/" title="2020秋季集训" class="md-nav__link">
+      2020秋季集训
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-7" type="checkbox" id="nav-10-7">
+    
+    <label class="md-nav__link" for="nav-10-7">
+      2020暑期集训
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-7">
+        2020暑期集训
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Summer/official/" title="暑期多校训练" class="md-nav__link">
+      暑期多校训练
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Summer/nowcoder/" title="2020牛客多校题解/总结" class="md-nav__link">
+      2020牛客多校题解/总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../training/2020Spring/" title="2020春季集训" class="md-nav__link">
+      2020春季集训
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      视频资源
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        视频资源
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../videos/videos/" title="视频资源" class="md-nav__link">
+      视频资源
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      题库
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        题库
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/How-to-use/" title="使用指南" class="md-nav__link">
+      使用指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-2" type="checkbox" id="nav-12-2">
+    
+    <label class="md-nav__link" for="nav-12-2">
+      递归
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-2">
+        递归
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/recursion/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/recursion-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-3" type="checkbox" id="nav-12-3">
+    
+    <label class="md-nav__link" for="nav-12-3">
+      差分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-3">
+        差分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/difference/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/difference-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-4" type="checkbox" id="nav-12-4">
+    
+    <label class="md-nav__link" for="nav-12-4">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-4">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dp/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dp-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-5" type="checkbox" id="nav-12-5">
+    
+    <label class="md-nav__link" for="nav-12-5">
+      二分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-5">
+        二分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dichotomy/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/dichotomy-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-6" type="checkbox" id="nav-12-6">
+    
+    <label class="md-nav__link" for="nav-12-6">
+      分治
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-6">
+        分治
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/divide/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/divide-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-7" type="checkbox" id="nav-12-7">
+    
+    <label class="md-nav__link" for="nav-12-7">
+      构造
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-7">
+        构造
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/construct/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/construct-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-8" type="checkbox" id="nav-12-8">
+    
+    <label class="md-nav__link" for="nav-12-8">
+      计数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-8">
+        计数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/count/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/count-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-9" type="checkbox" id="nav-12-9">
+    
+    <label class="md-nav__link" for="nav-12-9">
+      排序
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-9">
+        排序
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/sort/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/sort-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-10" type="checkbox" id="nav-12-10">
+    
+    <label class="md-nav__link" for="nav-12-10">
+      前缀和
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-10">
+        前缀和
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/presum/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/presum-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-11" type="checkbox" id="nav-12-11">
+    
+    <label class="md-nav__link" for="nav-12-11">
+      树状数组
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-11">
+        树状数组
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/ta/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/ta-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-12" type="checkbox" id="nav-12-12">
+    
+    <label class="md-nav__link" for="nav-12-12">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-12">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/math/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/math-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-13" type="checkbox" id="nav-12-13">
+    
+    <label class="md-nav__link" for="nav-12-13">
+      贪心
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-13">
+        贪心
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/greedy/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/greedy-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-14" type="checkbox" id="nav-12-14">
+    
+    <label class="md-nav__link" for="nav-12-14">
+      位运算
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-14">
+        位运算
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/bit/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/bit-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-15" type="checkbox" id="nav-12-15">
+    
+    <label class="md-nav__link" for="nav-12-15">
+      优化枚举
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-15">
+        优化枚举
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/op/" title="题目" class="md-nav__link">
+      题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../problems/op-solution/" title="题解" class="md-nav__link">
+      题解
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      参赛
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        参赛
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../enroll/icpc/" title="ICPC" class="md-nav__link">
+      ICPC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../enroll/ccpc/" title="CCPC" class="md-nav__link">
+      CCPC
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    素数与合数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    试除法判断素数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-eratosthenes" class="md-nav__link">
+    素数普通筛-埃拉托斯特尼(Eratosthenes)筛法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    素数线性筛(数论部分会涉及)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    斐波那契数列
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    简单性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    拓展
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    卡特兰数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    递推公式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    整数的整除
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    最大公因子与辗转相除法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    欧几里得算法(辗转相除法)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    裴蜀定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    同余式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    同余式的一些性质：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    剩余类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    欧拉函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    欧拉定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    费马小定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    欧拉函数的一些定理：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    线性同余方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    逆元
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    简单数学实战
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    找规律
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    结论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    举个栗子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    反例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oeis" class="md-nav__link">
+    OEIS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/CUCCS/acm-wiki/edit/master/docs/math/simple-math.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>简单数学</h1>
+                
+                <div class="admonition note">
+<p class="admonition-title">Copyright</p>
+</div>
+<p>本页面贡献者：<a href="https://github.com/LyuLumos">LyuLumos</a>，<a href="https://github.com/YanhuiJessica">YanhuiJessica</a>，<a href="https://github.com/Zhang1933">Zhang1933</a>。
+本页面内容遵循 MIT 协议，转载请附上原文出处链接和本声明。</p>
+<h2 id="_1">素数与合数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>素数(质数)：除了 1 和自身外，不能被其他数整除的正整数。素数只有两个因子。</p>
+<p>合数：拥有两个以上因子的正整数。</p>
+<p>1 既不是素数也不是合数。</p>
+<h3 id="_2">试除法判断素数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex"><span class="MathJax_Preview">O(\sqrt n)</span><script type="math/tex">O(\sqrt n)</script></span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">    </span><span class="c1">// 如果不为素数返回0</span>
+<span class="w">    　　</span><span class="p">{</span>
+<span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">    </span><span class="c1">// 反之则返回1</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="-eratosthenes">素数普通筛-埃拉托斯特尼(Eratosthenes)筛法<a class="headerlink" href="#-eratosthenes" title="Permanent link">&para;</a></h3>
+<p>基本思想：初始将所有大于等于 2 的数放在一个集合中，每次筛选后集合中剩余最小的数是质数，将它的倍数去掉。</p>
+<p>算法结束时，没有被筛去的数就是质数。每个数要被自己所有的因子标记一遍，所以普通筛的时间复杂度为<span class="arithmatex"><span class="MathJax_Preview">O(nloglogn)</span><script type="math/tex">O(nloglogn)</script></span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isPrime</span><span class="p">[</span><span class="n">maxn</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">getPrime</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">isPrime</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">isPrime</span><span class="p">));</span>
+<span class="w">    </span><span class="n">isPrime</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果用不到1也可以不用写</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">maxn</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">isPrime</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">maxn</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">                </span><span class="n">isPrime</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="_3"><del>素数线性筛</del>(数论部分会涉及)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h2 id="_4">斐波那契数列<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>斐波那契数列（The Fibonacci sequence）的递推式如下：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> F*0 = 0, F_1 = 1, F_n = F*{n-1} + F\_{n-2} </div>
+<script type="math/tex; mode=display"> F*0 = 0, F_1 = 1, F_n = F*{n-1} + F\_{n-2} </script>
+</div>
+<p>该数列的前几项如下：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... </div>
+<script type="math/tex; mode=display"> 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... </script>
+</div>
+<h3 id="_5">简单性质<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>斐波那契数列增长速度趋近于<span class="arithmatex"><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span></li>
+<li>斐波那契数列相邻两个数之间的比值趋近于黄金分割率</li>
+<li>前<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>项之和加一等于第<span class="arithmatex"><span class="MathJax_Preview">n+2</span><script type="math/tex">n+2</script></span>项</li>
+<li>以斐波那契数列相邻两项作为输入会使欧几里德算法达到最坏复杂度</li>
+</ul>
+<h3 id="_6">拓展<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><a href="https://cuccs.github.io/acm-wiki/math/num-sequence/">CUC ACM-Wiki - 数列</a></p>
+<h2 id="_7">卡特兰数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>Catalan 数定义如下：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">f_0=1,\,\,f_n = \sum_{i=0}^{n-1}f(i)\cdot f(n-i-1), n \in N_+</div>
+<script type="math/tex; mode=display">f_0=1,\,\,f_n = \sum_{i=0}^{n-1}f(i)\cdot f(n-i-1), n \in N_+</script>
+</div>
+<p>该数列的前几项如下：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012 ......</div>
+<script type="math/tex; mode=display">1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012 ......</script>
+</div>
+<h3 id="_8">递推公式<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">f(n) = \frac{1}{n+1}\tbinom{2n}{n}</span><script type="math/tex">f(n) = \frac{1}{n+1}\tbinom{2n}{n}</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">f(n) = \tbinom{2n}{n}-\tbinom{2n}{n-1}</span><script type="math/tex">f(n) = \tbinom{2n}{n}-\tbinom{2n}{n-1}</script></span> // 推荐</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">f(n) = \sum_{i=0}^{n-1}f(i)×f(n-i-1)</span><script type="math/tex">f(n) = \sum_{i=0}^{n-1}f(i)×f(n-i-1)</script></span></p>
+</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">f(n) = \frac{f(n-1)×(4n-2)}{n+1}</span><script type="math/tex">f(n) = \frac{f(n-1)×(4n-2)}{n+1}</script></span></li>
+</ol>
+<h4 id="_9">应用<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>二叉树的计数问题：已知二叉树有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个结点，求能构成多少种不同的二叉树。</li>
+<li>括号化问题：一个合法的表达式由()包围，()可以嵌套和连接，如：(())()也是合法表达式，现给出 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 对括号，求可以组成的合法表达式的个数。</li>
+<li>划分问题：将一个凸 <span class="arithmatex"><span class="MathJax_Preview">n+2</span><script type="math/tex">n+2</script></span> 多边形区域分成三角形区域的方法数。</li>
+<li>出栈问题：一个栈的进栈序列为 <span class="arithmatex"><span class="MathJax_Preview">1,2,3,..n</span><script type="math/tex">1,2,3,..n</script></span>，求不同的出栈序列有多少种。</li>
+<li>路径问题：在 <span class="arithmatex"><span class="MathJax_Preview">n\cdot n</span><script type="math/tex">n\cdot n</script></span> 的方格地图中，从一个角到另外一个角，求不跨越对角线的路径数有多少种。</li>
+<li>握手问题：<span class="arithmatex"><span class="MathJax_Preview">2n</span><script type="math/tex">2n</script></span> 个人均匀坐在一个圆桌边上，某个时刻所有人同时与另一个人握手，要求手之间不能交叉，求共有多少种握手方法。</li>
+</ul>
+<h2 id="_10">整数的整除<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="_11">最大公因子与辗转相除法<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p><strong>定理1:</strong> 设a,b,c是任意3个整数，若<span class="arithmatex"><span class="MathJax_Preview">a=bq+r</span><script type="math/tex">a=bq+r</script></span>,则有<span class="arithmatex"><span class="MathJax_Preview">(a,b)=(b,r)</span><script type="math/tex">(a,b)=(b,r)</script></span>。</p>
+<hr />
+<p>证明：因为<span class="arithmatex"><span class="MathJax_Preview">(a,b)|r,(a,b)|b</span><script type="math/tex">(a,b)|r,(a,b)|b</script></span>,一定有<span class="arithmatex"><span class="MathJax_Preview">(a,b)\leq (b,r)</span><script type="math/tex">(a,b)\leq (b,r)</script></span></p>
+<p>同理 <span class="arithmatex"><span class="MathJax_Preview">(b,r)|a,(b,r)|b</span><script type="math/tex">(b,r)|a,(b,r)|b</script></span>，所以<span class="arithmatex"><span class="MathJax_Preview">(b,r)\leq (a,b)</span><script type="math/tex">(b,r)\leq (a,b)</script></span>。</p>
+<p>所以可得<span class="arithmatex"><span class="MathJax_Preview">(b,r)=(a,b)</span><script type="math/tex">(b,r)=(a,b)</script></span></p>
+<hr />
+<p>于是就有欧几里得算法(辗转相除法)。</p>
+<h4 id="_12">欧几里得算法(辗转相除法)<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>求两个数的gcd,循环使用带余除法，有如下等式组：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{align}
+a=&amp; q_0b+r_0,0\leq r_0 &lt; b \nonumber \\ 
+b=&amp; q_1r_0+r_1 ,0\leq r_1 &lt; r_0 \nonumber \\
+r_0=&amp; q_2r_1+r_2 ,0\leq r_2 &lt; r_1  \nonumber \\
+... \nonumber \\
+r_{n-2}=&amp; q_{n}r_{n-1}+r_{n} ,0\leq r_{n}&lt; r_{n-1} \nonumber \\
+r_{n-1}=&amp; q_{n+1}r_n+r_{n+1} ,r_{n+1}=0 \nonumber
+\end{align}
+</div>
+<script type="math/tex; mode=display">
+\begin{align}
+a=& q_0b+r_0,0\leq r_0 < b \nonumber \\ 
+b=& q_1r_0+r_1 ,0\leq r_1 < r_0 \nonumber \\
+r_0=& q_2r_1+r_2 ,0\leq r_2 < r_1  \nonumber \\
+... \nonumber \\
+r_{n-2}=& q_{n}r_{n-1}+r_{n} ,0\leq r_{n}< r_{n-1} \nonumber \\
+r_{n-1}=& q_{n+1}r_n+r_{n+1} ,r_{n+1}=0 \nonumber
+\end{align}
+</script>
+</div>
+<p>因为有如下大小关系，余数是严格递减的:
+$$
+b&gt;r_0&gt;r_1&gt;r_2&gt;...\geq 0
+$$</p>
+<p>再由最<a href="#最大公因子与辗转相除法">大公因子与辗转相除法定理1</a>可得等式链：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{align}
+(a,b)=&amp; \nonumber\\
+(b,r_0)=&amp; \nonumber\\
+(r_0,r_1)=&amp; \nonumber\\
+(r_1,r_2)=&amp; \nonumber\\
+...&amp; \nonumber\\
+(r_n,0)=&amp; r_n \nonumber
+\end{align}
+</div>
+<script type="math/tex; mode=display">
+\begin{align}
+(a,b)=& \nonumber\\
+(b,r_0)=& \nonumber\\
+(r_0,r_1)=& \nonumber\\
+(r_1,r_2)=& \nonumber\\
+...& \nonumber\\
+(r_n,0)=& r_n \nonumber
+\end{align}
+</script>
+</div>
+<p>最后<span class="arithmatex"><span class="MathJax_Preview">r_n</span><script type="math/tex">r_n</script></span>即为所求。其思想就是把一个大的问题转化成一个小的问题来求解。</p>
+<p>求gcd的代码：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="o">?</span><span class="n">a</span><span class="o">:</span><span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="_13">裴蜀定理<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>又称贝祖定理,任意a,b不全为0的整数,存在整数x,y，使得:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+ax+by=(a,b)
+</div>
+<script type="math/tex; mode=display">
+ax+by=(a,b)
+</script>
+</div>
+<p>可以将朴素欧几里得算法回带带出x,y证明其正确性。这里说下面递归代码求解x,y的原理。</p>
+<hr />
+<p>证明：</p>
+<p>设有
+$$
+ax_0+by_0=(a,b)
+$$
+继续使用带余除法可得:
+$$
+bx_1+(a\%b)y_1=(b,a\%b)
+$$</p>
+<p>由<a href="#最大公因子与辗转相除法">大公因子与辗转相除法定理1</a>可得：
+$$
+(a,b)=(b,a\%b)
+$$</p>
+<p>于是带入得到：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{align}
+ax_0+by_0=&amp; bx_1+(a\%b)y_1  \\
+=&amp; bx_1+(a-a/b*b)y_1 \\
+=&amp; ay_1+b(x_1-a/b*y_1)
+\end{align}
+</div>
+<script type="math/tex; mode=display">
+\begin{align}
+ax_0+by_0=& bx_1+(a\%b)y_1  \\
+=& bx_1+(a-a/b*b)y_1 \\
+=& ay_1+b(x_1-a/b*y_1)
+\end{align}
+</script>
+</div>
+<p>于是可得递推关系：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+x_0=y_1 \\
+y_0=x_1-a/b*y_1
+</div>
+<script type="math/tex; mode=display">
+x_0=y_1 \\
+y_0=x_1-a/b*y_1
+</script>
+</div>
+<hr />
+<p>所以就可以在算gcd回溯的时候反向递推，写出如下代码：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ll</span><span class="w"> </span><span class="nf">exgcd</span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">ll</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="n">ll</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">ll</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="o">&amp;&amp;</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">ll</span><span class="w"> </span><span class="n">ans</span><span class="o">=</span><span class="n">exgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+<span class="w">    </span><span class="n">y</span><span class="o">-=</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>变量x和y中存储了方程<span class="arithmatex"><span class="MathJax_Preview">a*x+b*y=(a,b)</span><script type="math/tex">a*x+b*y=(a,b)</script></span>的一组整数解;函数的返回值是gcd(a,b),若返回-1,则无解;</p>
+<h2 id="_14">同余式<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>定义：给定一个正整数 m,若用 m 分别去除两个整数 a，b 所得的余数相同，则称 a 与 b 模 m 同余，记为:<span class="arithmatex"><span class="MathJax_Preview">a \equiv b\ (mod\ m)</span><script type="math/tex">a \equiv b\ (mod\ m)</script></span></p>
+</li>
+<li>
+<p>定理 1：整数 a,b 模 m 同余的充要条件是<span class="arithmatex"><span class="MathJax_Preview">m|(a-b)</span><script type="math/tex">m|(a-b)</script></span>。</p>
+</li>
+</ul>
+<hr />
+<p>证明:</p>
+<p>设<span class="arithmatex"><span class="MathJax_Preview">a=k_1m+r_a,b=k_2m+r_b,0\leq r_a,r_b &lt; m</span><script type="math/tex">a=k_1m+r_a,b=k_2m+r_b,0\leq r_a,r_b < m</script></span>。</p>
+<p>1.证：若 a,b 模 m 同余，则可以推出<span class="arithmatex"><span class="MathJax_Preview">m|(a-b)</span><script type="math/tex">m|(a-b)</script></span>。</p>
+<p>因为 a,b 模 m 同余，则<span class="arithmatex"><span class="MathJax_Preview">r_a=r_b</span><script type="math/tex">r_a=r_b</script></span>,于是<span class="arithmatex"><span class="MathJax_Preview">a-b=(k_1-k_2)m</span><script type="math/tex">a-b=(k_1-k_2)m</script></span>,即<span class="arithmatex"><span class="MathJax_Preview">m|(a-b)</span><script type="math/tex">m|(a-b)</script></span></p>
+<p>2.证：若<span class="arithmatex"><span class="MathJax_Preview">m|(a-b)</span><script type="math/tex">m|(a-b)</script></span>，则 a,b 同余。</p>
+<p>因为<span class="arithmatex"><span class="MathJax_Preview">m|(a-b)</span><script type="math/tex">m|(a-b)</script></span>，即<span class="arithmatex"><span class="MathJax_Preview">m|[(k_1-k_2)m+(r_a-r_b)]</span><script type="math/tex">m|[(k_1-k_2)m+(r_a-r_b)]</script></span>,所以<span class="arithmatex"><span class="MathJax_Preview">m|(r_a-r_b)</span><script type="math/tex">m|(r_a-r_b)</script></span></p>
+<p>因为有<span class="arithmatex"><span class="MathJax_Preview">-m&lt;r_a-r_b&lt;m</span><script type="math/tex">-m<r_a-r_b<m</script></span>,所以只有<span class="arithmatex"><span class="MathJax_Preview">r_a=r_b</span><script type="math/tex">r_a=r_b</script></span>。</p>
+<hr />
+<h3 id="_15">同余式的一些性质：<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>1.<span class="arithmatex"><span class="MathJax_Preview">a \equiv b(mod\ m), b\equiv c (mod \ m), 则 a\equiv c (mod \ m)</span><script type="math/tex">a \equiv b(mod\ m), b\equiv c (mod \ m), 则 a\equiv c (mod \ m)</script></span>.</p>
+<p>2.<span class="arithmatex"><span class="MathJax_Preview">设ad\equiv bd(mod\ m)</span><script type="math/tex">设ad\equiv bd(mod\ m)</script></span>,若 <span class="arithmatex"><span class="MathJax_Preview">(d,m)=1</span><script type="math/tex">(d,m)=1</script></span>，则<span class="arithmatex"><span class="MathJax_Preview">a\equiv b(mod\ m)</span><script type="math/tex">a\equiv b(mod\ m)</script></span>。</p>
+<hr />
+<p>证明:</p>
+<p>根据同余式定理 1, 有 <span class="arithmatex"><span class="MathJax_Preview">m|d(a-b)</span><script type="math/tex">m|d(a-b)</script></span> , 因为 <span class="arithmatex"><span class="MathJax_Preview">(d,m)=1</span><script type="math/tex">(d,m)=1</script></span> ,则 <span class="arithmatex"><span class="MathJax_Preview">m|(a-b)</span><script type="math/tex">m|(a-b)</script></span> 。</p>
+<hr />
+<p>3.设<span class="arithmatex"><span class="MathJax_Preview">a\equiv b(mod\ m)</span><script type="math/tex">a\equiv b(mod\ m)</script></span>,若 d 是 a,b,m 的公因子，则<span class="arithmatex"><span class="MathJax_Preview">\frac{a}{d}\equiv \frac{b}{d}(mod\ \frac{m}{d})</span><script type="math/tex">\frac{a}{d}\equiv \frac{b}{d}(mod\ \frac{m}{d})</script></span>。</p>
+<hr />
+<p>证明：</p>
+<p>若<span class="arithmatex"><span class="MathJax_Preview">a\equiv b(mod\ m)</span><script type="math/tex">a\equiv b(mod\ m)</script></span>,则<span class="arithmatex"><span class="MathJax_Preview">a=m*k+b</span><script type="math/tex">a=m*k+b</script></span>,d 是 a,b,m 的公因子,有<span class="arithmatex"><span class="MathJax_Preview">\frac{a}{d}=\frac{m}{d}*k+\frac{b}{d}</span><script type="math/tex">\frac{a}{d}=\frac{m}{d}*k+\frac{b}{d}</script></span>,所以<span class="arithmatex"><span class="MathJax_Preview">\frac{a}{d}\equiv \frac{b}{d}(mod\ \frac{m}{d})</span><script type="math/tex">\frac{a}{d}\equiv \frac{b}{d}(mod\ \frac{m}{d})</script></span>。</p>
+<hr />
+<p>4.若<span class="arithmatex"><span class="MathJax_Preview">a \equiv b(mod\ m_i),i=1,2,...k</span><script type="math/tex">a \equiv b(mod\ m_i),i=1,2,...k</script></span>，则<span class="arithmatex"><span class="MathJax_Preview">a \equiv b(mod [m_1,m_2,..m_k])</span><script type="math/tex">a \equiv b(mod [m_1,m_2,..m_k])</script></span>。</p>
+<hr />
+<p>证明：</p>
+<p>若<span class="arithmatex"><span class="MathJax_Preview">a\equiv b(mod\ m_i)</span><script type="math/tex">a\equiv b(mod\ m_i)</script></span>,即<span class="arithmatex"><span class="MathJax_Preview">m_i|(a-b),i=1,2..k</span><script type="math/tex">m_i|(a-b),i=1,2..k</script></span>,可以推出<span class="arithmatex"><span class="MathJax_Preview">a-b</span><script type="math/tex">a-b</script></span>是<span class="arithmatex"><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span>的公倍数，所以<span class="arithmatex"><span class="MathJax_Preview">[m_1,m_2,...m_k]|(a-b)</span><script type="math/tex">[m_1,m_2,...m_k]|(a-b)</script></span>。故<span class="arithmatex"><span class="MathJax_Preview">a \equiv b(mod [m_1,m_2,..m_k])</span><script type="math/tex">a \equiv b(mod [m_1,m_2,..m_k])</script></span>。</p>
+<hr />
+<p>5.若<span class="arithmatex"><span class="MathJax_Preview">a \equiv b(mod\ m)</span><script type="math/tex">a \equiv b(mod\ m)</script></span>,则<span class="arithmatex"><span class="MathJax_Preview">(a,m)=(b,m)</span><script type="math/tex">(a,m)=(b,m)</script></span>。</p>
+<hr />
+<p>证明：</p>
+<p>若<span class="arithmatex"><span class="MathJax_Preview">a\equiv b(mod\ m)</span><script type="math/tex">a\equiv b(mod\ m)</script></span>,则存在<span class="arithmatex"><span class="MathJax_Preview">k \in Z</span><script type="math/tex">k \in Z</script></span>,使得<span class="arithmatex"><span class="MathJax_Preview">a=km+b</span><script type="math/tex">a=km+b</script></span>。因为<span class="arithmatex"><span class="MathJax_Preview">(a,m)|a</span><script type="math/tex">(a,m)|a</script></span>,<span class="arithmatex"><span class="MathJax_Preview">(a,m)|m</span><script type="math/tex">(a,m)|m</script></span>,因为<span class="arithmatex"><span class="MathJax_Preview">b=a-km</span><script type="math/tex">b=a-km</script></span>,所以有<span class="arithmatex"><span class="MathJax_Preview">(a,m)|b</span><script type="math/tex">(a,m)|b</script></span>,即<span class="arithmatex"><span class="MathJax_Preview">(a,m)</span><script type="math/tex">(a,m)</script></span>是 b 和 m 的公因子，所以有<span class="arithmatex"><span class="MathJax_Preview">(a,m)\leq (b,m)</span><script type="math/tex">(a,m)\leq (b,m)</script></span>。同理可证<span class="arithmatex"><span class="MathJax_Preview">(b,m)\leq (a,m)</span><script type="math/tex">(b,m)\leq (a,m)</script></span>。所以就得到<span class="arithmatex"><span class="MathJax_Preview">(a,m)=(b,m)</span><script type="math/tex">(a,m)=(b,m)</script></span>。</p>
+<p>同时上面证明可以得到一个最大公因数的结论：
+若<span class="arithmatex"><span class="MathJax_Preview">a=km+b</span><script type="math/tex">a=km+b</script></span>,则<span class="arithmatex"><span class="MathJax_Preview">(a,m)=(b,m)</span><script type="math/tex">(a,m)=(b,m)</script></span>。</p>
+<hr />
+<h3 id="_16">剩余类<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>定义 1:设 m 是一个正整数，任一个整数除以 m 所得的余数是 0，1，2，...m-1 中的某一个。用某一个集合符号<span class="arithmatex"><span class="MathJax_Preview">[i](0\leq i \leq m-1)</span><script type="math/tex">[i](0\leq i \leq m-1)</script></span>表示所有模 m 余数为 i 的集合，该集合中元素的形式为<span class="arithmatex"><span class="MathJax_Preview">a=km+i,k\in Z</span><script type="math/tex">a=km+i,k\in Z</script></span>。任何一个整数必属于某个<span class="arithmatex"><span class="MathJax_Preview">[i]</span><script type="math/tex">[i]</script></span>。<span class="arithmatex"><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span>的子集合<span class="arithmatex"><span class="MathJax_Preview">[i]</span><script type="math/tex">[i]</script></span>称为整数模 m 的一个<strong>剩余类</strong>。集合<span class="arithmatex"><span class="MathJax_Preview">[0],[1],...[m-1]</span><script type="math/tex">[0],[1],...[m-1]</script></span>构成模 m 的<strong>完全剩余类</strong>，用<span class="arithmatex"><span class="MathJax_Preview">Z_m=\{[0],[1],...,[m-1]\}</span><script type="math/tex">Z_m=\{[0],[1],...,[m-1]\}</script></span>表示,通常简记为<span class="arithmatex"><span class="MathJax_Preview">Z_m=\{0,1...,m-1\}</span><script type="math/tex">Z_m=\{0,1...,m-1\}</script></span>。</p>
+<ul>
+<li>
+<p>定义 2: 如果模 m 的一个剩余类中的数与 m 互素，就称这个剩余类为与模 m 互素的剩余类。在与 m 互素的所有剩余类中，各取一数所组成的集合叫做模 m 的一组<strong>缩系</strong>(既约剩余系)。</p>
+</li>
+<li>
+<p>定理 1:只要某个剩余类中的一个数与 m 互素，则该剩余类的所有其他数也与 m 互素。</p>
+</li>
+</ul>
+<hr />
+<p>证明:同余式性质 5。</p>
+<hr />
+<ul>
+<li>定理 2:设<span class="arithmatex"><span class="MathJax_Preview">a_1,a_2,...a_{\varphi(m)}</span><script type="math/tex">a_1,a_2,...a_{\varphi(m)}</script></span>是模 m 的一组缩系，若<span class="arithmatex"><span class="MathJax_Preview">(k,m)=1</span><script type="math/tex">(k,m)=1</script></span>,则</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+ka_1,ka_2,...ka_{\varphi(m)}
+</div>
+<script type="math/tex; mode=display">
+ka_1,ka_2,...ka_{\varphi(m)}
+</script>
+</div>
+<p>也是模 m 的一组缩系。<span class="arithmatex"><span class="MathJax_Preview">\varphi(m)</span><script type="math/tex">\varphi(m)</script></span>表示 m 的欧拉函数，定义见<a href="#欧拉函数">欧拉函数节</a>。</p>
+<hr />
+<p>证明：因为<span class="arithmatex"><span class="MathJax_Preview">(a_i,m)=1,(k,m)=1</span><script type="math/tex">(a_i,m)=1,(k,m)=1</script></span>，则</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(ka_i,m)=1,1\leq i \leq \varphi(m)
+</div>
+<script type="math/tex; mode=display">
+(ka_i,m)=1,1\leq i \leq \varphi(m)
+</script>
+</div>
+<p>因为<span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>与 m 质因子分解后不包含公共的质因子，<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>与<span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>质因子分解后不包含公共的质因子，所以乘起来还是不包含公共的质因子。</p>
+<p>因为<span class="arithmatex"><span class="MathJax_Preview">m\nmid   (a_i-a_j),i\neq j</span><script type="math/tex">m\nmid   (a_i-a_j),i\neq j</script></span>。有<span class="arithmatex"><span class="MathJax_Preview">m\nmid k(a_i-a_j)</span><script type="math/tex">m\nmid k(a_i-a_j)</script></span> <del>(可以用质因子分解的角度想)</del>。所以</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+ka_i \not\equiv  ka_j(mod\ m)
+</div>
+<script type="math/tex; mode=display">
+ka_i \not\equiv  ka_j(mod\ m)
+</script>
+</div>
+<p>因为个数没变，模下来两两之间结果不相同且gcd为1,所以<span class="arithmatex"><span class="MathJax_Preview">k_{a_1},k_{a_2},..,k_{a_\varphi(m)}</span><script type="math/tex">k_{a_1},k_{a_2},..,k_{a_\varphi(m)}</script></span>是模 m 的一组缩系。</p>
+<hr />
+<p><strong>定理3:</strong> 设m的一组完全剩余系为：<span class="arithmatex"><span class="MathJax_Preview">a_1,a_2,...a_{m-1}</span><script type="math/tex">a_1,a_2,...a_{m-1}</script></span>,若<span class="arithmatex"><span class="MathJax_Preview">(k,m)=1</span><script type="math/tex">(k,m)=1</script></span>,则<span class="arithmatex"><span class="MathJax_Preview">ka_1,ka_2,...,ka_{m-1}</span><script type="math/tex">ka_1,ka_2,...,ka_{m-1}</script></span>也是m的一组完全剩余系。</p>
+<hr />
+<p>证明：</p>
+<p>用定理2的第二步同理证明可得。</p>
+<hr />
+<h3 id="_17">欧拉函数<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>定义 1:欧拉函数<span class="arithmatex"><span class="MathJax_Preview">\varphi (m)</span><script type="math/tex">\varphi (m)</script></span>表示整数序列 0,1,2,...,m-1 中与 m 互素的数的个数。规定<span class="arithmatex"><span class="MathJax_Preview">\varphi (1)=1</span><script type="math/tex">\varphi (1)=1</script></span>。当 m 素数时，显然有<span class="arithmatex"><span class="MathJax_Preview">\varphi (m)=m-1</span><script type="math/tex">\varphi (m)=m-1</script></span>。</p>
+<h3 id="_18">欧拉定理<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>设<span class="arithmatex"><span class="MathJax_Preview">m\in Z^+,(k,m)=1</span><script type="math/tex">m\in Z^+,(k,m)=1</script></span>，则：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+k^{\varphi (m)}\equiv 1(mod\ m)
+</div>
+<script type="math/tex; mode=display">
+k^{\varphi (m)}\equiv 1(mod\ m)
+</script>
+</div>
+<hr />
+<p>证明：设整数<span class="arithmatex"><span class="MathJax_Preview">a_1,a_2,...a_{\varphi(m)}</span><script type="math/tex">a_1,a_2,...a_{\varphi(m)}</script></span>是模 m 的一组缩系，因为<span class="arithmatex"><span class="MathJax_Preview">(k,m)=1</span><script type="math/tex">(k,m)=1</script></span>,则由剩余类定理 2，知<span class="arithmatex"><span class="MathJax_Preview">ka_1,ka_2..ka_{\varphi(m)}</span><script type="math/tex">ka_1,ka_2..ka_{\varphi(m)}</script></span>也是模 m 的一组缩系。</p>
+<p>所以：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+a_1a_2...a_{\varphi(m)}\equiv ka_1ka_2...ka_{\varphi(m)}(mod\ m)
+</div>
+<script type="math/tex; mode=display">
+a_1a_2...a_{\varphi(m)}\equiv ka_1ka_2...ka_{\varphi(m)}(mod\ m)
+</script>
+</div>
+<p>由同余式性质 2 可得：<span class="arithmatex"><span class="MathJax_Preview">k^{\varphi(m)}\equiv 1(mod\ m)</span><script type="math/tex">k^{\varphi(m)}\equiv 1(mod\ m)</script></span></p>
+<hr />
+<p>根据欧拉定理可以得到<strong>费马小定理</strong>：</p>
+<h3 id="_19">费马小定理<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>欧拉定理特殊情况：若 p 为素数，<span class="arithmatex"><span class="MathJax_Preview">(a,p)=1</span><script type="math/tex">(a,p)=1</script></span>,则<span class="arithmatex"><span class="MathJax_Preview">a^{p-1}\equiv 1(mod\ p)</span><script type="math/tex">a^{p-1}\equiv 1(mod\ p)</script></span>。</p>
+<p>可得到:若 p 为素数，<span class="arithmatex"><span class="MathJax_Preview">(a,p)=1</span><script type="math/tex">(a,p)=1</script></span>,a 在模 p 下的<strong>逆元</strong>为<span class="arithmatex"><span class="MathJax_Preview">a^{p-2}(mod\ m)</span><script type="math/tex">a^{p-2}(mod\ m)</script></span>。(逆元定义见<a href="#逆元">逆元节</a>)。</p>
+<h3 id="_20">欧拉函数的一些定理：<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p><strong>定理一:</strong> 如果 p 是质数，并且<span class="arithmatex"><span class="MathJax_Preview">k \geq 1</span><script type="math/tex">k \geq 1</script></span>则有：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\varphi(p^k)=p^k-p^{k-1}=p^{k-1}(p-1)=p^k(1-\frac{1}{p})
+</div>
+<script type="math/tex; mode=display">
+\varphi(p^k)=p^k-p^{k-1}=p^{k-1}(p-1)=p^k(1-\frac{1}{p})
+</script>
+</div>
+<hr />
+<p>证明：
+因为 p 是质数，对于<span class="arithmatex"><span class="MathJax_Preview">1\leq m\leq p^k</span><script type="math/tex">1\leq m\leq p^k</script></span>能让<span class="arithmatex"><span class="MathJax_Preview">gcd(p^k,m)&gt;1</span><script type="math/tex">gcd(p^k,m)>1</script></span>的 m 的条件只有让 m 是 p 的倍数，也就是<span class="arithmatex"><span class="MathJax_Preview">m \in \{p,2p,3p,...p^{k-1}p=p^k\}</span><script type="math/tex">m \in \{p,2p,3p,...p^{k-1}p=p^k\}</script></span>。这样的数一共有<span class="arithmatex"><span class="MathJax_Preview">p^{k-1}</span><script type="math/tex">p^{k-1}</script></span>个。所以剩下互素的就有<span class="arithmatex"><span class="MathJax_Preview">p^k-p^{k-1}</span><script type="math/tex">p^k-p^{k-1}</script></span>个。</p>
+<hr />
+<p><strong>定理二：</strong> 欧拉函数是积性函数。如果 m,n 互素即<span class="arithmatex"><span class="MathJax_Preview">gcd(n,m)=1</span><script type="math/tex">gcd(n,m)=1</script></span>，则有<span class="arithmatex"><span class="MathJax_Preview">\varphi(m)\varphi(n)=\varphi(mn)</span><script type="math/tex">\varphi(m)\varphi(n)=\varphi(mn)</script></span></p>
+<hr />
+<p>证明：</p>
+<p>将<span class="arithmatex"><span class="MathJax_Preview">0,1...mn-1</span><script type="math/tex">0,1...mn-1</script></span>写成下面这种类似剩余类的形式：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{matrix}
+0 &amp; m &amp; 2m &amp;...&amp; (n-1)m \\
+1 &amp; m+1 &amp; 2m+1 &amp;...&amp; (n-1)m+1  \\
+2 &amp; m+2 &amp; 2m+2 &amp;...&amp; (n-1)m+2\\
+... \\
+m-1 &amp; 2m-1 &amp; 3m-1&amp; ...&amp; mn-1
+\end{matrix}
+</div>
+<script type="math/tex; mode=display">
+\begin{matrix}
+0 & m & 2m &...& (n-1)m \\
+1 & m+1 & 2m+1 &...& (n-1)m+1  \\
+2 & m+2 & 2m+2 &...& (n-1)m+2\\
+... \\
+m-1 & 2m-1 & 3m-1& ...& mn-1
+\end{matrix}
+</script>
+</div>
+<p>由剩余类定理 1 可知，有<span class="arithmatex"><span class="MathJax_Preview">\varphi(m)</span><script type="math/tex">\varphi(m)</script></span>行与 m 互素。然后需要证这些行中与 n 互素的数有多少。</p>
+<p>因为<span class="arithmatex"><span class="MathJax_Preview">0，1，2，...n-1</span><script type="math/tex">0，1，2，...n-1</script></span>是模 n 的一组完全剩余系。因为<span class="arithmatex"><span class="MathJax_Preview">(m,n)=1</span><script type="math/tex">(m,n)=1</script></span>,由<strong>剩余类定理 2</strong>第二步的证明思路可证<span class="arithmatex"><span class="MathJax_Preview">0，m，2m...(n-1)m</span><script type="math/tex">0，m，2m...(n-1)m</script></span>也是模 n 的一组完全剩余系。</p>
+<p>因为<span class="arithmatex"><span class="MathJax_Preview">0+a,m+a,2m+a,...,(n-1)m+a,0\leq a \leq n-1</span><script type="math/tex">0+a,m+a,2m+a,...,(n-1)m+a,0\leq a \leq n-1</script></span>也是模 n 的一组完全剩余系(相当于每个数都往后循环偏移 a 个数)。</p>
+<p>所以在与 m 互素的行(同时也是所有的行)中有<span class="arithmatex"><span class="MathJax_Preview">\varphi(n)</span><script type="math/tex">\varphi(n)</script></span>个数与 n 互素。</p>
+<p>所以在 nm 个数中一共有<span class="arithmatex"><span class="MathJax_Preview">\varphi(m)\varphi(n)</span><script type="math/tex">\varphi(m)\varphi(n)</script></span>个数与 nm 互素。得证。</p>
+<hr />
+<p><strong>定理三：</strong></p>
+<p>将 n 质因子分解得到<span class="arithmatex"><span class="MathJax_Preview">n=p_1^{a_1}p_2^{a_2}...p_k^{a_k}</span><script type="math/tex">n=p_1^{a_1}p_2^{a_2}...p_k^{a_k}</script></span>，<span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span>为质数，<span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>为正整数，则有：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\varphi(n)=p_1^{a_1-1}(p_1-1)p_2^{a_2-1}(p_2-1)...p_k^{a_k-1}(p_k-1)
+</div>
+<script type="math/tex; mode=display">
+\varphi(n)=p_1^{a_1-1}(p_1-1)p_2^{a_2-1}(p_2-1)...p_k^{a_k-1}(p_k-1)
+</script>
+</div>
+<hr />
+<p>证明：由欧拉函数定理二可得:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\varphi(n)=\varphi(p_1^{a_1})\varphi(p_2^{a_2})...\varphi(p_k^{a_k})
+</div>
+<script type="math/tex; mode=display">
+\varphi(n)=\varphi(p_1^{a_1})\varphi(p_2^{a_2})...\varphi(p_k^{a_k})
+</script>
+</div>
+<p>再由欧拉函数定理 1 把<span class="arithmatex"><span class="MathJax_Preview">\varphi(p_i^{a_i})</span><script type="math/tex">\varphi(p_i^{a_i})</script></span>展开相乘可得上述结论。</p>
+<hr />
+<h3 id="_21">线性同余方程<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>形如<span class="arithmatex"><span class="MathJax_Preview">ax\equiv b(mod\ m)</span><script type="math/tex">ax\equiv b(mod\ m)</script></span>的等式称为线性同余方程。</p>
+<p><strong>定理 1</strong>: 设<span class="arithmatex"><span class="MathJax_Preview">a,b\in Z,m\geq0</span><script type="math/tex">a,b\in Z,m\geq0</script></span>,若<span class="arithmatex"><span class="MathJax_Preview">(a,m)=1</span><script type="math/tex">(a,m)=1</script></span>,则同余式</p>
+<p>$$
+ax\equiv b(mod m)
+$$
+在<span class="arithmatex"><span class="MathJax_Preview">0 \leq x \leq m-1</span><script type="math/tex">0 \leq x \leq m-1</script></span>的范围内恰有一个解。</p>
+<hr />
+<p>证明：
+在模m的一组完全剩余系中：
+$$
+0,1,2,...m-1
+$$</p>
+<p>有一个数恰好与b同余。</p>
+<p>由剩余系定理3可知：
+$$
+0,a,2a,...a(m-1)
+$$</p>
+<p>也是模m的一组完全剩余系,且恰好有一个<span class="arithmatex"><span class="MathJax_Preview">xa</span><script type="math/tex">xa</script></span>与b同余。那个x即为所求。</p>
+<hr />
+<p><strong>定理 2</strong> : 同余方程<span class="arithmatex"><span class="MathJax_Preview">ax\equiv b(mod\ m)</span><script type="math/tex">ax\equiv b(mod\ m)</script></span>有解的充要条件是<span class="arithmatex"><span class="MathJax_Preview">(a,m)|b</span><script type="math/tex">(a,m)|b</script></span>。</p>
+<hr />
+<p>证明：</p>
+<ol>
+<li>证明若同余方程<span class="arithmatex"><span class="MathJax_Preview">ax\equiv b(mod\ m)</span><script type="math/tex">ax\equiv b(mod\ m)</script></span>有解，则<span class="arithmatex"><span class="MathJax_Preview">gcd(a,m)|b</span><script type="math/tex">gcd(a,m)|b</script></span>。</li>
+</ol>
+<p>设同余方程<span class="arithmatex"><span class="MathJax_Preview">ax\equiv b(mod\ m)</span><script type="math/tex">ax\equiv b(mod\ m)</script></span>的解为<span class="arithmatex"><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span>,于是存在<span class="arithmatex"><span class="MathJax_Preview">k\in Z</span><script type="math/tex">k\in Z</script></span>,有<span class="arithmatex"><span class="MathJax_Preview">b=ax_0+my</span><script type="math/tex">b=ax_0+my</script></span>。因为<span class="arithmatex"><span class="MathJax_Preview">gcd(a,m)|a,gcd(a,m)|m</span><script type="math/tex">gcd(a,m)|a,gcd(a,m)|m</script></span>,所以<span class="arithmatex"><span class="MathJax_Preview">gcd(a,m)|b</span><script type="math/tex">gcd(a,m)|b</script></span>。</p>
+<ol>
+<li>证明若<span class="arithmatex"><span class="MathJax_Preview">gcd(a,m)|b</span><script type="math/tex">gcd(a,m)|b</script></span>,则同余方程<span class="arithmatex"><span class="MathJax_Preview">ax\equiv b(mod\ m)</span><script type="math/tex">ax\equiv b(mod\ m)</script></span>有解。</li>
+</ol>
+<p>设<span class="arithmatex"><span class="MathJax_Preview">d=gcd(a,m)</span><script type="math/tex">d=gcd(a,m)</script></span>。有<span class="arithmatex"><span class="MathJax_Preview">gcd(\frac{a}{d},\frac{m}{d})=1</span><script type="math/tex">gcd(\frac{a}{d},\frac{m}{d})=1</script></span><del>(可以用两个数质因子分解与gcd的关系的角度来想其正确性)</del>,由线性同余方程定理1可得同余式:
+$$
+\frac{a}{d}x\equiv \frac{b}{d}(mod \frac{m}{d}) \tag{1}
+$$</p>
+<p>有解。设方程组(1)的解为<span class="arithmatex"><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span>,<span class="arithmatex"><span class="MathJax_Preview">x\equiv x_0(mod\ \frac{m}{d})</span><script type="math/tex">x\equiv x_0(mod\ \frac{m}{d})</script></span>也是(1)的解。将(1)写成等式,即存在
+$$
+\frac{a}{d}x_0+\frac{m}{d}y=\frac{b}{d}
+$$
+两边同乘d有:
+$$
+ax_0+my=b 
+$$
+即：
+$$
+ax_0\equiv b( mod m)
+$$
+所以<span class="arithmatex"><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span>即为所求。同时，上述证明可以说明，在模m下，方程有d个解，其分别是<span class="arithmatex"><span class="MathJax_Preview">x_0,x_0+\frac{m}{d},x_0+2\frac{m}{d},...x_0+(d-1)\frac{m}{d}</span><script type="math/tex">x_0,x_0+\frac{m}{d},x_0+2\frac{m}{d},...x_0+(d-1)\frac{m}{d}</script></span>。</p>
+<p>最小正整数解可以通过表达式<span class="arithmatex"><span class="MathJax_Preview">x_0=(x\%\frac{m}{d}+\frac{m}{d})\%\frac{m}{d}</span><script type="math/tex">x_0=(x\%\frac{m}{d}+\frac{m}{d})\%\frac{m}{d}</script></span>求出。</p>
+<hr />
+<p>所以只要我们有办法求出一组解，就可以求出所有的解，于是就有了下面这种思路。</p>
+<p><strong>线性同余方程求解方法：</strong></p>
+<p>用线性同余方程定理1排除无解的情况，现在来考虑有解的情况。首先将<span class="arithmatex"><span class="MathJax_Preview">ax\equiv b(mod\ m)</span><script type="math/tex">ax\equiv b(mod\ m)</script></span>方程改写为<span class="arithmatex"><span class="MathJax_Preview">a*x+m*y=b</span><script type="math/tex">a*x+m*y=b</script></span>的形式,然后使用拓展欧几里德求出一组特解<span class="arithmatex"><span class="MathJax_Preview">x_1,y_1</span><script type="math/tex">x_1,y_1</script></span>满足<span class="arithmatex"><span class="MathJax_Preview">ax_1+my_1=(a,m)</span><script type="math/tex">ax_1+my_1=(a,m)</script></span>。然后在原方程两边同时除以<span class="arithmatex"><span class="MathJax_Preview">(a,m)</span><script type="math/tex">(a,m)</script></span>并乘上b得到：
+$$
+\frac{abx_1}{(a,m)}+\frac{mby_1}{(a,m)}=b
+$$</p>
+<p>就得到了方程<span class="arithmatex"><span class="MathJax_Preview">ax_0+my_0=b</span><script type="math/tex">ax_0+my_0=b</script></span>的一组解也就是同余方程<span class="arithmatex"><span class="MathJax_Preview">ax_0\equiv b(mod\ m)</span><script type="math/tex">ax_0\equiv b(mod\ m)</script></span>的一组解。知道了一组解，剩下的解就可以根据<a href="#线性同余方程">线性同余方程定理2第二个证明</a>求出其他解了。</p>
+<p><strong>代码:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//解同余方程$ax0\equiv b(mod m)$中最小的x0,若无解返回false</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">ModularEqu</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x0</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">k</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="o">=</span><span class="n">exgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">%</span><span class="n">d</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="n">x0</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="n">d</span><span class="p">)</span><span class="o">%</span><span class="n">m</span><span class="p">;</span><span class="n">k</span><span class="o">=</span><span class="n">m</span><span class="o">/</span><span class="n">d</span><span class="p">;</span><span class="n">x0</span><span class="o">=</span><span class="p">(</span><span class="n">x0</span><span class="o">%</span><span class="n">k</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">%</span><span class="n">k</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="_22">逆元<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>用来解决取模条件下除法的问题。</p>
+<p><strong>定义</strong>:</p>
+<p>如果一个线性同余方程有<span class="arithmatex"><span class="MathJax_Preview">ax\equiv 1(mod\ m)</span><script type="math/tex">ax\equiv 1(mod\ m)</script></span> ，则称x为 a在模m下的的逆元，记作<span class="arithmatex"><span class="MathJax_Preview">a^{-1}</span><script type="math/tex">a^{-1}</script></span> 。</p>
+<p><strong>1.扩展欧几里得求逆元</strong>：</p>
+<p>使用条件：线性同余方程有解条件，即: <span class="arithmatex"><span class="MathJax_Preview">(a,m)=1</span><script type="math/tex">(a,m)=1</script></span>。</p>
+<p>和求解同余方程为一个原理。</p>
+<p><strong>2.快速幂求逆元</strong>：</p>
+<p>使用条件：模数是素数。</p>
+<p>用得最多，求解原理见<a href="#费马小定理">费马小定理节</a>。</p>
+<p>代码就是快速幂的代码。</p>
+<p>参考资料：</p>
+<ul>
+<li>姜正涛.《信息安全数学基础》[M].北京:电子工业出版社,2017.</li>
+<li><a href="https://en.wikipedia.org/wiki/Euler%27s_totient_function#Euler's_product_formula">Euler's totient function - Wikipedia</a></li>
+<li><a href="https://oi-wiki.org/math/number-theory/linear-equation/">oi wiki 数学部分</a></li>
+</ul>
+<h2 id="_23">简单数学实战<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<h3 id="_24">找规律<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>1 1 2 3 5 8 13 ...</li>
+<li>1 1 2 5 14 ...</li>
+<li>1 5 10 10 5 1</li>
+<li>1 4 10 20 35 56 ...</li>
+</ul>
+<h3 id="_25">结论<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li>有限项数列都可以用公式表示，比如 Lagrange 插值公式就可以求出通项。</li>
+<li>公式显然不止一个。</li>
+</ul>
+<p>所以猜测是有风险的。</p>
+<h3 id="_26">举个栗子<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p>1，2，3，4，5，？</p>
+<p>显然答案是 126，因为 <span class="arithmatex"><span class="MathJax_Preview">a_n = (n-1)(n-2)(n-3)(n-4)(n-5)+n</span><script type="math/tex">a_n = (n-1)(n-2)(n-3)(n-4)(n-5)+n</script></span>。</p>
+<p>但其实它有很多种答案，比如 <span class="arithmatex"><span class="MathJax_Preview">a_n =C \cdot (n-1)(n-2)(n-3)(n-4)(n-5)+n, C为常数</span><script type="math/tex">a_n =C \cdot (n-1)(n-2)(n-3)(n-4)(n-5)+n, C为常数</script></span>。</p>
+<h3 id="_27">反例<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title"><a href="https://vjudge.net/contest/372154#problem/D">Codeforces 656A - Da Vinci Powers</a></p>
+<p>找规律，输入3输出8，输入10输出1024，输入13输出8092。</p>
+</div>
+<p>需要用下面介绍的 OEIS 解决。</p>
+<h3 id="oeis">OEIS<a class="headerlink" href="#oeis" title="Permanent link">&para;</a></h3>
+<p><a href="https://oeis.org/">The On-Line Encyclopedia of Integer Sequences® (OEIS®)</a></p>
+<p>包含了绝大部分数列，只能在网络比赛中使用。</p>
+<p><strong>例题</strong></p>
+<div class="admonition question">
+<p class="admonition-title">题目来源：2020 牛客寒假算法小白训练营</p>
+<p>一个游戏，人物攻击力为0-10，怪物的生命值为10，每次攻击对怪物以均等的1/11的概率，随机造成0，1，2……10中之一点数的伤害，怪物的体力达到0或更低时视为击败，问击败怪物的平均攻击次数？</p>
+</div>
+<p>设当怪物血剩余 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 时攻击次数的期望为 <span class="arithmatex"><span class="MathJax_Preview">a_n</span><script type="math/tex">a_n</script></span>。则显然 <span class="arithmatex"><span class="MathJax_Preview">a_0＝0</span><script type="math/tex">a_0＝0</script></span> ，考虑 <span class="arithmatex"><span class="MathJax_Preview">n &lt; 1</span><script type="math/tex">n < 1</script></span>，此时肯定要先打一次。打完后有 <span class="arithmatex"><span class="MathJax_Preview">\frac{11-n}{11}</span><script type="math/tex">\frac{11-n}{11}</script></span>的概率怪兽死亡，另外有<span class="arithmatex"><span class="MathJax_Preview">\frac{1}{11}</span><script type="math/tex">\frac{1}{11}</script></span>的概率回到 <span class="arithmatex"><span class="MathJax_Preview">a_1-a_n</span><script type="math/tex">a_1-a_n</script></span>中的一种情况。故有<span class="arithmatex"><span class="MathJax_Preview">a_n=1+\frac{1}{11}(a_1+...+a_n)</span><script type="math/tex">a_n=1+\frac{1}{11}(a_1+...+a_n)</script></span>。令<span class="arithmatex"><span class="MathJax_Preview">Sn=a_1+...a_n</span><script type="math/tex">Sn=a_1+...a_n</script></span>，则有<span class="arithmatex"><span class="MathJax_Preview">a_{n}=1+\frac{1}{11}S_{n}</span><script type="math/tex">a_{n}=1+\frac{1}{11}S_{n}</script></span>。解得 <span class="arithmatex"><span class="MathJax_Preview">a_n=(\frac{11}{10})^n</span><script type="math/tex">a_n=(\frac{11}{10})^n</script></span>。本题答案为 <span class="arithmatex"><span class="MathJax_Preview">1.1^{10}</span><script type="math/tex">1.1^{10}</script></span>。</p>
+<div class="admonition note">
+<p class="admonition-title">具体计算过程</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">a_{n}=1+\frac{1}{11}S_{n}</div>
+<script type="math/tex; mode=display">a_{n}=1+\frac{1}{11}S_{n}</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">a_{n-1}=1+\frac{1}{11}S_{n-1}</div>
+<script type="math/tex; mode=display">a_{n-1}=1+\frac{1}{11}S_{n-1}</script>
+</div>
+<p>相减 <span class="arithmatex"><span class="MathJax_Preview">a_n-a_{n-1}=\frac{1}{11}*a_n</span><script type="math/tex">a_n-a_{n-1}=\frac{1}{11}*a_n</script></span></p>
+<div class="arithmatex">
+<div class="MathJax_Preview">a_n=\frac{11}{10}a_{n-1}(n &gt;0)</div>
+<script type="math/tex; mode=display">a_n=\frac{11}{10}a_{n-1}(n >0)</script>
+</div>
+<p>当怪物血剩余 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 时攻击次数的期望为 <span class="arithmatex"><span class="MathJax_Preview">a_n</span><script type="math/tex">a_n</script></span>。则显然 <span class="arithmatex"><span class="MathJax_Preview">a_0＝0</span><script type="math/tex">a_0＝0</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">n = 1</span><script type="math/tex">n = 1</script></span>代入解得</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">a_1=\frac{11}{10}</span><script type="math/tex">a_1=\frac{11}{10}</script></span> 则 <span class="arithmatex"><span class="MathJax_Preview">a_n=(\frac{11}{10})^n</span><script type="math/tex">a_n=(\frac{11}{10})^n</script></span></p>
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../search/dfs/" title="栈和深度优先搜索" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                栈和深度优先搜索
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../number-theory/" title="数论" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                数论
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2021 CUC ACM Team
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://cuccs.github.io/ctf-wiki/" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="http://39.98.122.96/" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.3.1",url:{base:"../.."}})</script>
+      
+        <script src="../../_static/js/extra.js?v=16"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
